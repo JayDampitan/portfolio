@@ -50,12 +50,16 @@ const logoVariants = {
   },
   visible: {
     y: 0,
+    delay: 2,
     transition: {
       duration: 1,
       type: "spring",
       mass: 0.5,
     },
   },
+  hover: {
+    rotate: 360
+  }
 };
 
 const linksVariant = {
@@ -83,6 +87,7 @@ const Navbar = () => {
         variants={logoVariants}
         initial="hidden"
         animate="visible"
+        whileHover = "hover"
       >
         JD
       </Logo>

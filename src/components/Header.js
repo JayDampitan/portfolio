@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Media from "./Media";
 
 // ----------------------------Header Styled Components
 
@@ -87,12 +88,14 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
+        <Media />
         <FirstHeader
           as={motion.div}
           variants={firstVariant}
           initial="hidden"
           animate="visible"
           whileHover="hover"
+          drag
         >
           Hello!
         </FirstHeader>
@@ -102,6 +105,7 @@ const Header = () => {
           initial="hidden"
           animate="visible"
           whileHover="hover"
+          drag
         >
           I'm Jay,
         </SecondHeader>
@@ -111,8 +115,9 @@ const Header = () => {
           initial="hidden"
           animate="visible"
           whileHover="hover"
+          drag
         >
-          I'm a software developer from California
+          software developer from California
         </ThirdHeader>
       </HeaderContainer>
     </>
