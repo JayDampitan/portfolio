@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Media from "./Media";
 
 // ----------------------------Header Styled Components
 
@@ -30,6 +31,9 @@ const ThirdHeader = styled.div`
 
 // ----------------------------Header Motion Variants
 const firstVariant = {
+  hover: {
+    scale: 1.1,
+  },
   hidden: {
     x: "-200vw",
   },
@@ -45,44 +49,53 @@ const firstVariant = {
 };
 
 const secondVariant = {
-    hidden: {
-      x: "-200vw",
+  hover: {
+    scale: 1.1,
+  },
+  hidden: {
+    x: "-200vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 4,
+      type: "spring",
+      mass: 0.5,
+      ease: "easeIn",
     },
-    visible: {
-      x: 0,
-      transition: {
-        duration: 4,
-        type: "spring",
-        mass: 0.5,
-        ease: 'easeIn'
-      },
-    },
-  };
+  },
+};
 
-  const thirdVariant = {
-    hidden: {
-      x: "-200vw",
+const thirdVariant = {
+  hover: {
+    scale: 1.1,
+  },
+  hidden: {
+    x: "-200vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 6,
+      type: "spring",
+      mass: 0.6,
+      ease: "easeIn",
     },
-    visible: {
-      x: 0,
-      transition: {
-        duration: 6,
-        type: "spring",
-        mass: 0.6,
-        ease: 'easeIn'
-      },
-    },
-  };
+  },
+};
 
 const Header = () => {
   return (
     <>
       <HeaderContainer>
+        <Media />
         <FirstHeader
           as={motion.div}
           variants={firstVariant}
           initial="hidden"
           animate="visible"
+          whileHover="hover"
+          drag
         >
           Hello!
         </FirstHeader>
@@ -91,15 +104,20 @@ const Header = () => {
           variants={secondVariant}
           initial="hidden"
           animate="visible"
+          whileHover="hover"
+          drag
         >
           I'm Jay,
         </SecondHeader>
-        <ThirdHeader as={motion.div}
+        <ThirdHeader
+          as={motion.div}
           variants={thirdVariant}
-          initial='hidden'
-          animate='visible'
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          drag
         >
-          I'm a software developer from California
+          software developer from California
         </ThirdHeader>
       </HeaderContainer>
     </>

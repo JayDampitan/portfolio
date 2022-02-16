@@ -50,12 +50,16 @@ const logoVariants = {
   },
   visible: {
     y: 0,
+    delay: 2,
     transition: {
       duration: 1,
       type: "spring",
       mass: 0.5,
     },
   },
+  hover: {
+    rotate: 360
+  }
 };
 
 const linksVariant = {
@@ -83,20 +87,21 @@ const Navbar = () => {
         variants={logoVariants}
         initial="hidden"
         animate="visible"
+        whileHover = "hover"
       >
         JD
       </Logo>
 
-      <NavLinksContainer as={motion.div}
-        variants={linksVariant}
-        initial='hidden'
-        animate='visible'
+      <NavLinksContainer as = {motion.div}
+        variants = {linksVariant}
+        initial = 'hidden'
+        animate = 'visible'
       >
-        <NavLinks>Home</NavLinks>
-        <NavLinks>About</NavLinks>
-        <NavLinks>Skills</NavLinks>
-        <NavLinks>Portfolio</NavLinks>
-        <NavLinks>Contact</NavLinks>
+        <NavLinks> Home </NavLinks>
+        <NavLinks> About </NavLinks>
+        <NavLinks> Skills </NavLinks>
+        <NavLinks> Portfolio </NavLinks>
+        <NavLinks> Contact </NavLinks>
       </NavLinksContainer>
     </NavContainer>
   );

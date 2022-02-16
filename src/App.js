@@ -3,6 +3,7 @@ import styled from "styled-components";
 import GlobalStyle from "./globalStyles";
 import GradientLine from "./components/GradientLine";
 import Header from "./components/Header";
+import Media from "./components/Media";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyle/>
         <Navbar />
       <GradientLine/>
+        
         <Header/>
       <GradientLine/>
     </div>
