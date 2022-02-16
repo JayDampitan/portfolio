@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import JD from "../assets/JD1.png";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const NavContainer = styled.div`
   height: 180px;
@@ -9,6 +10,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 `;
 
 const Logo = styled.a`
@@ -97,11 +99,12 @@ const Navbar = () => {
         initial = 'hidden'
         animate = 'visible'
       >
-        <NavLinks> Home </NavLinks>
-        <NavLinks> About </NavLinks>
-        <NavLinks> Skills </NavLinks>
-        <NavLinks> Portfolio </NavLinks>
-        <NavLinks> Contact </NavLinks>
+        <Link to = '/'><NavLinks> Home </NavLinks></Link>
+        <Link to='/about'><NavLinks> About </NavLinks></Link>
+        <Link to='/experience'><NavLinks> Experience </NavLinks></Link>
+        <Link to='/portfolio'><NavLinks> Portfolio</NavLinks></Link>
+        <Link to='/contact'><NavLinks> Contact</NavLinks></Link>
+       
       </NavLinksContainer>
     </NavContainer>
   );

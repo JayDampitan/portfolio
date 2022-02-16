@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const BorderLine = styled.div`
-    background-image: linear-gradient( to right, yellow, red) ;
-    height: 3px;
+    background-image: linear-gradient( to right, #3A0832, #F6DE03) ;
+    height: 2px;
 `
 
 const gradientVariant = {
