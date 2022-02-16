@@ -12,13 +12,13 @@ const Icons = styled.div`
   align-items: center;
 
   position: fixed;
-  bottom: 10.3rem;
-  left: 2rem;
+  bottom: 10.5rem;
+  right: 2rem;
 
   z-index: 3;
 
   & > *:not(:last-child) {
-    margin: 0.7rem 0;
+    margin: 0.8rem 0;
   }
 `;
 
@@ -44,7 +44,7 @@ const mediaVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 1.5
+            duration: 2
         }
     }
 }

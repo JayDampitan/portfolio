@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Media from "./Media";
 
 // ----------------------------Header Styled Components
 
@@ -12,6 +11,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   color: #fff;
   padding: 7rem 0;
+  height: 39.5vh;
 `;
 
 const FirstHeader = styled.div`
@@ -42,8 +42,8 @@ const firstVariant = {
     transition: {
       duration: 3,
       type: "spring",
-      mass: 0.4,
-      damping: 8,
+      mass: 0.2,
+      damping: 9,
     },
   },
 };
@@ -58,10 +58,10 @@ const secondVariant = {
   visible: {
     x: 0,
     transition: {
-      duration: 4,
+      duration: 3,
       type: "spring",
       mass: 0.5,
-      ease: "easeIn",
+      damping: 8,
     },
   },
 };
@@ -79,7 +79,7 @@ const thirdVariant = {
       duration: 6,
       type: "spring",
       mass: 0.6,
-      ease: "easeIn",
+      damping: 8,
     },
   },
 };
@@ -88,7 +88,6 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <Media />
         <FirstHeader
           as={motion.div}
           variants={firstVariant}
