@@ -17,6 +17,7 @@ const Logo = styled.a`
   text-decoration: none;
   font-weight: 800;
   font-size: 3rem;
+  font-family: 'Alfa Slab One', sans-serif;
 `;
 
 const NavLinksContainer = styled.div`
