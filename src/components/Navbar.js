@@ -1,47 +1,102 @@
 import React from "react";
 import styled from "styled-components";
 import JD from "../assets/JD1.png";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const NavContainer = styled.div`
-  max-height: 20%;
+  height: 180px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
-const LogoContainer = styled.div`
-  width: 150px;
+
+const Logo = styled.a`
+  padding: 1rem 5rem;
+  color: #ffff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 3rem;
+`;
+
+const NavLinksContainer = styled.div`
   display: flex;
-  margin-left: 5%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 `;
+
+const NavLinks = styled.a`
+  color: #ffff;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.7s ease-in;
+
+  &:hover {
+    color: yellow;
+  }
+`;
+
+const Hamburger = styled.div``;
 
 const logoVariants = {
+  hidden: {
+    y: "-100vh",
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 1,
+      type: "spring",
+      mass: 0.5,
+    },
+  },
+};
+
+const linksVariant = {
     hidden: {
-        y: '-100vh',
+        x: '+100vw',
+        opacity: 0,
     },
     visible: {
-        y: 0,
-        transition: {
+        opacity: 1,
+        x: 1,
+        transition:{
             duration: 1,
-            type: 'spring',
-            mass: 0.5
+            type: "spring",
+            mass: 0.4,
+            damping: 8,
         }
     }
-}
-
-const Logo = styled.img`
-    width: 100%;
-`;
+};
 
 const Navbar = () => {
   return (
     <NavContainer>
-      <LogoContainer as={motion.div} 
+      <Logo
+        as={motion.div}
         variants={logoVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        JD
+      </Logo>
+
+      <NavLinksContainer as={motion.div}
+        variants={linksVariant}
         initial='hidden'
         animate='visible'
       >
-         <Logo alt="" src={JD} />
-      </LogoContainer>  
+        <NavLinks>Home</NavLinks>
+        <NavLinks>About</NavLinks>
+        <NavLinks>Skills</NavLinks>
+        <NavLinks>Portfolio</NavLinks>
+        <NavLinks>Contact</NavLinks>
+      </NavLinksContainer>
     </NavContainer>
   );
 };
