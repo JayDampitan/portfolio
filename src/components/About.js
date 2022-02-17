@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import JD from '../assets/portfolio.jpg'
+import JD from '../assets/portfolio.jpg';
 
 
 const AboutContainer = styled.div`
