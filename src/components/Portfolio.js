@@ -8,8 +8,7 @@ const PortfolioContainer = styled.div`
   align-items: center;
   flex-direction: column;
   color: #fff;
-  padding: 7rem 0;
-  height: 39.5vh;
+  height: 63vh;
 `;
 
 
@@ -24,7 +23,8 @@ const portfolioVariants = {
     transition: {
       duration: 3,
       mass: 0.4,
-      type: 'spring'
+      type: 'spring',
+      damping: 8,
     }
   }
 };

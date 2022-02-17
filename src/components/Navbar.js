@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import JD from "../assets/JD1.png";
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const NavContainer = styled.div`
   height: 180px;
@@ -10,7 +9,6 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
 `;
 
 const Logo = styled.a`
@@ -19,7 +17,7 @@ const Logo = styled.a`
   text-decoration: none;
   font-weight: 800;
   font-size: 3rem;
-  font-family: 'Alfa Slab One', sans-serif;
+  font-family: "Alfa Slab One", sans-serif;
 `;
 
 const NavLinksContainer = styled.div`
@@ -29,7 +27,13 @@ const NavLinksContainer = styled.div`
   position: relative;
 `;
 
-const NavLinks = styled.a`
+const LinkWrapper = styled.div`
+  display: flex;
+  justify-content: centerl
+  align-items: center;
+`;
+
+const NavLinks = styled(Link)`
   color: #ffff;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
@@ -60,25 +64,30 @@ const logoVariants = {
     },
   },
   hover: {
-    rotate: 360
-  }
+    rotate: 360,
+  },
 };
 
+const hoverVariants = {
+  hoverMe: {
+    scale: 1.3,
+  },
+};
 const linksVariant = {
-    hidden: {
-        x: '+100vw',
-        opacity: 0,
+  hidden: {
+    x: "+100vw",
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    x: 1,
+    transition: {
+      duration: 1,
+      type: "spring",
+      mass: 0.4,
+      damping: 8,
     },
-    visible: {
-        opacity: 1,
-        x: 1,
-        transition:{
-            duration: 1,
-            type: "spring",
-            mass: 0.4,
-            damping: 8,
-        }
-    }
+  },
 };
 
 const Navbar = () => {
@@ -89,22 +98,47 @@ const Navbar = () => {
         variants={logoVariants}
         initial="hidden"
         animate="visible"
-        whileHover = "hover"
+        whileHover="hover"
       >
         JD
       </Logo>
 
-      <NavLinksContainer as = {motion.div}
-        variants = {linksVariant}
-        initial = 'hidden'
-        animate = 'visible'
+      <NavLinksContainer
+        as={motion.div}
+        variants={linksVariant}
+        initial="hidden"
+        animate="visible"
       >
-        <Link to = '/'><NavLinks> Home </NavLinks></Link>
-        <Link to='/about'><NavLinks> About </NavLinks></Link>
-        <Link to='/experience'><NavLinks> Experience </NavLinks></Link>
-        <Link to='/portfolio'><NavLinks> Portfolio</NavLinks></Link>
-        <Link to='/contact'><NavLinks> Contact</NavLinks></Link>
-       
+        <LinkWrapper
+          as={motion.div}
+          variants={hoverVariants}
+          whileHover="hoverMe"
+        >
+          <NavLinks to="/"> Home </NavLinks>
+        </LinkWrapper>
+        <LinkWrapper
+          as={motion.div}
+          variants={hoverVariants}
+          whileHover="hoverMe"
+        >
+          <NavLinks to="/about"> About </NavLinks>
+        </LinkWrapper>
+        
+        <LinkWrapper
+          as={motion.div}
+          variants={hoverVariants}
+          whileHover="hoverMe"
+        >
+          <NavLinks to="/portfolio"> Portfolio </NavLinks>
+        </LinkWrapper>
+
+        <LinkWrapper
+          as={motion.div}
+          variants={hoverVariants}
+          whileHover="hoverMe"
+        >
+          <NavLinks to="/contact"> Contact </NavLinks>
+        </LinkWrapper>
       </NavLinksContainer>
     </NavContainer>
   );

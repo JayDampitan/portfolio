@@ -10,8 +10,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   flex-direction: column;
   color: #fff;
-  padding: 7rem 0;
-  height: 39.5vh;
+  height: 63vh;
 `;
 
 const FirstHeader = styled.div`
@@ -40,7 +39,7 @@ const firstVariant = {
   visible: {
     x: 0,
     transition: {
-      duration: 3,
+      duration: 8,
       type: "spring",
       mass: 0.2,
       damping: 9,
