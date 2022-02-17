@@ -8,7 +8,6 @@ import GradientLine from "./components/GradientLine";
 import Header from "./components/Header";
 import Media from "./components/Media";
 import About from "./components/About";
-import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 
@@ -22,11 +21,13 @@ function App() {
       <Navbar />
       <GradientLine />
       <Routes>
-        <Route path="/" element={<Header />} />
+        <Route path="/" element={<Header />} /> 
         <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<Experience />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path = '/test' element = {
+          <h2>Test</h2>
+        }/>
       </Routes>
       <Media />
       <GradientLine />
