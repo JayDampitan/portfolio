@@ -25,11 +25,12 @@ const NavLinksContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin: 0 5rem;
 `;
 
 const LinkWrapper = styled.div`
   display: flex;
-  justify-content: centerl
+  justify-content: center;
   align-items: center;
 `;
 
@@ -37,14 +38,10 @@ const NavLinks = styled(Link)`
   color: #ffff;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  transition: all 0.7s ease-in;
-
-  &:hover {
-    color: yellow;
   }
 `;
 

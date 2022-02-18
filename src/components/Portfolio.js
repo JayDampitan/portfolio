@@ -1,13 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Mail from "./AllSvgs";
-
-import JD from "../assets/portfolio.jpg";
-import movieApp from '../assets/movieapp.png';
-import toadtribune from '../assets/toadtribune.png';
-import pokepalace from '../assets/pokepalace.png';
-import toad from '../assets/toad.png';
 
 
 const PortfolioContainer = styled.div`
@@ -35,8 +28,8 @@ const PortfolioContent = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  height: 18rem;
-  width: 18rem;
+  height: 16rem;
+  width: 16rem;
   border-radius: 50%;
   background-image: linear-gradient(to right, red, yellow);
   display: flex;
@@ -45,8 +38,8 @@ const ImageContainer = styled.div`
 `;
 
 const TopCircle = styled.div`
-  height: 17.7rem;
-  width: 17.7rem;
+  height: 15.7rem;
+  width: 15.7rem;
   border-radius: 50%;
   background: #160f29;
   display: flex;
@@ -54,11 +47,6 @@ const TopCircle = styled.div`
   justify-content: center;
 `;
 
-const Image = styled.img`
-  width: 96%;
-  height: 96%;
-  border-radius: 50%;
-`;
 
 
 // -------------About Page Variants
@@ -85,31 +73,28 @@ const Portfolio = () => {
       variants={portfolioVariants}
       initial="hidden"
       animate="visible"
+      
     >
       <PortfolioTitle>Portfolio</PortfolioTitle>
 
       <PortfolioContent>
         <ImageContainer>
           <TopCircle>
-            <Image src={movieApp} />
           </TopCircle>
         </ImageContainer>
 
         <ImageContainer>
           <TopCircle>
-            <Image src={pokepalace} />
           </TopCircle>
         </ImageContainer>
 
         <ImageContainer>
           <TopCircle>
-            <Image src={toadtribune} />
           </TopCircle>
         </ImageContainer>
 
         <ImageContainer>
           <TopCircle>
-            <Image src={toad} />
           </TopCircle>
         </ImageContainer>
       </PortfolioContent>
