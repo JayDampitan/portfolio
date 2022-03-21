@@ -1,84 +1,58 @@
 import React from "react";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 
-// ----------------------------Header Styled Components
-
-const HeaderContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  height: 63vh;
-`;
-
-const FirstHeader = styled.div`
-  font-size: 130px;
-  font-family: "Alfa Slab One", sans-serif;
-`;
-
-const SecondHeader = styled.div`
-  font-size: 100px;
-  font-family: "Roboto", sans-serif;
-`;
-
-const ThirdHeader = styled.div`
-  font-size: 50px;
-  font-family: "Poppins", sans-serif;
-`;
+import {
+  HeaderContainer,
+  FirstHeader,
+  SecondHeader,
+  ThirdHeader,
+} from "./headerStyles";
 
 // ----------------------------Header Motion Variants
 const firstVariant = {
   hover: {
-    scale: 1.1,
+    boxShadow:
+      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
   },
   hidden: {
-    x: "-200vw",
+    opacity: 0,
   },
   visible: {
-    x: 0,
+    opacity: 1,
     transition: {
-      duration: 8,
-      type: "spring",
-      mass: 0.2,
-      damping: 9,
+      duration: 1,
     },
   },
 };
 
 const secondVariant = {
   hover: {
-    scale: 1.1,
+    boxShadow:
+      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
   },
   hidden: {
-    x: "-200vw",
+    opacity: 0,
   },
   visible: {
-    x: 0,
+    opacity: 1,
     transition: {
-      duration: 3,
-      type: "spring",
-      mass: 0.5,
-      damping: 8,
+      duration: 1,
     },
   },
 };
 
 const thirdVariant = {
   hover: {
-    scale: 1.1,
+    boxShadow:
+      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
   },
   hidden: {
-    x: "-200vw",
+    opacity: 0,
   },
   visible: {
-    x: 0,
+    opacity: 1,
     transition: {
-      duration: 6,
-      type: "spring",
-      mass: 0.6,
-      damping: 8,
+      duration: 1,
     },
   },
 };

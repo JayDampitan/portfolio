@@ -1,104 +1,68 @@
 import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
 
-const NavContainer = styled.div`
-  height: 180px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import {
+  NavContainer,
+  LogoContainer,
+  Logo,
+  NavLinksContainer,
+  LinkWrapper,
+  NavLinks,
+  Hamburger,
+  SwitchButton,
+} from "./navbarStyles";
 
-const Logo = styled.a`
-  padding: 1rem 5rem;
-  color: #ffff;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 3rem;
-  font-family: "Alfa Slab One", sans-serif;
-`;
-
-const NavLinksContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin: 0 5rem;
-`;
-
-const LinkWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const NavLinks = styled(Link)`
-  color: #ffff;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  padding: 1rem 3rem;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  }
-`;
-
-const Hamburger = styled.div``;
+import { Moon, Sun } from "../AllSvgs";
 
 const logoVariants = {
   hidden: {
-    y: "-100vh",
+    opacity: 0,
   },
   visible: {
-    y: 0,
-    delay: 2,
+    opacity: 1,
     transition: {
       duration: 1,
       type: "spring",
       mass: 0.5,
     },
   },
-  hover: {
-    rotate: 360,
-  },
 };
 
 const hoverVariants = {
   hoverMe: {
-    scale: 1.3,
+    boxShadow:
+      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
   },
 };
+
 const linksVariant = {
   hidden: {
-    x: "+100vw",
     opacity: 0,
   },
   visible: {
     opacity: 1,
-    x: 1,
     transition: {
-      duration: 1,
-      type: "spring",
-      mass: 0.4,
-      damping: 8,
+      duration: 1.5,
+      ease: "easeIn",
     },
   },
 };
 
-const Navbar = () => {
+const Navbar = ({ switchActive, setSwitchActive }) => {
+  const control = useAnimation();
+
   return (
     <NavContainer>
-      <Logo
-        as={motion.div}
-        variants={logoVariants}
-        initial="hidden"
-        animate="visible"
-        whileHover="hover"
-      >
-        JD
-      </Logo>
+  
+        <Logo
+          as={motion.div}
+          variants={logoVariants}
+          initial="hidden"
+          animate="visible"
+        >
+         <h2>JD</h2>
+        </Logo>
+   
 
       <NavLinksContainer
         as={motion.div}
@@ -107,6 +71,12 @@ const Navbar = () => {
         animate="visible"
       >
         <LinkWrapper
+          onClick={() => {
+            control.start({
+              boxShadow:
+                "inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4)",
+            });
+          }}
           as={motion.div}
           variants={hoverVariants}
           whileHover="hoverMe"
@@ -120,7 +90,7 @@ const Navbar = () => {
         >
           <NavLinks to="/about"> About </NavLinks>
         </LinkWrapper>
-        
+
         <LinkWrapper
           as={motion.div}
           variants={hoverVariants}
@@ -137,6 +107,16 @@ const Navbar = () => {
           <NavLinks to="/contact"> Contact </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>
+      <SwitchButton
+        onClick={() => {
+          setSwitchActive(!switchActive);
+        }}
+        as={motion.div}
+        variants={hoverVariants}
+        whileHover="hoverMe"
+      >
+        {switchActive ? <Moon fill='#E9E016' /> : <Sun fill='#E9E016'/>}
+      </SwitchButton>
     </NavContainer>
   );
 };
