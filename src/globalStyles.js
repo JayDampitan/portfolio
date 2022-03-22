@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.body};
         color: ${props => props.theme.text};
         width: 100vw;
-        height: 100vh;  
+        height: 100vh;
     }
 
 `;

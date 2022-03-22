@@ -1,39 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const AboutContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  color: ${(props) => props.theme.text};
-  height: 63vh;
-  width: 100vw;
-
-  @media only screen and (max-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    margin-top: 1rem;
-  }
-`;
-
-export const AboutTitle = styled.h2`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: auto;
-  padding: 1.2rem;
-  font-size: 2rem;
-  border: 4px solid ${(props) => props.theme.body};
-  border-radius: 1rem;
-  box-shadow: ${(props) => props.theme.boxShadow},
-    ${(props) => props.theme.inset};
-
-  @media (max-width: 1000px) {
-    font-size: 1.5rem;
-  }
-`;
 
 export const ContentContainer = styled.div`
   display: flex;

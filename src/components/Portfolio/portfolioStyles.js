@@ -7,6 +7,7 @@ export const PortfolioContainer = styled.div`
   align-items: center;
   color: ${(props) => props.theme.text};
   height: 63vh;
+  width: 100%;
 `;
 
 export const PortfolioTitle = styled.div`
