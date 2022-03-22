@@ -15,46 +15,34 @@ import {
   Button,
 } from "./contactStyles";
 
+import {PageContainer} from '../../subComponents/pageContainer'
+
+
 // -------------About Page Variants
 
-const contactVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 3,
-      mass: 0.4,
-      type: "spring",
-      damping: 8,
-    },
-  },
-};
+// const contactVariants = {
+//   hidden: {
+//     opacity: 0,
+//   },
+//   visible: {
+//     opacity: 1,
+//     transition: {
+//       duration: 3,
+//       mass: 0.4,
+//       type: "spring",
+//       damping: 8,
+//     },
+//   },
+// };
 
 const Contact = () => {
   return (
-    <ContactContainer
+    <PageContainer
       as={motion.div}
-      variants={contactVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <ContactTitle>Contact</ContactTitle>
-      <ContactContents>
-        <MailLogo src={mail}></MailLogo>
 
-        <ContactForm>
-          <Label>Name</Label>
-          <Input />
-          <Label>Email</Label>
-          <Input />
-          <Label>Message</Label>
-          <TextArea />
-          <Button>Connect</Button>
-        </ContactForm>
-      </ContactContents>
-    </ContactContainer>
+    >
+      
+    </PageContainer>
   );
 };
 

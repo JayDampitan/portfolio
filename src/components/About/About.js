@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 import JD from "../../assets/portfolio.jpg";
 import {
-  AboutContainer,
-  AboutTitle,
   ContentContainer,
   ImageContainer,
   TopCircle,
   Image,
   AboutMe,
 } from "./aboutStyles";
+
+import { PageContainer } from "../../subComponents/pageContainer";
 
 // -------------About Page Variants
 
@@ -28,15 +28,8 @@ const aboutVariants = {
 
 const About = () => {
   return (
-    <AboutContainer
-      as={motion.div}
-      variants={aboutVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <AboutTitle>Something About Me</AboutTitle>
-
-      <ContentContainer>
+    <PageContainer>
+      {/* <ContentContainer>
         <ImageContainer>
           <Image src={JD} />
         </ImageContainer>
@@ -51,8 +44,8 @@ const About = () => {
             explicabo tempora odio quia.
           </p>
         </AboutMe>
-      </ContentContainer>
-    </AboutContainer>
+      </ContentContainer> */}
+    </PageContainer>
   );
 };
 
