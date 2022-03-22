@@ -7,7 +7,7 @@ export const ContactContainer = styled.div`
   align-items: center;
   color: ${(props) => props.theme.text};
   height: 63vh;
-  padding: 0 13rem;
+  width: 100%auto;
 `;
 
 export const ContactTitle = styled.div`
