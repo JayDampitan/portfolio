@@ -6,21 +6,16 @@ export const Icons = styled.div`
   align-items: center;
   position: absolute;
   bottom: 0;
-  left: 38%;
-  padding: 1rem;
-
-  @media only screen and (max-width: 1000px) {
-    margin: 1.3rem 0;
-  }
+  left: 40%;
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  margin: 2rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
   padding: 0.5rem;
   border-radius: 50%;
   box-shadow: ${(props) => props.theme.boxShadow};
