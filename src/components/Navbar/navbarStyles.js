@@ -23,12 +23,12 @@ export const Logo = styled.div`
   font-weight: 900;
   font-size: 4rem;
   font-family: ${props => props.theme.fontFamily}, sans-serif;
-  text-shadow: ${(props) => props.theme.boxShadow};
+  text-shadow: ${(props) => props.theme.logoShadow};
   background-color: ${(props) => props.theme.body};
   user-select: none;
 
   h2{
-    color: ${props => props.theme.body};
+    color: ${props => props.theme.orange};
   }
 `;
 
@@ -45,7 +45,7 @@ export const LinkWrapper = styled.div`
   justify-content: center;
   border-radius: 1rem;
   align-items: center;
-  margin-left: 3rem;
+  margin-left: 2rem;
   border: ${(props) => props.theme.border};
   box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
@@ -53,7 +53,7 @@ export const LinkWrapper = styled.div`
 `;
 
 export const NavLinks = styled(Link)`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   padding: 1rem 3rem;

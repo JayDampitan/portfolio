@@ -2,68 +2,41 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import {
-  HeaderContainer,
-  FirstHeader,
-  SecondHeader,
-  ThirdHeader,
+  HeaderIntro,
+  HeaderName,
+  HeaderTitle,
+  ConnectButton,
+  HeaderBox,
+  FirstCircle,
+  SecondCircle,
+  Trapezoid,
+
 } from "./headerStyles";
 
 import { PageContainer } from "../../subComponents/pageContainer";
 
-// ----------------------------Header Motion Variants
-// const firstVariant = {
-//   hover: {
-//     boxShadow:
-//       " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-//   },
-//   hidden: {
-//     opacity: 0,
-//   },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       duration: 1,
-//     },
-//   },
-// };
-
-// const secondVariant = {
-//   hover: {
-//     boxShadow:
-//       " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-//   },
-//   hidden: {
-//     opacity: 0,
-//   },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       duration: 1,
-//     },
-//   },
-// };
-
-// const thirdVariant = {
-//   hover: {
-//     boxShadow:
-//       " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-//   },
-//   hidden: {
-//     opacity: 0,
-//   },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       duration: 1,
-//     },
-//   },
-// };
-
 const Header = () => {
   return (
-   <PageContainer>
+    <PageContainer>
+      <FirstCircle/>
+      <HeaderIntro>Hello my name is</HeaderIntro>
+      <HeaderName>
+        Jay Dampitan
+      </HeaderName>
+      <HeaderTitle>
+        software developer from california
+      </HeaderTitle>
+      <SecondCircle/>
+
+      <ConnectButton to="/contact">connect</ConnectButton>
+
+      <HeaderBox>
+        
+      </HeaderBox>
      
-   </PageContainer>
+    
+    </PageContainer>
+    
   );
 };
 

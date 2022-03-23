@@ -13,10 +13,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         overflow-x: hidden;
         font-family: "Source Sans Pro", sans-serif;
-        background-color: ${props => props.theme.body};
         color: ${props => props.theme.text};
         width: 100vw;
         height: 100vh;
+        background-color: ${props => props.theme.body};
     }
 
 `;
