@@ -53,6 +53,7 @@ export const ConnectButton = styled(Link)`
   text-decoration: none;
   font-family: ${(props) => props.theme.fontFamily};
   border: ${(props) => props.theme.border};
+  margin-top: 1rem;
   cursor: pointer;
 
   :hover {
@@ -66,32 +67,80 @@ export const ConnectButton = styled(Link)`
 
 export const HeaderBox = styled.div`
   grid-area: 2/6/9/10;
-  box-shadow: ${(props) => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow}, ${props => props.theme.inset};
   border-radius: 2rem;
   position: relative;
+  border: 5px solid ${props => props.theme.orange};
+`;
+
+export const CircleContainer = styled.div`
+  grid-area: 4/1/5/2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+`;
+
+export const FirstLine = styled.div`
+  width: 4rem;
+  height: 2px;
+  background-color: ${(props) => props.theme.text};
+  grid-area: 4/1/5/2;
+  top: 52.6%;
+  margin-bottom: 1rem;
 `;
 
 export const FirstCircle = styled.div`
-  width: 40%;
-  height: 50%;
+  width: 4rem;
+  height: 4rem;
   background-color: ${(props) => props.theme.body};
-  grid-area: 4/1/5/2;
   border-radius: 50%;
-  margin-top: 5rem;
-  margin-left: 5rem;
   box-shadow: ${(props) => props.theme.inset};
+  /* border-radius: 0px 50% 50% 50% ; */
+  border: ${(props) => props.theme.border};
+  margin-left: 2rem;
+  transform: translateY(1.3rem);
 `;
 
-export const SecondCircle = styled.div`
+export const SquareContainer = styled.div`
+  grid-area: 4/5/10/6;
+  display: flex;
+  align-items: space-between;
+  position: relative;
+`;
 
-  width: 40%;
-  height: 50%;
+export const Square = styled.div`
+  width: 4rem;
+  height: 4rem;
   background-color: ${(props) => props.theme.body};
-  grid-area: 4/5/5/6;
-  border-radius: 50%;
+
+  border-radius: 20%;
   margin-top: 5rem;
   margin-left: 3rem;
   box-shadow: ${(props) => props.theme.inset};
+`;
+
+export const SecondLine = styled.div`
+  position: absolute;
+  transform: rotate(90deg);
+  top: 17rem;
+  left: -1.9rem;
+  height: 2px;
+  width: 14rem;
+  background-color: ${(props) => props.theme.text};
+`;
+
+export const SecondSquareContainer = styled.div`
+  grid-area: 10/5/11/6;
+  display: flex;
+`;
+export const SecondSquare = styled.div`
+  height: 4rem;
+  width: 4rem;
+  background-color: ${(props) => props.theme.body};
+  box-shadow: ${(props) => props.theme.inset};
+  border-radius: 20%;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
 `;
 
 // export const Trapezoid = styled.div`
