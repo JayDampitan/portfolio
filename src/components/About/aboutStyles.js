@@ -2,19 +2,21 @@ import styled from 'styled-components';
 
 
 export const ContentContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  grid-area: 3/3/10/9;
   padding: 2rem 10rem;
   padding: 4rem;
+  border: ${props => props.theme.border};
+  box-shadow: ${props => props.theme.boxShadow};
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 10rem;;
 
-
-  @media (max-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    padding: 2rem 5rem;
-  }
+ h2{
+   margin-bottom: 4rem;
+ }
 `;
 
 export const ImageContainer = styled.div`
@@ -23,38 +25,52 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  top: -7rem;
+  left: -10rem;
   padding: 0.5rem;
   border: 5px solid ${(props) => props.theme.body};
   box-shadow: ${(props) => props.theme.boxShadow},
     ${(props) => props.theme.inset};
-    margin: 0 5rem;
-
-  @media (max-width: 1000px) {
-    height: 13rem;
-    width: 13rem;
-  }
 `;
 
 export const Image = styled.img`
-  width: 97%;
+  width: 100%;
   border-radius: 50%;
 `;
 
 export const AboutMe = styled.div`
+  grid-area: 4/4/9/8;
+  box-shadow: ${(props) => props.theme.boxShadow};
+  border-radius: 1rem;
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
-  width: 25vw;
-  height: 20vh;
-  border: 4px solid ${(props) => props.theme.body};
-  box-shadow: ${(props) => props.theme.boxShadow},
-    ${(props) => props.theme.inset};
-  padding: 1.4rem;
-  border-radius: 1rem;
+  justify-content: center;
+  padding: 5rem;
 
-  @media (max-width: 1000px) {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
+  p{ 
+    display: inline-block;
+    }
 `;
+
+export const SvgContainer = styled.div`
+  grid-area: 7/4/8/8;
+  box-shadow: ${props => props.theme.boxShadow};
+  border-radius: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+export const SvgBox = styled.div`
+  width: 3rem;
+  height: 3rem;
+  border: ${props => props.theme.border};
+  box-shadow: ${props => props.theme.boxShadow};
+  border-radius: 50%;
+  padding: .5rem;
+    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  `

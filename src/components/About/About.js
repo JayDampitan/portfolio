@@ -1,5 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { CSS, Framer,
+  StyledComponents,
+  HTML,
+JavaScript,
+ReactIcon,
+ReduxIcon,
+} from "../AllSvgs";
 
 import JD from "../../assets/portfolio.jpg";
 import {
@@ -8,6 +15,8 @@ import {
   TopCircle,
   Image,
   AboutMe,
+  SvgContainer,
+  SvgBox,
 } from "./aboutStyles";
 
 import { PageContainer } from "../../subComponents/pageContainer";
@@ -29,22 +38,27 @@ const aboutVariants = {
 const About = () => {
   return (
     <PageContainer>
-      {/* <ContentContainer>
+      <ContentContainer>
         <ImageContainer>
           <Image src={JD} />
         </ImageContainer>
+        <h2>Something About me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium totam laudantium rerum quia. Culpa expedita tempora provident saepe itaque laboriosam autem fugit minima amet hic eligendi unde necessitatibus sequi dolores voluptate, neque nesciunt. Rem dignissimos laudantium, impedit dolore quis expedita dicta illo repellendus, fugiat modi debitis, iusto quos nostrum officiis asperiores laborum aspernatur delectus hic. Iusto eligendi necessitatibus atque eius architecto hic dicta quo nam totam, natus nulla similique. Totam dolores error eos excepturi ullam vel commodi aperiam quas quod.</p>
+       
+      </ContentContainer>
+      <SvgContainer>
+      <SvgBox>< HTML /></SvgBox>
+      <SvgBox><CSS/></SvgBox>
+      <SvgBox><JavaScript/></SvgBox>
+      <SvgBox><ReactIcon/></SvgBox>
+      <SvgBox><ReduxIcon/></SvgBox>
+      <SvgBox><Framer/></SvgBox>
+      <SvgBox><StyledComponents/></SvgBox>
+      </SvgContainer>
+      
 
-        <AboutMe>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dicta
-            rem, officia similique ex quis officiis voluptatum! Culpa adipisci
-            et numquam, vero beatae, architecto iure consequuntur natus nihil
-            odit reprehenderit aperiam, blanditiis doloribus laborum doloremque
-            provident est ducimus veniam ipsa qui ut nam! Quis, quae? Neque
-            explicabo tempora odio quia.
-          </p>
-        </AboutMe>
-      </ContentContainer> */}
+ 
+      
     </PageContainer>
   );
 };
