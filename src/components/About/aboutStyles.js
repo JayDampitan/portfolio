@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const ContentContainer = styled.div`
-  grid-area: 3/3/10/9;
+  grid-area: 4/4/12/11;
   padding: 2rem 10rem;
   padding: 4rem;
   border: ${props => props.theme.border};
@@ -16,11 +16,12 @@ export const ContentContainer = styled.div`
 
  h2{
    margin-bottom: 4rem;
+   border-bottom: 3px solid ${props => props.theme.orange};
  }
 `;
 
 export const ImageContainer = styled.div`
-  width: 18rem;
+  width: 15rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -40,7 +41,6 @@ export const Image = styled.img`
 `;
 
 export const AboutMe = styled.div`
-  grid-area: 4/4/9/8;
   box-shadow: ${(props) => props.theme.boxShadow};
   border-radius: 1rem;
   display: flex;
@@ -54,12 +54,15 @@ export const AboutMe = styled.div`
 `;
 
 export const SvgContainer = styled.div`
-  grid-area: 7/4/8/8;
+  grid-area: 9/5/11/11;
   box-shadow: ${props => props.theme.boxShadow};
   border-radius: 1.5rem;
   padding: 1rem;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: 40%;
 `;
 
 export const SvgBox = styled.div`

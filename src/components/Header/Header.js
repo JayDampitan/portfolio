@@ -8,15 +8,15 @@ import {
   ConnectButton,
   HeaderBox,
   CircleContainer,
-  FirstCircle,
+  Circle,
   Square,
   FirstLine,
   SecondLine,
   SquareContainer,
-  SecondSquareContainer,
-  SecondSquare,
+  ThirdLineContainer,
+  ThirdLine,
+  SecondCircleContainer,
   Trapezoid,
-
 } from "./headerStyles";
 
 import { PageContainer } from "../../subComponents/pageContainer";
@@ -25,57 +25,54 @@ const Header = () => {
   return (
     <PageContainer>
       <CircleContainer>
-        <FirstLine 
-          as = {motion.div}
-          initial = {{
-            x: -100
+        <FirstLine
+          as={motion.div}
+          initial={{
+            x: -100,
           }}
-          animate = {{
-            x: 1
+          animate={{
+            x: 1,
           }}
-          transition ={{
-            duration: 1
+          transition={{
+            duration: 1,
           }}
         />
-        <FirstCircle/>
+        <Circle />
       </CircleContainer>
-     
+
       <HeaderIntro>Hello my name is</HeaderIntro>
       <HeaderName
-        as = {motion.div}
-        initial = {{
-          x: -100
+        as={motion.div}
+        initial={{
+          x: -100,
         }}
-        animate = {{
-          x: 1
+        animate={{
+          x: 1,
         }}
-        transition = {{
-          duration: 2
+        transition={{
+          duration: 2,
         }}
       >
         Jay Dampitan
       </HeaderName>
-      <HeaderTitle>
-        software developer from california
-      </HeaderTitle>
+      <HeaderTitle>software developer from california</HeaderTitle>
       <SquareContainer>
-        <Square/>
-        <SecondLine/>
+        <Square />
+        <SecondLine />
+        <Square />
       </SquareContainer>
-      <SecondSquareContainer>
-        <SecondSquare/>
-      </SecondSquareContainer>
-     
+
+      <ThirdLineContainer>
+        <ThirdLine />
+      </ThirdLineContainer>
+      <SecondCircleContainer>
+        <Circle />
+      </SecondCircleContainer>
 
       <ConnectButton to="/contact">connect</ConnectButton>
 
-      <HeaderBox>
-        
-      </HeaderBox>
-     
-    
+      <HeaderBox></HeaderBox>
     </PageContainer>
-    
   );
 };
 

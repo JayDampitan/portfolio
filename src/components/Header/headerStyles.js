@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const HeaderIntro = styled.div`
   color: ${(props) => props.theme.text};
-  grid-area: 3/2/4/4;
+  grid-area: 4/3/5/5;
   font-family: ${(props) => props.theme.fontFamily};
   text-transform: uppercase;
   color: ${(props) => props.theme.text};
@@ -12,35 +12,35 @@ export const HeaderIntro = styled.div`
   font-weight: 900;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-start;
 `;
 
 export const HeaderName = styled.div`
   display: grid;
-  grid-area: 4/2/5/5;
+  grid-area: 5/3/6/7;
   align-items: flex-start;
   font-size: 4rem;
   font-family: ${(props) => props.theme.fontFamily};
   text-transform: uppercase;
   color: ${(props) => props.theme.orange};
-  margin: 1rem 0;
-  border-bottom: 2px solid ${(props) => props.theme.text};
+  border-bottom: 3px solid ${(props) => props.theme.text};
   word-spacing: 1rem;
   letter-spacing: 0.2rem;
 `;
 
 export const HeaderTitle = styled.div`
-  grid-area: 5/2/6/4;
+  grid-area: 6/3/7/7;
   font-size: 1.2rem;
   color: ${(props) => props.theme.text};
   text-transform: uppercase;
   letter-spacing: 0.3rem; ;
+  margin: 1rem 0px;
 `;
 
 export const ConnectButton = styled(Link)`
   justify-content: center;
   display: flex;
-  grid-area: 6/2/7/3;
+  grid-area: 7/3/8/4;
   justify-content: center;
   align-items: center;
   border-radius: 4rem;
@@ -53,43 +53,40 @@ export const ConnectButton = styled(Link)`
   text-decoration: none;
   font-family: ${(props) => props.theme.fontFamily};
   border: ${(props) => props.theme.border};
-  margin-top: 1rem;
   cursor: pointer;
 
   :hover {
-    /* background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4 ); */
-    /* background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199 ); */
-    /* background-size: 400%; */
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.orange};
   }
 `;
 
 export const HeaderBox = styled.div`
-  grid-area: 2/6/9/10;
-  box-shadow: ${(props) => props.theme.boxShadow}, ${props => props.theme.inset};
+  grid-area: 3/8/11/13;
+  box-shadow: ${(props) => props.theme.boxShadow},
+    ${(props) => props.theme.inset};
   border-radius: 2rem;
   position: relative;
-  border: 5px solid ${props => props.theme.orange};
+  border: 5px solid ${(props) => props.theme.orange};
 `;
 
 export const CircleContainer = styled.div`
-  grid-area: 4/1/5/2;
+  grid-area: 5/1/6/3;
   display: flex;
+  justify-content: space-around;
   align-items: flex-end;
-  justify-content: center;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
 `;
 
 export const FirstLine = styled.div`
-  width: 4rem;
+  width: 40%;
   height: 2px;
   background-color: ${(props) => props.theme.text};
-  grid-area: 4/1/5/2;
-  top: 52.6%;
-  margin-bottom: 1rem;
+  margin-bottom: -1rem;
 `;
 
-export const FirstCircle = styled.div`
+export const Circle = styled.div`
   width: 4rem;
   height: 4rem;
   background-color: ${(props) => props.theme.body};
@@ -97,50 +94,52 @@ export const FirstCircle = styled.div`
   box-shadow: ${(props) => props.theme.inset};
   /* border-radius: 0px 50% 50% 50% ; */
   border: ${(props) => props.theme.border};
-  margin-left: 2rem;
   transform: translateY(1.3rem);
 `;
 
 export const SquareContainer = styled.div`
-  grid-area: 4/5/10/6;
+  grid-area: 5/7/12/8;
   display: flex;
-  align-items: space-between;
-  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 `;
 
 export const Square = styled.div`
   width: 4rem;
   height: 4rem;
   background-color: ${(props) => props.theme.body};
-
   border-radius: 20%;
-  margin-top: 5rem;
-  margin-left: 3rem;
   box-shadow: ${(props) => props.theme.inset};
 `;
 
 export const SecondLine = styled.div`
-  position: absolute;
   transform: rotate(90deg);
-  top: 17rem;
-  left: -1.9rem;
   height: 2px;
-  width: 14rem;
+  width: 80%;
   background-color: ${(props) => props.theme.text};
+  margin: 3rem;
 `;
 
-export const SecondSquareContainer = styled.div`
-  grid-area: 10/5/11/6;
+export const ThirdLineContainer = styled.div`
+  grid-area: 11/7/13/11;
   display: flex;
+  align-items: center;
+  justify-content: center;
 `;
-export const SecondSquare = styled.div`
-  height: 4rem;
-  width: 4rem;
-  background-color: ${(props) => props.theme.body};
-  box-shadow: ${(props) => props.theme.inset};
-  border-radius: 20%;
-  margin-left: 3rem;
-  margin-bottom: 1rem;
+
+export const ThirdLine = styled.div`
+  background-color: ${(props) => props.theme.text};
+  width: 50%;
+  height: 2px;
+`;
+
+export const SecondCircleContainer = styled.div`
+  grid-area: 11/10/13/12;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right:8rem;
 `;
 
 // export const Trapezoid = styled.div`

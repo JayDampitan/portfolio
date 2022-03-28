@@ -1,59 +1,69 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const PortfolioContainer = styled.div`
+// ------ Portfolio Cards
+
+export const Card = styled.div`
+  width: 100%;
+  height: 100%;
+  border: ${(props) => props.theme.border};
+  box-shadow: ${(props) => props.theme.inset};
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
   color: ${(props) => props.theme.text};
-  height: 63vh;
-  width: 100%;
-`;
 
-export const PortfolioTitle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: auto;
-  font-size: 2rem;
-  border: 4px solid ${(props) => props.theme.body};
-  box-shadow: ${(props) => props.theme.boxShadow},
-    ${(props) => props.theme.inset};
-  padding: 1.2rem;
-  border-radius: 1rem;
-  user-select: none;
-`;
+  h3 {
+    color: ${(props) => props.theme.text};
+    text-transform: uppercase;
+    font-family: ${(props) => props.theme.fontFamily};
+    border-bottom: 2px solid ${(props) => props.theme.orange};
+  }
 
-export const PortfolioContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 5rem;
-
-  @media only screen and (max-width: 1000px) {
-    display: flex;
-    align-items: center;
+  p {
+    font-family: ${(props) => props.theme.fontFamily};
+    font-size: 0.9rem;
+    padding: 0 2rem;
   }
 `;
 
-export const ContentContainer = styled.div`
-  height: 16rem;
-  width: 16rem;
-  border-radius: 20%;
+export const FirstCardContainer = styled.div`
+  grid-area: 4/2/11/4;
+`;
+
+export const SecondCardContainer = styled.div`
+  grid-area: 4/5/11/7;
+`;
+
+export const ThirdCardContainer = styled.div`
+  grid-area: 4/8/11/10;
+`;
+
+export const FourthCardContainer = styled.div`
+  grid-area: 4/11/11/13;
+`;
+
+// ------ Buttons
+
+export const PortFolioVisit = styled(Link)`
+  width: 10rem;
+  height: 3rem;
+  box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   display: flex;
   align-items: center;
   justify-content: center;
-  border: ${(props) => props.theme.border};
-  margin: 0 4rem;
-  box-shadow: ${(props) => props.theme.boxShadow};
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: ${(props) => (props) => props.theme.orange};
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 
-  @media only screen and (max-width: 1000px) {
-    display: flex;
-    align-items: center;
-    height: 13rem;
-    width: 13rem;
-    margin: 0 1rem;
+  :hover{
+    box-shadow: ${props => props.theme.inset};
   }
 `;

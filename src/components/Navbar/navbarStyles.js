@@ -28,7 +28,8 @@ export const Logo = styled.div`
   user-select: none;
 
   h2{
-    color: ${props => props.theme.orange};
+    color: ${props => props.theme.body};
+    
   }
 `;
 
