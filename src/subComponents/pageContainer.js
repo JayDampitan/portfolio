@@ -7,6 +7,6 @@ export const PageContainer = styled.div`
   height: 70vh;
   user-select: none;
   display: grid;
-  grid-template-columns: repeat(10, 1fr );
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(13, 1fr );
+  grid-template-rows: repeat(12, 1fr);
 `;

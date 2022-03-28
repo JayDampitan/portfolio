@@ -56,9 +56,6 @@ const Navbar = ({ switchActive, setSwitchActive }) => {
   
         <Logo
           as={motion.div}
-          variants={logoVariants}
-          initial="hidden"
-          animate="visible"
         >
          <h2>JD</h2>
         </Logo>

@@ -47,13 +47,13 @@ const About = () => {
        
       </ContentContainer>
       <SvgContainer>
-      <SvgBox>< HTML /></SvgBox>
-      <SvgBox><CSS/></SvgBox>
-      <SvgBox><JavaScript/></SvgBox>
-      <SvgBox><ReactIcon/></SvgBox>
-      <SvgBox><ReduxIcon/></SvgBox>
-      <SvgBox><Framer/></SvgBox>
-      <SvgBox><StyledComponents/></SvgBox>
+      <SvgBox>< HTML fill='currentColor'/></SvgBox>
+      <SvgBox><CSS  fill='currentColor'/></SvgBox>
+      <SvgBox><JavaScript fill='currentColor'/></SvgBox>
+      <SvgBox><ReactIcon fill='currentColor'/></SvgBox>
+      <SvgBox><ReduxIcon fill='currentColor'/></SvgBox>
+      <SvgBox><Framer fill='currentColor'/></SvgBox>
+      <SvgBox><StyledComponents fill='currentColor'/></SvgBox>
       </SvgContainer>
       
 
