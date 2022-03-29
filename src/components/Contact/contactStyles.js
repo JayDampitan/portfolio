@@ -1,70 +1,82 @@
 import styled from "styled-components";
 
-export const ContactContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: ${(props) => props.theme.text};
-  height: 63vh;
-  width: 100%auto;
-`;
-
-export const ContactTitle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: auto;
-  font-size: 2rem;
-  border: 2px solid red;
-  padding: 1.2rem;
-  border-radius: 1rem;
-  border: 4px solid ${(props) => props.theme.body};
-  box-shadow: ${(props) => props.theme.boxShadow},
-    ${(props) => props.theme.inset};
-`;
-
-export const ContactContents = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: space-between;
-`;
-
-export const MailLogo = styled.img`
-  width: 30%;
-  min-height: 40%;
-`;
-
 export const ContactForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  padding: 0 5rem;
+  grid-area: 2/4/12/11;
+  box-shadow: ${(props) => props.theme.boxShadow};
+  background-color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
+  border: ${(props) => props.theme.border};
 `;
 
-export const Label = styled.label`
-  font-size: 1.8rem;
-  margin: 0.5rem;
+export const ContactInfoContainer = styled.div`
+  grid-area: 2/4/12/8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 2rem;
+  color: ${(props) => props.theme.orange};
+  font-family: ${(props) => props.theme.fontFamily};
+
 `;
 
 export const Input = styled.input`
-  height: 2.5rem;
-  width: 25rem;
-  border-radius: 0.7rem;
+  box-shadow: ${(props) => props.theme.inset};
+  background-color: ${(props) => props.theme.body};
+  border-radius: 0.5rem;
+  border: ${(props) => props.theme.border};
+  width: 60%;
+  height: 10%;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  color: ${(props) => props.theme.text};
+  padding-left: 1.4rem;
+  font-family: ${(props) => props.theme.fontFamily};
+  outline: none;
 `;
 
 export const TextArea = styled.textarea`
-  width: 30rem;
-  height: 10rem;
-  border-radius: 0.7rem;
+  box-shadow: ${(props) => props.theme.inset};
+  background-color: ${(props) => props.theme.body};
+  border-radius: 0.8rem;
+  border: ${(props) => props.theme.border};
+  width: 60%;
+  height: 40%;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  font-size: 1.3rem;
+  color: ${(props) => props.theme.text};
+  font-family: ${(props) => props.theme.fontFamily};
+  outline: none;
+  resize: none;
 `;
 
-export const Button = styled.button`
-  width: 10rem;
-  height: 3rem;
-  background: yellow;
-  border-radius: 0.7rem;
-  margin: 1rem;
-  font-size: 1.3rem;
-  color: #160f29;
+export const SubmitButton = styled.button`
+  width: 8rem;
+  height: 3.5rem;
+  box-shadow: ${(props) => props.theme.boxShadow};
+  background-color: ${(props) => props.theme.body};
+  border-radius: 2rem;
+  border: ${(props) => props.theme.border};
+  font-family: ${(props) => props.theme.fontFamily};
+  letter-spacing: 0.2rem;
+  color: ${(props) => props.theme.text};
+  cursor: pointer;
+  font-weight: 700;
+  margin: .5rem .3rem;
+
+  :hover {
+    color: ${(props) => props.theme.body};
+    background-color: ${(props) => props.theme.orange};
+    transition: ease-in-out .3s;
+  }
+`;
+
+export const ContactImageContainer = styled.div`
+    grid-area: 3/7/11/11;
+    box-shadow: ${props => props.theme.boxShadow}, ${props => props.theme.inset};
+    border: 5px solid ${props => props.theme.body};
+    border-radius: 2rem;
+    margin: 0 3rem;
+    
 `;

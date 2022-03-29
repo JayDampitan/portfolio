@@ -58,6 +58,7 @@ export const ConnectButton = styled(Link)`
   :hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.orange};
+    transition: ease-in-out .3s;
   }
 `;
 

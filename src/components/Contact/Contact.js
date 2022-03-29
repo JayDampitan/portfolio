@@ -1,49 +1,34 @@
 import React from "react";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import mail from "../../assets/mail.svg";
 import {
-  ContactContainer,
-  ContactTitle,
-  ContactContents,
-  MailLogo,
   ContactForm,
-  Label,
+  ContactInfoContainer,
   Input,
   TextArea,
-  Button,
+  SubmitButton,
+  ContactImageContainer
 } from "./contactStyles";
 
-import {PageContainer} from '../../subComponents/pageContainer'
+import { PageContainer } from "../../subComponents/pageContainer";
 
-
-// -------------About Page Variants
-
-// const contactVariants = {
-//   hidden: {
-//     opacity: 0,
-//   },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       duration: 3,
-//       mass: 0.4,
-//       type: "spring",
-//       damping: 8,
-//     },
-//   },
-// };
 
 const Contact = () => {
-  return (
-    <PageContainer
-      as={motion.div}
+  return <PageContainer as={motion.div}>
+      <ContactForm/>
+      <ContactInfoContainer>
+        <h2>Get in touch</h2>
+      <Input placeholder="Name"/>
+      <Input placeholder="Email"/>
+      <TextArea placeholder="Message"/>
+      <SubmitButton>Submit</SubmitButton>
+      </ContactInfoContainer>
+      <ContactImageContainer>
+        
+      </ContactImageContainer>
 
-    >
-      
-    </PageContainer>
-  );
+  </PageContainer>;
 };
 
 export default Contact;
