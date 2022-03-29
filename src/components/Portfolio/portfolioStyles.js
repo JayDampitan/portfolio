@@ -14,6 +14,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-evenly;
   color: ${(props) => props.theme.text};
+  padding: 2rem;
 
   h3 {
     color: ${(props) => props.theme.text};
@@ -30,19 +31,19 @@ export const Card = styled.div`
 `;
 
 export const FirstCardContainer = styled.div`
-  grid-area: 4/2/11/4;
+  grid-area: 3/2/10/4;
 `;
 
 export const SecondCardContainer = styled.div`
-  grid-area: 4/5/11/7;
+  grid-area: 3/5/10/7;
 `;
 
 export const ThirdCardContainer = styled.div`
-  grid-area: 4/8/11/10;
+  grid-area: 3/8/10/10;
 `;
 
 export const FourthCardContainer = styled.div`
-  grid-area: 4/11/11/13;
+  grid-area: 3/11/10/13;
 `;
 
 // ------ Buttons

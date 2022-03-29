@@ -33,7 +33,7 @@ export const HeaderTitle = styled.div`
   font-size: 1.2rem;
   color: ${(props) => props.theme.text};
   text-transform: uppercase;
-  letter-spacing: 0.3rem; ;
+  letter-spacing: 0.3rem;
   margin: 1rem 0px;
 `;
 
@@ -58,20 +58,11 @@ export const ConnectButton = styled(Link)`
   :hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.orange};
-    transition: ease-in-out .3s;
+    transition: ease-in-out 0.3s;
   }
 `;
 
-export const HeaderBox = styled.div`
-  grid-area: 3/8/11/13;
-  box-shadow: ${(props) => props.theme.boxShadow},
-    ${(props) => props.theme.inset};
-  border-radius: 2rem;
-  position: relative;
-  border: 5px solid ${(props) => props.theme.orange};
-`;
-
-export const CircleContainer = styled.div`
+export const FirstCircleContainer = styled.div`
   grid-area: 5/1/6/3;
   display: flex;
   justify-content: space-around;
@@ -140,8 +131,27 @@ export const SecondCircleContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-right:8rem;
+  padding-right: 8rem;
 `;
+
+export const HeaderBox = styled.div`
+  grid-area: 3/8/11/13;
+  box-shadow: ${(props) => props.theme.boxShadow},
+    ${(props) => props.theme.inset};
+  border-radius: 2rem;
+  border: 5px solid ${(props) => props.theme.orange};
+  /* padding: .5rem 0;
+  padding-left: 9rem; */
+`;
+
+export const HeaderImage = styled.img`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 5rem;
+  padding-top: .6rem;
+`
 
 // export const Trapezoid = styled.div`
 //   clip-path: polygon(25% 15%, 73% 15%, 100% 100%, 0% 100%);

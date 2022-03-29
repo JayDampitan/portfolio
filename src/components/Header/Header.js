@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import HeaderBoxImage from '../../assets/headerBoxImage.png'
 
 import {
   HeaderIntro,
@@ -7,7 +8,7 @@ import {
   HeaderTitle,
   ConnectButton,
   HeaderBox,
-  CircleContainer,
+  FirstCircleContainer,
   Circle,
   Square,
   FirstLine,
@@ -16,62 +17,107 @@ import {
   ThirdLineContainer,
   ThirdLine,
   SecondCircleContainer,
+  HeaderImage,
   Trapezoid,
 } from "./headerStyles";
+
+import {
+  firstLineVariant,
+  firstCircleVariant,
+  headerIntroVariant,
+  squareContainerVariant,
+  thirdContainerVariant,
+  secondCircleVariant,
+  headerBoxVariant,
+}
+from './headerVariants'
 
 import { PageContainer } from "../../subComponents/pageContainer";
 
 const Header = () => {
   return (
     <PageContainer>
-      <CircleContainer>
-        <FirstLine
-          as={motion.div}
-          initial={{
-            x: -100,
-          }}
-          animate={{
-            x: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
-        />
-        <Circle />
-      </CircleContainer>
 
-      <HeaderIntro>Hello my name is</HeaderIntro>
+      <FirstCircleContainer>
+        <FirstLine 
+          as = {motion.div}
+          variants = {firstLineVariant}
+          initial = 'hidden'
+          animate = 'visible'
+        />
+        <Circle 
+        as = {motion.div}
+        variants = {firstCircleVariant}
+        initial = 'hidden'
+        animate = 'visible'
+        />
+      </FirstCircleContainer>
+
+      <HeaderIntro
+        as = {motion.div}
+        variants = {headerIntroVariant}
+        initial = 'hidden'
+        animate = 'visible'
+
+      >Hello my name is</HeaderIntro>
       <HeaderName
-        as={motion.div}
-        initial={{
-          x: -100,
-        }}
-        animate={{
-          x: 1,
-        }}
-        transition={{
-          duration: 2,
-        }}
+        as = {motion.div}
+        variants = {headerIntroVariant}
+        initial = 'hidden'
+        animate = 'visible'
       >
         Jay Dampitan
       </HeaderName>
-      <HeaderTitle>software developer from california</HeaderTitle>
-      <SquareContainer>
+      <HeaderTitle
+        as = {motion.div}
+        variants = {headerIntroVariant}
+        initial = 'hidden'
+        animate = 'visible'
+      >software developer from california</HeaderTitle>
+      <ConnectButton to="/contact"
+        as = {motion.div}
+        variants = {headerIntroVariant}
+        initial = 'hidden'
+        animate = 'visible'
+      >connect</ConnectButton>
+
+
+      <SquareContainer 
+        as = {motion.div}
+        variants = {squareContainerVariant}
+        initial = 'hidden'
+        animate = 'visible'
+      >
         <Square />
         <SecondLine />
         <Square />
       </SquareContainer>
 
       <ThirdLineContainer>
-        <ThirdLine />
+        <ThirdLine 
+        as = {motion.div}
+        variants = {thirdContainerVariant}
+        initial = 'hidden'
+        animate = 'visible'
+      />
       </ThirdLineContainer>
       <SecondCircleContainer>
-        <Circle />
+        <Circle 
+          as = {motion.div}
+          variants = {secondCircleVariant}
+          initial = 'hidden'
+          animate = 'visible'
+        />
       </SecondCircleContainer>
+      <HeaderBox
+        as = {motion.div}
+        variants = {headerBoxVariant}
+        initial = 'hidden'
+        animate = 'visible'
+      >
+       <HeaderImage src={HeaderBoxImage}/>
 
-      <ConnectButton to="/contact">connect</ConnectButton>
-
-      <HeaderBox></HeaderBox>
+      </HeaderBox>
     </PageContainer>
   );
 };

@@ -6,7 +6,7 @@ export const Icons = styled.div`
   align-items: center;
   position: absolute;
   bottom: 0;
-  left: 40%;
+  left: 43%;
 `;
 
 export const IconContainer = styled.div`
