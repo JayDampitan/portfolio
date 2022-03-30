@@ -85,7 +85,7 @@ const Navbar = ({ switchActive, setSwitchActive }) => {
           variants={hoverVariants}
           whileHover="hoverMe"
         >
-          <NavLinks to="/about"> me </NavLinks>
+          <NavLinks to="/about"> About </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper

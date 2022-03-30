@@ -84,9 +84,7 @@ export const Circle = styled.div`
   background-color: ${(props) => props.theme.body};
   border-radius: 50%;
   box-shadow: ${(props) => props.theme.inset};
-  /* border-radius: 0px 50% 50% 50% ; */
   border: ${(props) => props.theme.border};
-  transform: translateY(1.3rem);
 `;
 
 export const SquareContainer = styled.div`
@@ -117,7 +115,8 @@ export const ThirdLineContainer = styled.div`
   grid-area: 11/7/13/11;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 2rem;
 `;
 
 export const ThirdLine = styled.div`
@@ -126,13 +125,6 @@ export const ThirdLine = styled.div`
   height: 2px;
 `;
 
-export const SecondCircleContainer = styled.div`
-  grid-area: 11/10/13/12;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-right: 8rem;
-`;
 
 export const HeaderBox = styled.div`
   grid-area: 3/8/11/13;
@@ -140,8 +132,6 @@ export const HeaderBox = styled.div`
     ${(props) => props.theme.inset};
   border-radius: 2rem;
   border: 5px solid ${(props) => props.theme.orange};
-  /* padding: .5rem 0;
-  padding-left: 9rem; */
 `;
 
 export const HeaderImage = styled.img`
@@ -151,7 +141,21 @@ export const HeaderImage = styled.img`
   justify-content: center;
   padding-left: 5rem;
   padding-top: .6rem;
-`
+`;
+
+export const FourthLineContainer = styled.div`
+  grid-area: 11/11/13/14;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 2rem;
+`;
+
+export const FourthLine = styled.div`
+  background-color: ${(props) => props.theme.text};
+  width: 50%;
+  height: 2px;
+`;
 
 // export const Trapezoid = styled.div`
 //   clip-path: polygon(25% 15%, 73% 15%, 100% 100%, 0% 100%);

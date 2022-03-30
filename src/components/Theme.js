@@ -2,7 +2,7 @@ export const lightMode = {
   body: "#C8C9D0",
   text: "#232427",
   boxShadow:
-    "-3px -3px 8px rgba(10, 10, 10, .2) , 3px 3px 8px rgba(240, 240, 240, .4)",
+    "-3px -3px 5px rgba(10, 10, 10, .2) , 3px 3px 8px rgba(240, 240, 240, .4)",
   border: "2px solid #BEBEBE",
   inset:
     "inset -3px -3px 8px rgba(10, 10, 10, .3) , inset 3px 3px 8px rgba(240,240,240, 0.6)",

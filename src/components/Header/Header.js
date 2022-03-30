@@ -16,8 +16,9 @@ import {
   SquareContainer,
   ThirdLineContainer,
   ThirdLine,
-  SecondCircleContainer,
   HeaderImage,
+  FourthLineContainer,
+  FourthLine,
   Trapezoid,
 } from "./headerStyles";
 
@@ -103,15 +104,24 @@ const Header = () => {
           initial="hidden"
           animate="visible"
         />
-      </ThirdLineContainer>
-      <SecondCircleContainer>
         <Circle
           as={motion.div}
           variants={secondCircleVariant}
           initial="hidden"
           animate="visible"
         />
-      </SecondCircleContainer>
+      </ThirdLineContainer>
+
+      <FourthLineContainer
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <FourthLine/>
+        <Square/>
+      </FourthLineContainer>
+
       <HeaderBox
         as={motion.div}
         variants={headerBoxVariant}
@@ -120,6 +130,8 @@ const Header = () => {
       >
         <HeaderImage src={HeaderBoxImage} />
       </HeaderBox>
+
+
     </PageContainer>
   );
 };
