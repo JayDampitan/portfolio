@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-import mail from "../../assets/mail.svg";
 import {
   ContactForm,
   ContactInfoContainer,
