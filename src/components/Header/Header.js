@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeaderBoxImage from '../../assets/headerBoxImage.png'
+import HeaderBoxImage from "../../assets/headerBoxImage.png";
 
 import {
   HeaderIntro,
@@ -29,64 +29,67 @@ import {
   thirdContainerVariant,
   secondCircleVariant,
   headerBoxVariant,
-}
-from './headerVariants'
+} from "./headerVariants";
 
 import { PageContainer } from "../../subComponents/pageContainer";
 
 const Header = () => {
   return (
     <PageContainer>
-
       <FirstCircleContainer>
-        <FirstLine 
-          as = {motion.div}
-          variants = {firstLineVariant}
-          initial = 'hidden'
-          animate = 'visible'
+        <FirstLine
+          as={motion.div}
+          variants={firstLineVariant}
+          initial="hidden"
+          animate="visible"
         />
-        <Circle 
-        as = {motion.div}
-        variants = {firstCircleVariant}
-        initial = 'hidden'
-        animate = 'visible'
+        <Circle
+          as={motion.div}
+          variants={firstCircleVariant}
+          initial="hidden"
+          animate="visible"
         />
       </FirstCircleContainer>
 
       <HeaderIntro
-        as = {motion.div}
-        variants = {headerIntroVariant}
-        initial = 'hidden'
-        animate = 'visible'
-
-      >Hello my name is</HeaderIntro>
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        Hello, my name is
+      </HeaderIntro>
       <HeaderName
-        as = {motion.div}
-        variants = {headerIntroVariant}
-        initial = 'hidden'
-        animate = 'visible'
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
       >
         Jay Dampitan
       </HeaderName>
       <HeaderTitle
-        as = {motion.div}
-        variants = {headerIntroVariant}
-        initial = 'hidden'
-        animate = 'visible'
-      >software developer from california</HeaderTitle>
-      <ConnectButton to="/contact"
-        as = {motion.div}
-        variants = {headerIntroVariant}
-        initial = 'hidden'
-        animate = 'visible'
-      >connect</ConnectButton>
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        software developer from california
+      </HeaderTitle>
+      <ConnectButton
+        to="/contact"
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        connect
+      </ConnectButton>
 
-
-      <SquareContainer 
-        as = {motion.div}
-        variants = {squareContainerVariant}
-        initial = 'hidden'
-        animate = 'visible'
+      <SquareContainer
+        as={motion.div}
+        variants={squareContainerVariant}
+        initial="hidden"
+        animate="visible"
       >
         <Square />
         <SecondLine />
@@ -94,29 +97,28 @@ const Header = () => {
       </SquareContainer>
 
       <ThirdLineContainer>
-        <ThirdLine 
-        as = {motion.div}
-        variants = {thirdContainerVariant}
-        initial = 'hidden'
-        animate = 'visible'
-      />
+        <ThirdLine
+          as={motion.div}
+          variants={thirdContainerVariant}
+          initial="hidden"
+          animate="visible"
+        />
       </ThirdLineContainer>
       <SecondCircleContainer>
-        <Circle 
-          as = {motion.div}
-          variants = {secondCircleVariant}
-          initial = 'hidden'
-          animate = 'visible'
+        <Circle
+          as={motion.div}
+          variants={secondCircleVariant}
+          initial="hidden"
+          animate="visible"
         />
       </SecondCircleContainer>
       <HeaderBox
-        as = {motion.div}
-        variants = {headerBoxVariant}
-        initial = 'hidden'
-        animate = 'visible'
+        as={motion.div}
+        variants={headerBoxVariant}
+        initial="hidden"
+        animate="visible"
       >
-       <HeaderImage src={HeaderBoxImage}/>
-
+        <HeaderImage src={HeaderBoxImage} />
       </HeaderBox>
     </PageContainer>
   );
