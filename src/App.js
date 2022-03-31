@@ -31,10 +31,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/test" element={<h2>Test</h2>} />
           </Routes>
-
-          <GradientLine />
           <Media />
         </ThemeProvider>
       </BrowserRouter>
