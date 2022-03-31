@@ -48,7 +48,7 @@ export const SvgBox = styled.div`
   width: 2rem;
   height: 2rem;
   border: ${(props) => props.theme.border};
-  box-shadow: ${(props) => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.inset};
   border-radius: 50%;
   padding: 0.5rem;
   margin: 0.2rem 0.5rem;
