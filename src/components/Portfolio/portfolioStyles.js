@@ -15,6 +15,7 @@ export const Card = styled.div`
   justify-content: space-evenly;
   color: ${(props) => props.theme.text};
   padding: 2rem;
+  transform: translateX(-35px);
 
   h3 {
     color: ${(props) => props.theme.text};
@@ -68,3 +69,80 @@ export const PortFolioVisit = styled(Link)`
     box-shadow: ${props => props.theme.inset};
   }
 `;
+
+// -----------Background Designs 
+
+export const Square = styled.div`
+  width: 4rem;
+  height: 4rem;
+  background-color: ${(props) => props.theme.body};
+  border-radius: 20%;
+  box-shadow: ${(props) => props.theme.inset};
+`;
+
+export const Circle = styled.div`
+  width: 4rem;
+  height: 4rem;
+  background-color: ${(props) => props.theme.body};
+  border-radius: 50%;
+  box-shadow: ${(props) => props.theme.inset};
+  border: ${(props) => props.theme.border};
+`;
+
+export const FirstLineContainer = styled.div`
+  grid-area: 7/1/8/2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+
+export const FirstPortfolioLine = styled.div`
+  width: 60%;
+  height: 2px;
+  background-color: ${(props) => props.theme.text};
+`
+
+export const SecondLineContainer = styled.div`
+  grid-area: 11/2/13/7;
+  display: flex; 
+  align-items: center;
+  justify-content: space-evenly;
+`
+
+export const ThirdLineContainer = styled.div`
+  grid-area: 1/7/13/8;
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+`
+
+export const SecondPortfolioLine = styled.div`
+  width: 180%;
+  height: 2px;
+  background-color: ${(props) => props.theme.text};
+  transform: rotate(90deg);
+  margin: 11.5rem 0;
+`
+
+export const FourthLineContainer = styled.div`
+  grid-area: 1/8/3/12;
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+`
+
+export const FifthLineContainer = styled.div`
+  grid-area: 1/12/3/14;
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+`
+
+
+
+
+
+
+
+

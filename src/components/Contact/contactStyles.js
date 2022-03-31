@@ -49,6 +49,7 @@ export const TextArea = styled.textarea`
   font-family: ${(props) => props.theme.fontFamily};
   outline: none;
   resize: none;
+  margin-bottom: .6rem;
 `;
 
 export const SubmitButton = styled.button`
@@ -63,7 +64,7 @@ export const SubmitButton = styled.button`
   color: ${(props) => props.theme.text};
   cursor: pointer;
   font-weight: 700;
-  margin: .5rem .3rem;
+  margin: .9rem .3rem;
 
   :hover {
     color: ${(props) => props.theme.body};
