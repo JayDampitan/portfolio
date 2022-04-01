@@ -81,32 +81,14 @@ export const ContactImageContainer = styled.div`
   border-radius: 2rem;
   margin: 1rem 5rem 3rem 2rem;
   padding: 2rem 0 2rem 9rem;
-  
 `;
 
 export const ContactImage = styled.img`
   width: 90%;
   height: 100%;
-`
-
-// -----------Background Designs
-
-export const Circle = styled.div`
-  width: 4rem;
-  height: 4rem;
-  background-color: ${(props) => props.theme.body};
-  border-radius: 50%;
-  box-shadow: ${(props) => props.theme.inset};
-  border: ${(props) => props.theme.border};
 `;
 
-export const Square = styled.div`
-  width: 4rem;
-  height: 4rem;
-  background-color: ${(props) => props.theme.body};
-  border-radius: 20%;
-  box-shadow: ${(props) => props.theme.inset};
-`;
+// -----------Background Elements
 
 export const FirstContactContainer = styled.div`
   grid-area: 1/1/3/3;

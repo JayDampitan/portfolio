@@ -19,8 +19,6 @@ import {
   SvgBox,
   FirstLineContainer,
   FirstLine,
-  Circle,
-  Square,
   SecondLineContainer,
   SecondLine,
   ThirdLineContainer,
@@ -28,6 +26,11 @@ import {
   FourthAboutLineContainer,
   FourthLine,
 } from "./aboutStyles";
+
+import {
+  Square,
+  Circle
+} from '../../subComponents/backgroundElements';
 
 import {
   firstLineVariant,

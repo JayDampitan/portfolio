@@ -9,8 +9,6 @@ import {
   ConnectButton,
   HeaderBox,
   FirstCircleContainer,
-  Circle,
-  Square,
   FirstLine,
   SecondLine,
   SquareContainer,
@@ -32,26 +30,13 @@ import {
   headerBoxVariant,
 } from "./headerVariants";
 
+import { Square, Circle } from "../../subComponents/backgroundElements";
+
 import { PageContainer } from "../../subComponents/pageContainer";
 
 const Header = () => {
   return (
     <PageContainer>
-      <FirstCircleContainer>
-        <FirstLine
-          as={motion.div}
-          variants={firstLineVariant}
-          initial="hidden"
-          animate="visible"
-        />
-        <Circle
-          as={motion.div}
-          variants={firstCircleVariant}
-          initial="hidden"
-          animate="visible"
-        />
-      </FirstCircleContainer>
-
       <HeaderIntro
         as={motion.div}
         variants={headerIntroVariant}
@@ -86,6 +71,23 @@ const Header = () => {
         connect
       </ConnectButton>
 
+      {/* -----------Background Elements */}
+
+      <FirstCircleContainer>
+        <FirstLine
+          as={motion.div}
+          variants={firstLineVariant}
+          initial="hidden"
+          animate="visible"
+        />
+        <Circle
+          as={motion.div}
+          variants={firstCircleVariant}
+          initial="hidden"
+          animate="visible"
+        />
+      </FirstCircleContainer>
+
       <SquareContainer
         as={motion.div}
         variants={squareContainerVariant}
@@ -118,8 +120,8 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <FourthLine/>
-        <Square/>
+        <FourthLine />
+        <Square />
       </FourthLineContainer>
 
       <HeaderBox
@@ -130,8 +132,6 @@ const Header = () => {
       >
         <HeaderImage src={HeaderBoxImage} />
       </HeaderBox>
-
-
     </PageContainer>
   );
 };
