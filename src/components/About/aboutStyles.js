@@ -57,34 +57,17 @@ export const SvgBox = styled.div`
   justify-content: center;
 `;
 
-
+// -----------Background Elements
 export const FirstLineContainer = styled.div`
   grid-area: 11/1/13/2;
-  display: flex;  
+  display: flex;
   align-items: center;
-
-`
+`;
 
 export const FirstLine = styled.div`
   width: 80%;
   height: 2px;
   background-color: ${(props) => props.theme.text};
-`
-export const Circle = styled.div`
-  width: 4rem;
-  height: 4rem;
-  background-color: ${(props) => props.theme.body};
-  border-radius: 50%;
-  box-shadow: ${(props) => props.theme.inset};
-  border: ${(props) => props.theme.border};
-`;
-
-export const Square = styled.div`
-  width: 4rem;
-  height: 4rem;
-  background-color: ${(props) => props.theme.body};
-  border-radius: 20%;
-  box-shadow: ${(props) => props.theme.inset};
 `;
 
 export const SecondLineContainer = styled.div`
@@ -93,7 +76,7 @@ export const SecondLineContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 export const SecondLine = styled.div`
   width: 150%;
@@ -109,24 +92,24 @@ export const ThirdLineContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-left: 1rem;
-`
+`;
 
 export const ThirdLine = styled.div`
   width: 60%;
   height: 2px;
   background-color: ${(props) => props.theme.text};
   transform: rotate(90deg);
-` 
+`;
 
 export const FourthAboutLineContainer = styled.div`
   grid-area: 7/12/8/14;
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 export const FourthLine = styled.div`
   width: 60%;
   height: 2px;
   background-color: ${(props) => props.theme.text};
-` 
+`;

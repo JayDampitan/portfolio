@@ -7,8 +7,6 @@ import {
   TextArea,
   SubmitButton,
   ContactImageContainer,
-  Square,
-  Circle,
   FirstContactContainer,
   FirstContactLine,
   SecondContactContainer,
@@ -18,6 +16,8 @@ import {
   FourthContactContainer,
   ContactImage,
 } from "./contactStyles";
+
+import { Square, Circle } from "../../subComponents/backgroundElements";
 
 import {
   firstLineVariant,
@@ -59,7 +59,7 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        <ContactImage src={Phone} alt='Phone'/>
+        <ContactImage src={Phone} alt="Phone" />
       </ContactImageContainer>
 
       {/* -----------Background Designs and Animations */}

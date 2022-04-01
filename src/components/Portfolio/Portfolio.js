@@ -7,8 +7,6 @@ import {
   ThirdCardContainer,
   FourthCardContainer,
   PortFolioVisit,
-  Square,
-  Circle,
   FirstLineContainer,
   FirstPortfolioLine,
   SecondLineContainer,
@@ -18,6 +16,7 @@ import {
   FifthLineContainer,
 } from "./portfolioStyles";
 import { PageContainer } from "../../subComponents/pageContainer";
+import { Circle, Square } from "../../subComponents/backgroundElements";
 
 import {
   firstCardVariant,
@@ -25,11 +24,11 @@ import {
   thirdCardVariant,
   fourthCardVariant,
   firstLineVariant,
-secondLineVariant,
-thirdLineVariant,
-fourthLineVariant,
-fifthLineVariant,
-squareColorVariant
+  secondLineVariant,
+  thirdLineVariant,
+  fourthLineVariant,
+  fifthLineVariant,
+  squareColorVariant,
 } from "./portfolioVariants";
 
 const Portfolio = () => {
@@ -145,27 +144,28 @@ const Portfolio = () => {
       </SecondLineContainer>
 
       <ThirdLineContainer
-       as={motion.div}
-       variants={thirdLineVariant}
-       initial="hidden"
-       animate="visible">
+        as={motion.div}
+        variants={thirdLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
         <Circle />
         <SecondPortfolioLine />
         <Square />
       </ThirdLineContainer>
 
       <FourthLineContainer
-         as={motion.div}
-         variants={fourthLineVariant}
-         initial="hidden"
-         animate="visible"
+        as={motion.div}
+        variants={fourthLineVariant}
+        initial="hidden"
+        animate="visible"
       >
         <FirstPortfolioLine />
         <Square
-            as={motion.div}
-            variants={squareColorVariant}
-            initial="hidden"
-            animate="visible"
+          as={motion.div}
+          variants={squareColorVariant}
+          initial="hidden"
+          animate="visible"
         />
       </FourthLineContainer>
 

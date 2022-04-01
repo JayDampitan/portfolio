@@ -9,4 +9,14 @@ export const PageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(13, 1fr );
   grid-template-rows: repeat(12, 1fr);
+
+  @media (max-width: 810px){
+    height: 90vh;
+    width: 100%;
+  }
+
+  @media (max-width: 420px){
+    height: 90vh;
+    width: 100%;
+  }
 `;
