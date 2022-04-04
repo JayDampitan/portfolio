@@ -68,7 +68,7 @@ export const SwitchButton = styled.div`
   border: ${(props) => props.theme.border};
   padding: 0.7rem;
   border-radius: 50%;
-  box-shadow: ${(props) => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.logoShadow};
   display: flex;
   align-items: center;
   justify-content: center;

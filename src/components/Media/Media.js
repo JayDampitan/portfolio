@@ -28,41 +28,41 @@ const linksVariants = {
 
 const Media = () => {
   return (
-    <Icons
+    <IconContainer
       as={motion.div}
       variants={mediaVariants}
       initial="hidden"
       animate="visible"
     >
-      <IconContainer
+      <Icons
         as={motion.div}
         variants={linksVariants}
         whileHover="hover"
       >
         <Github fill="currentColor" />
-      </IconContainer>
-      <IconContainer
+      </Icons>
+      <Icons
         as={motion.div}
         variants={linksVariants}
         whileHover="hover"
       >
         <YouTube fill="currentColor" />
-      </IconContainer>
-      <IconContainer
+      </Icons>
+      <Icons
         as={motion.div}
         variants={linksVariants}
         whileHover="hover"
       >
         <Twitter fill="currentColor" />
-      </IconContainer>
-      <IconContainer
+      </Icons>
+      <Icons
         as={motion.div}
         variants={linksVariants}
         whileHover="hover"
       >
         <Facebook fill="currentColor" />
-      </IconContainer>
-    </Icons>
+      </Icons>
+    </IconContainer>
   );
 };
 

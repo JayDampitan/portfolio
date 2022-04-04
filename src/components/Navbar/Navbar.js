@@ -14,19 +14,7 @@ import {
 
 import { Moon, Sun } from "../AllSvgs";
 
-const logoVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      type: "spring",
-      mass: 0.5,
-    },
-  },
-};
+
 
 const hoverVariants = {
   hoverMe: {

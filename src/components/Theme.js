@@ -8,7 +8,7 @@ export const lightMode = {
     "inset -3px -3px 8px rgba(10, 10, 10, .3) , inset 3px 3px 8px rgba(240,240,240, 0.6)",
   fontFamily: 'Poppins', 
   orange: 'rgba(187, 68, 48, 1)',
-  logoShadow: "  -5px -5px 8px rgba(255,255,255, .3), 3px 3px 5px rgba(20, 20, 20, .4) ",
+  logoShadow: "  5px 5px 8px rgba(255,255,255, .3), -3px -3px 5px rgba(20, 20, 20, .4) ",
   
   };
 

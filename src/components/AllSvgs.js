@@ -129,6 +129,8 @@ export const Sun = (props) => (
   </svg>
 );
 
+// -----------Tech Icons
+
 export const CSS = (props) => (
   <svg
     width={29}
