@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PageContainer = styled.div`
   
   color: ${(props) => props.theme.text};
-  width: 100%;
+  width: 100vw;
   height: 70vh;
   user-select: none;
   display: grid;
@@ -11,12 +11,10 @@ export const PageContainer = styled.div`
   grid-template-rows: repeat(12, 1fr);
 
   @media (max-width: 810px){
-    height: 90vh;
-    width: 100%;
+    width: 100vw;
   }
 
   @media (max-width: 420px){
-    height: 90vh;
-    width: 100%;
+    width: 100vw;
   }
 `;

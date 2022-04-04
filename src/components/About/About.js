@@ -15,7 +15,9 @@ import {
   ContentContainer,
   ImageContainer,
   Image,
+  TitleContainer,
   SvgContainer,
+  ParagraphContainer,
   SvgBox,
   FirstLineContainer,
   FirstLine,
@@ -27,10 +29,7 @@ import {
   FourthLine,
 } from "./aboutStyles";
 
-import {
-  Square,
-  Circle
-} from '../../subComponents/backgroundElements';
+import { Square, Circle } from "../../subComponents/backgroundElements";
 
 import {
   firstLineVariant,
@@ -50,8 +49,22 @@ const About = () => {
         variants={contentVariant}
         initial="hidden"
         animate="visible"
+      />
+      <TitleContainer
+        as={motion.div}
+        variants={contentVariant}
+        initial="hidden"
+        animate="visible"
       >
-        <h2>Something about me</h2>
+        <h2>Something About me</h2>
+      </TitleContainer>
+
+      <ParagraphContainer
+        as={motion.div}
+        variants={contentVariant}
+        initial="hidden"
+        animate="visible"
+      >
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           totam laudantium rerum quia. Culpa expedita tempora provident saepe
@@ -63,31 +76,36 @@ const About = () => {
           necessitatibus atque eius architecto hic dicta quo nam totam, natus
           nulla similique.
         </p>
+      </ParagraphContainer>
 
-        <SvgContainer>
-          <SvgBox>
-            <HTML fill="currentColor" />
-          </SvgBox>
-          <SvgBox>
-            <CSS fill="currentColor" />
-          </SvgBox>
-          <SvgBox>
-            <JavaScript stroke="currentColor" fill="currentColor" />
-          </SvgBox>
-          <SvgBox>
-            <ReactIcon fill="currentColor" />
-          </SvgBox>
-          <SvgBox>
-            <ReduxIcon fill="currentColor" />
-          </SvgBox>
-          <SvgBox>
-            <Framer fill="currentColor" />
-          </SvgBox>
-          <SvgBox>
-            <StyledComponents fill="currentColor" />
-          </SvgBox>
-        </SvgContainer>
-      </ContentContainer>
+      <SvgContainer
+        as={motion.div}
+        variants={contentVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <SvgBox>
+          <HTML fill="currentColor" />
+        </SvgBox>
+        <SvgBox>
+          <CSS fill="currentColor" />
+        </SvgBox>
+        <SvgBox>
+          <JavaScript stroke="currentColor" fill="currentColor" />
+        </SvgBox>
+        <SvgBox>
+          <ReactIcon fill="currentColor" />
+        </SvgBox>
+        <SvgBox>
+          <ReduxIcon fill="currentColor" />
+        </SvgBox>
+        <SvgBox>
+          <Framer fill="currentColor" />
+        </SvgBox>
+        <SvgBox>
+          <StyledComponents fill="currentColor" />
+        </SvgBox>
+      </SvgContainer>
 
       {/* -----------Profile Image */}
       <ImageContainer

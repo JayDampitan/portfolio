@@ -212,6 +212,10 @@ export const FirstCircleContainer = styled.div`
     grid-area: 3/1/4/5;
   }
 
+  @media (max-width: 810px) {
+    display: none;
+  }
+
   @media (max-width: 520px) {
     display: none;
   }
@@ -236,7 +240,7 @@ export const SquareContainer = styled.div`
   }
 
   @media (max-width: 810px) {
-    grid-area: 4/12/9/13;
+    display: none;
   }
 
   @media (max-width: 520px) {
@@ -268,8 +272,7 @@ export const ThirdLineContainer = styled.div`
   }
 
   @media (max-width: 810px) {
-    grid-area: 12/11/13/14;
-    justify-content: space-between;
+   display: none;
   }
 
   @media (max-width: 520px) {
@@ -296,7 +299,7 @@ export const FourthLineContainer = styled.div`
   }
 
   @media (max-width: 810px) {
-    grid-area: 7/2/10/3;
+    display: none;
   }
 
   @media (max-width: 520px) {
@@ -317,14 +320,3 @@ export const FourthLine = styled.div`
     width: 150%;
   }
 `;
-
-// export const Trapezoid = styled.div`
-//   clip-path: polygon(25% 15%, 73% 15%, 100% 100%, 0% 100%);
-//   background-color: ${props => props.theme.body};
-//   height: 50%;
-//   width: 50%;
-//   margin-left: 3rem;
-//   border-radius: .5rem;
-//   box-shadow: ${props => props.theme.triangleShadow};
-//   border-radius: 1rem;
-// `;
