@@ -6,7 +6,7 @@ export const IconContainer = styled.div`
   align-items: center;
   position: absolute;
   bottom: 0;
-  left: 43%;
+  left: 44%;
 
   @media (max-width: 1200px){
     left: 39%;
@@ -17,7 +17,7 @@ export const IconContainer = styled.div`
   }
 
   @media (max-width: 420px){
-    left: 17%;
+    left: 10%;
   }
 `;
 
