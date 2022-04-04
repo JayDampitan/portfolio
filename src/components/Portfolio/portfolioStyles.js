@@ -22,32 +22,92 @@ export const Card = styled.div`
     text-transform: uppercase;
     font-family: ${(props) => props.theme.fontFamily};
     border-bottom: 2px solid ${(props) => props.theme.orange};
+
+    @media (max-width: 1400px) {
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 810px){
+      font-size: .8rem;
+    }
   }
 
   p {
     font-family: ${(props) => props.theme.fontFamily};
     font-size: 0.9rem;
     padding: 0 2rem;
+    text-indent: 2rem;
+
+    @media (max-width: 1400px) {
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 810px) {
+      font-size: .7rem;
+      padding: .4rem 0.9rem;
+      margin: .2rem 0;
+    }
+
+    @media (max-width: 420px) {
+      font-size: .6rem;
+      padding: .3rem;
+    }
   }
 `;
 
 export const FirstCardContainer = styled.div`
   grid-area: 3/2/10/4;
+
+  @media (max-width: 1400px) {
+    grid-area: 3/2/6/7;
+    padding: 1rem;
+  }
+
+  @media (max-width: 420px) {
+    grid-area: 1/2/3/13;
+  }
 `;
 
 export const SecondCardContainer = styled.div`
   grid-area: 3/5/10/7;
+
+  @media (max-width: 1400px) {
+    grid-area: 7/2/10/7;
+    padding: 1rem;
+  }
+
+  @media (max-width: 420px) {
+    grid-area: 4/2/6/13;
+  }
 `;
 
 export const ThirdCardContainer = styled.div`
   grid-area: 3/8/10/10;
+
+  @media (max-width: 1400px) {
+    grid-area: 3/8/6/13;
+    padding: 1rem;
+  }
+
+  @media (max-width: 420px) {
+    grid-area: 7/2/9/13;
+  }
 `;
 
 export const FourthCardContainer = styled.div`
   grid-area: 3/11/10/13;
+
+  @media (max-width: 1400px) {
+    grid-area: 7/8/10/13;
+    padding: 1rem;
+  }
+
+  @media (max-width: 420px) {
+    grid-area: 10/2/12/13;
+  }
 `;
 
-// ------ Buttons
+// ----------- Buttons
 
 export const PortFolioVisit = styled(Link)`
   width: 10rem;
@@ -68,6 +128,21 @@ export const PortFolioVisit = styled(Link)`
   :hover {
     box-shadow: ${(props) => props.theme.inset};
   }
+
+  @media (max-width: 1400px) {
+    width: 8rem;
+    height: 2.5rem;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 810px) {
+    width: 7rem;
+    font-size: .8rem;
+  }
+
+  @media (max-width: 420px) {
+    width: 4rem;
+  }
 `;
 
 // -----------Background Elements
@@ -77,6 +152,15 @@ export const FirstLineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 1400px) {
+    align-items: flex-start;
+  }
+
+  @media (max-width: 810px) {
+    display: none;
+    width: 80%;
+  }
 `;
 
 export const FirstPortfolioLine = styled.div`
@@ -90,6 +174,10 @@ export const SecondLineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 810px) {
+    display: none;
+  }
 `;
 
 export const ThirdLineContainer = styled.div`
@@ -98,6 +186,10 @@ export const ThirdLineContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+
+  @media (max-width: 810px) {
+    display: none;
+  }
 `;
 
 export const SecondPortfolioLine = styled.div`
@@ -113,6 +205,10 @@ export const FourthLineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 810px) {
+    display: none;
+  }
 `;
 
 export const FifthLineContainer = styled.div`
@@ -120,4 +216,8 @@ export const FifthLineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 810px) {
+    display: none;
+  }
 `;

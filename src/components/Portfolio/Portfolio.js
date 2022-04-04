@@ -17,6 +17,7 @@ import {
 } from "./portfolioStyles";
 import { PageContainer } from "../../subComponents/pageContainer";
 import { Circle, Square } from "../../subComponents/backgroundElements";
+import { data } from '../../assets/data'
 
 import {
   firstCardVariant,
@@ -41,18 +42,13 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>movie app</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-            velit autem tenetur quisquam eaque fugiat est nobis officiis
-            provident molestias accusamus obcaecati, sit illo quos quam
-            voluptatem vero voluptatibus porro.
-          </p>
+          <h3>{data.movieApp.title}</h3>
+          <p>{data.movieApp.desciption}</p>
           <PortFolioVisit
             target="_blank"
             to="https://reactoads-movie-app-7c45e.web.app/"
           >
-            <h4>visit</h4>
+            visit
           </PortFolioVisit>
         </Card>
       </FirstCardContainer>
@@ -64,18 +60,13 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>PokePalace</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-            velit autem tenetur quisquam eaque fugiat est nobis officiis
-            provident molestias accusamus obcaecati, sit illo quos quam
-            voluptatem vero voluptatibus porro.
-          </p>
+          <h3>{data.pokePalace.title}</h3>
+          <p>{data.pokePalace.desciption}</p>
           <PortFolioVisit
             target="_blank"
             to="https://pokepalace-fa118.web.app/"
           >
-            <h4>visit</h4>
+            visit
           </PortFolioVisit>
         </Card>
       </SecondCardContainer>
@@ -87,18 +78,13 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>toad tribune</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-            velit autem tenetur quisquam eaque fugiat est nobis officiis
-            provident molestias accusamus obcaecati, sit illo quos quam
-            voluptatem vero voluptatibus porro.
-          </p>
+          <h3>{data.toadTribune.title}</h3>
+          <p>{data.toadTribune.desciption}</p>
           <PortFolioVisit
             target="_blank"
             to="https://the-toad-tribune-659c7.web.app/"
           >
-            <h4>visit</h4>
+            visit
           </PortFolioVisit>
         </Card>
       </ThirdCardContainer>
@@ -110,15 +96,10 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>Kovvi</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-            velit autem tenetur quisquam eaque fugiat est nobis officiis
-            provident molestias accusamus obcaecati, sit illo quos quam
-            voluptatem vero voluptatibus porro.
-          </p>
+          <h3>{data.kovvi.title}</h3>
+          <p>{data.kovvi.desciption}</p>
           <PortFolioVisit to="">
-            <h4>visit</h4>
+            visit
           </PortFolioVisit>
         </Card>
       </FourthCardContainer>
