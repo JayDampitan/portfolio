@@ -20,8 +20,8 @@ export const ContentContainer = styled.div`
 
 
 export const ImageContainer = styled.div`
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 85%;
   grid-area: 2/3/7/5;
   border-radius: 50%;
   border: 5px solid ${(props) => props.theme.orange};
