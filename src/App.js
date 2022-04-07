@@ -21,10 +21,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={switchActive ? lightMode : darkMode}>
           <GlobalStyle />
-          <Navbar
-            switchActive={switchActive}
-            setSwitchActive={setSwitchActive}
-          />
+          <Navbar/>
           <GradientLine />
           <Routes>
             <Route path="/" element={<Header />} />
@@ -32,7 +29,10 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          <Media />
+          <Media 
+            switchActive={switchActive}
+            setSwitchActive={setSwitchActive}
+           />
         </ThemeProvider>
       </BrowserRouter>
     </div>

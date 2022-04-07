@@ -1,24 +1,16 @@
 import styled from "styled-components";
 import { Github } from "../AllSvgs";
 
+export const MediaContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+`
+
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 44%;
-
-  @media (max-width: 1200px){
-    left: 39%;
-  }
-
-  @media (max-width: 810px){
-    left: 30%;
-  }
-
-  @media (max-width: 420px){
-    left: 10%;
-  }
 `;
 
 export const Icons = styled.div`
@@ -45,5 +37,16 @@ export const Icons = styled.div`
     width: 1.4rem;
     height: 1.4rem;
   }
+`;
+
+export const SwitchButton = styled.div`
+  border: ${(props) => props.theme.border};
+  padding: 0.7rem;
+  border-radius: 50%;
+  box-shadow: ${(props) => props.theme.logoShadow};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: .8rem;
 `;
 
