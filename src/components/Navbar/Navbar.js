@@ -1,20 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import {
   NavContainer,
-  LogoContainer,
   Logo,
   NavLinksContainer,
   LinkWrapper,
   NavLinks,
   Hamburger,
-  SwitchButton,
 } from "./navbarStyles";
-
-import { Moon, Sun } from "../AllSvgs";
-
-
 
 const hoverVariants = {
   hoverMe: {
@@ -36,7 +30,8 @@ const linksVariant = {
   },
 };
 
-const Navbar = ({ switchActive, setSwitchActive }) => {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const control = useAnimation();
 
   return (
@@ -47,9 +42,15 @@ const Navbar = ({ switchActive, setSwitchActive }) => {
         >
          <h2>JD</h2>
         </Logo>
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </Hamburger>
    
 
       <NavLinksContainer
+      isOpen = {isOpen}
         as={motion.div}
         variants={linksVariant}
         initial="hidden"
@@ -92,16 +93,7 @@ const Navbar = ({ switchActive, setSwitchActive }) => {
           <NavLinks to="/contact"> Contact </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>
-      <SwitchButton
-        onClick={() => {
-          setSwitchActive(!switchActive);
-        }}
-        as={motion.div}
-        variants={hoverVariants}
-        whileHover="hoverMe"
-      >
-        {switchActive ? <Moon fill='#E9E016' /> : <Sun fill='#E9E016'/>}
-      </SwitchButton>
+     
     </NavContainer>
   );
 };

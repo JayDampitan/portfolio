@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Facebook, Github, Twitter, YouTube } from "../AllSvgs";
 
-import { Icons, IconContainer, Line } from "./mediaStyles";
-
+import { Icons, IconContainer, SwitchButton, MediaContainer } from "./mediaStyles";
+import { Moon, Sun } from "../AllSvgs";
 // ----------------Media Animations
 
 const mediaVariants = {
@@ -26,8 +26,10 @@ const linksVariants = {
   },
 };
 
-const Media = () => {
+const Media = ({ switchActive, setSwitchActive }) => {
   return (
+<MediaContainer>
+   
     <IconContainer
       as={motion.div}
       variants={mediaVariants}
@@ -63,6 +65,19 @@ const Media = () => {
         <Facebook fill="currentColor" />
       </Icons>
     </IconContainer>
+
+    <SwitchButton
+    onClick={() => {
+      setSwitchActive(!switchActive);
+    }}
+    as={motion.div}
+    variants={linksVariants}
+    whileHover="hover"
+  >
+    {switchActive ? <Moon fill='#E9E016' /> : <Sun fill='#E9E016'/>}
+  </SwitchButton>
+
+    </MediaContainer>
   );
 };
 

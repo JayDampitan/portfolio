@@ -36,7 +36,9 @@ import { PageContainer } from "../../subComponents/pageContainer";
 
 const Header = () => {
   return (
-    <PageContainer>
+    <PageContainer
+      
+    >
       <HeaderIntro
         as={motion.div}
         variants={headerIntroVariant}
