@@ -42,7 +42,7 @@ export const PortfolioContentContainer = styled.div`
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: ${(props) =>
-  props.firstCardActive ? props.theme.inset : props.theme.boxShadow};
+    props.firstCardActive ? props.theme.inset : props.theme.boxShadow};
   padding: 1rem;
 
   &p {

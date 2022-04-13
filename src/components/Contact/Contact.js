@@ -33,7 +33,11 @@ import { PageContainer } from "../../subComponents/pageContainer";
 
 const Contact = () => {
   return (
-    <PageContainer>
+    <PageContainer
+      as={motion.div}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       {/* -----------Contact Form and Animations */}
       <ContactForm
         as={motion.div}

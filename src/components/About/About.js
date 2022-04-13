@@ -42,7 +42,11 @@ import { PageContainer } from "../../subComponents/pageContainer";
 
 const About = () => {
   return (
-    <PageContainer>
+    <PageContainer
+      as={motion.div}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       {/* -----------About Page Content */}
       <ContentContainer
         as={motion.div}

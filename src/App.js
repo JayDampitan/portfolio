@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyles";
-import GradientLine from "./components/Gradient/GradientLine";
 
-// Components import
-import Header from "./components/Header/Header";
+import GradientLine from "./components/Gradient/GradientLine";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 import Media from "./components/Media/Media";
-import About from "./components/About/About";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
 import { lightMode, darkMode } from "./components/Theme";
 
 function App() {
@@ -21,18 +17,13 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={switchActive ? lightMode : darkMode}>
           <GlobalStyle />
-          <Navbar/>
+          <Navbar />
           <GradientLine />
-          <Routes>
-            <Route path="/" element={<Header />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-          <Media 
+          <AnimatedRoutes />
+          <Media
             switchActive={switchActive}
             setSwitchActive={setSwitchActive}
-           />
+          />
         </ThemeProvider>
       </BrowserRouter>
     </div>

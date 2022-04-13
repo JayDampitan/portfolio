@@ -17,7 +17,6 @@ import {
   HeaderImage,
   FourthLineContainer,
   FourthLine,
-  Trapezoid,
 } from "./headerStyles";
 
 import {
@@ -37,7 +36,9 @@ import { PageContainer } from "../../subComponents/pageContainer";
 const Header = () => {
   return (
     <PageContainer
-      
+      as = {motion.div}
+      exit = {{opacity: 0}}
+      transition = {{duration: .6}}
     >
       <HeaderIntro
         as={motion.div}
