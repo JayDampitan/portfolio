@@ -30,7 +30,7 @@ export const NavLinksContainer = styled.div`
   align-items: center;
   position: relative;
 
-  @media (max-width: 900px){
+  @media (max-width: 960px){
     overflow: hidden;
     width: 100%;
     max-height: ${({isOpen}) => (isOpen ? "300px" : "0")};

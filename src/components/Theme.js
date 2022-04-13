@@ -1,5 +1,5 @@
 export const lightMode = {
-  body: "#C8C9D0",
+  body: "#BCBCC1",
   text: "#232427",
   boxShadow:
     "-3px -3px 5px rgba(10, 10, 10, .2) , 3px 3px 8px rgba(240, 240, 240, .4)",
@@ -14,7 +14,7 @@ export const lightMode = {
 
 export const darkMode = {
   body: "#232427",
-  text: "#D1D1D1",
+  text: "#BCBCC1",
   fontFamily: 'Poppins',
   boxShadow:
     "-3px -3px 10px rgba(240,240,240, 0.1), 3px 3px 8px rgba(10, 10, 10, .4) ",

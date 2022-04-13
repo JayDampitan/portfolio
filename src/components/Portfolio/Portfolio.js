@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
+  PortfolioContentContainer,
+  PortfolioImage,
   FirstCardContainer,
   SecondCardContainer,
   ThirdCardContainer,
@@ -15,9 +17,16 @@ import {
   FourthLineContainer,
   FifthLineContainer,
 } from "./portfolioStyles";
+
 import { PageContainer } from "../../subComponents/pageContainer";
+
 import { Circle, Square } from "../../subComponents/backgroundElements";
-import { data } from '../../assets/data'
+
+import { data } from "../../assets/data";
+import MovieApp from "../../assets/movieApp.png";
+import PokePalace from "../../assets/pokePalace.png";
+import ToadTribune from "../../assets/toadTribune.png";
+import Kovvi from "../../assets/kovviShot.png";
 
 import {
   firstCardVariant,
@@ -33,8 +42,18 @@ import {
 } from "./portfolioVariants";
 
 const Portfolio = () => {
+  const [firstCardActive, setFirstCardActive] = useState(false);
+  const [secondCardActive, setSecondCardActive] = useState(false);
+  const [thirdCardActive, setThirdCardActive] = useState(false);
+  const [fourthCardActive, setFourthCardActive] = useState(false);
+
+
+
+
+
   return (
     <PageContainer>
+      {/* -------------Third Card Container */}
       <FirstCardContainer>
         <Card
           as={motion.div}
@@ -43,16 +62,30 @@ const Portfolio = () => {
           animate="visible"
         >
           <h3>{data.movieApp.title}</h3>
-          <p>{data.movieApp.desciption}</p>
+
+          <PortfolioContentContainer
+            firstCardActive={firstCardActive}
+            onClick={() => setFirstCardActive(!firstCardActive)}
+          >
+            {firstCardActive ? (
+              <p>{data.movieApp.desciption}</p>
+            ) : (
+              <PortfolioImage
+                src={MovieApp}
+                alt=""
+              />
+            )}
+          </PortfolioContentContainer>
+
           <PortFolioVisit
             target="_blank"
-            to="https://reactoads-movie-app-7c45e.web.app/"
+            href="https://reactoads-movie-app-7c45e.web.app/"
           >
             visit
           </PortFolioVisit>
         </Card>
       </FirstCardContainer>
-
+      {/* -------------Second Card Container */}
       <SecondCardContainer>
         <Card
           as={motion.div}
@@ -61,16 +94,29 @@ const Portfolio = () => {
           animate="visible"
         >
           <h3>{data.pokePalace.title}</h3>
-          <p>{data.pokePalace.desciption}</p>
+          <PortfolioContentContainer
+            firstCardActive={secondCardActive}
+            onClick={() => setSecondCardActive(!secondCardActive)}
+          >
+            {secondCardActive ? (
+              <p>{data.pokePalace.desciption}</p>
+            ) : (
+              <PortfolioImage
+                src={PokePalace}
+                alt=""
+              />
+            )}
+          </PortfolioContentContainer>
+
           <PortFolioVisit
             target="_blank"
-            to="https://pokepalace-fa118.web.app/"
+            href="https://pokepalace-fa118.web.app/"
           >
             visit
           </PortFolioVisit>
         </Card>
       </SecondCardContainer>
-
+      {/* -------------Third Card Container */}
       <ThirdCardContainer>
         <Card
           as={motion.div}
@@ -79,16 +125,28 @@ const Portfolio = () => {
           animate="visible"
         >
           <h3>{data.toadTribune.title}</h3>
-          <p>{data.toadTribune.desciption}</p>
+          <PortfolioContentContainer
+            firstCardActive={thirdCardActive}
+            onClick={() => setThirdCardActive(!thirdCardActive)}
+          >
+            {thirdCardActive ? (
+              <p>{data.toadTribune.desciption}</p>
+            ) : (
+              <PortfolioImage
+                src={ToadTribune}
+              />
+            )}
+          </PortfolioContentContainer>
+
           <PortFolioVisit
             target="_blank"
-            to="https://the-toad-tribune-659c7.web.app/"
+            href="https://the-toad-tribune-659c7.web.app/"
           >
             visit
           </PortFolioVisit>
         </Card>
       </ThirdCardContainer>
-
+      {/* -------------Fourth Card Container */}
       <FourthCardContainer>
         <Card
           as={motion.div}
@@ -97,10 +155,18 @@ const Portfolio = () => {
           animate="visible"
         >
           <h3>{data.kovvi.title}</h3>
-          <p>{data.kovvi.desciption}</p>
-          <PortFolioVisit to="">
-            visit
-          </PortFolioVisit>
+          <PortfolioContentContainer
+            firstCardActive ={fourthCardActive}
+            onClick={() => setFourthCardActive(!fourthCardActive)}
+          >
+            {fourthCardActive ? (
+              <p>{data.kovvi.desciption}</p>
+            ) : (
+              <PortfolioImage src={Kovvi} alt="Kovvi app " />
+            )}
+          </PortfolioContentContainer>
+
+          <PortFolioVisit href="/">visit</PortFolioVisit>
         </Card>
       </FourthCardContainer>
 

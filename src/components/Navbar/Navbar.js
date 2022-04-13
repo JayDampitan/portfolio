@@ -32,7 +32,6 @@ const linksVariant = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const control = useAnimation();
 
   return (
     <NavContainer>
@@ -50,19 +49,14 @@ const Navbar = () => {
    
 
       <NavLinksContainer
-      isOpen = {isOpen}
+        isOpen = {isOpen}
         as={motion.div}
         variants={linksVariant}
         initial="hidden"
         animate="visible"
       >
         <LinkWrapper
-          onClick={() => {
-            control.start({
-              boxShadow:
-                "inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4)",
-            });
-          }}
+         
           as={motion.div}
           variants={hoverVariants}
           whileHover="hoverMe"
@@ -82,7 +76,7 @@ const Navbar = () => {
           variants={hoverVariants}
           whileHover="hoverMe"
         >
-          <NavLinks to="/portfolio"> Portfolio </NavLinks>
+          <NavLinks to="/portfolio"> Work </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper

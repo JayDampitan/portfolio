@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Circle = styled.div`
-  width: 4rem;
-  height: 4rem;
+  width: 3.7rem;
+  height: 3.7rem;
   background-color: ${(props) => props.theme.body};
   border-radius: 50%;
   box-shadow: ${(props) => props.theme.inset};
@@ -25,8 +25,8 @@ export const Circle = styled.div`
 `;
 
 export const Square = styled.div`
-  width: 4rem;
-  height: 4rem;
+  width: 3.7rem;
+  height: 3.7rem;
   background-color: ${(props) => props.theme.body};
   border-radius: 20%;
   box-shadow: ${(props) => props.theme.inset};
