@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Github } from "../AllSvgs";
 
 export const MediaContainer = styled.div`
   display: flex;
@@ -20,7 +19,7 @@ export const Icons = styled.div`
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  margin: 1rem;
+  margin: 0 1rem;
   padding: 0.5rem;
   border-radius: 50%;
   box-shadow: ${(props) => props.theme.boxShadow};
@@ -41,12 +40,12 @@ export const Icons = styled.div`
 
 export const SwitchButton = styled.div`
   border: ${(props) => props.theme.border};
-  padding: 0.7rem;
+  padding: 0.5rem;
   border-radius: 50%;
   box-shadow: ${(props) => props.theme.logoShadow};
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: .8rem;
+  padding-left: .7rem;
 `;
 

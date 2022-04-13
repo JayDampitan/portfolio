@@ -7,12 +7,12 @@ export const Card = styled.div`
   width: 100%;
   height: 100%;
   border: ${(props) => props.theme.border};
-  box-shadow: ${(props) => props.theme.inset};
+  box-shadow: ${(props) => props.theme.boxShadow};
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: ${(props) => props.theme.text};
   padding: 2rem;
   transform: translateX(-35px);
@@ -26,13 +26,26 @@ export const Card = styled.div`
     @media (max-width: 1400px) {
       font-size: 0.9rem;
     }
-    
-    @media (max-width: 810px){
-      font-size: .8rem;
+
+    @media (max-width: 810px) {
+      font-size: 0.8rem;
     }
   }
+`;
 
-  p {
+export const PortfolioContentContainer = styled.div`
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: ${(props) =>
+  props.firstCardActive ? props.theme.inset : props.theme.boxShadow};
+  padding: 1rem;
+
+  &p {
     font-family: ${(props) => props.theme.fontFamily};
     font-size: 0.9rem;
     padding: 0 2rem;
@@ -43,16 +56,22 @@ export const Card = styled.div`
     }
 
     @media (max-width: 810px) {
-      font-size: .7rem;
-      padding: .4rem 0.9rem;
-      margin: .2rem 0;
+      font-size: 0.7rem;
+      padding: 0.4rem 0.9rem;
+      margin: 0.2rem 0;
     }
 
     @media (max-width: 420px) {
-      font-size: .6rem;
-      padding: .3rem;
+      font-size: 0.6rem;
+      padding: 0.3rem;
     }
   }
+`;
+
+export const PortfolioImage = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
 `;
 
 export const FirstCardContainer = styled.div`
@@ -109,7 +128,7 @@ export const FourthCardContainer = styled.div`
 
 // ----------- Buttons
 
-export const PortFolioVisit = styled(Link)`
+export const PortFolioVisit = styled.a`
   width: 10rem;
   height: 3rem;
   box-shadow: ${(props) => props.theme.boxShadow};
@@ -119,7 +138,7 @@ export const PortFolioVisit = styled(Link)`
   justify-content: center;
   text-decoration: none;
   border-radius: 0.5rem;
-  color: ${(props) => (props) => props.theme.orange};
+  color: ${(props) => props.theme.orange};
   user-select: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -137,7 +156,7 @@ export const PortFolioVisit = styled(Link)`
 
   @media (max-width: 810px) {
     width: 7rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   @media (max-width: 420px) {
