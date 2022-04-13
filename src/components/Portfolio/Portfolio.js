@@ -47,12 +47,12 @@ const Portfolio = () => {
   const [thirdCardActive, setThirdCardActive] = useState(false);
   const [fourthCardActive, setFourthCardActive] = useState(false);
 
-
-
-
-
   return (
-    <PageContainer>
+    <PageContainer
+      as={motion.div}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       {/* -------------Third Card Container */}
       <FirstCardContainer>
         <Card
@@ -70,10 +70,7 @@ const Portfolio = () => {
             {firstCardActive ? (
               <p>{data.movieApp.desciption}</p>
             ) : (
-              <PortfolioImage
-                src={MovieApp}
-                alt=""
-              />
+              <PortfolioImage src={MovieApp} alt="" />
             )}
           </PortfolioContentContainer>
 
@@ -101,10 +98,7 @@ const Portfolio = () => {
             {secondCardActive ? (
               <p>{data.pokePalace.desciption}</p>
             ) : (
-              <PortfolioImage
-                src={PokePalace}
-                alt=""
-              />
+              <PortfolioImage src={PokePalace} alt="" />
             )}
           </PortfolioContentContainer>
 
@@ -132,9 +126,7 @@ const Portfolio = () => {
             {thirdCardActive ? (
               <p>{data.toadTribune.desciption}</p>
             ) : (
-              <PortfolioImage
-                src={ToadTribune}
-              />
+              <PortfolioImage src={ToadTribune} />
             )}
           </PortfolioContentContainer>
 
@@ -156,13 +148,13 @@ const Portfolio = () => {
         >
           <h3>{data.kovvi.title}</h3>
           <PortfolioContentContainer
-            firstCardActive ={fourthCardActive}
+            firstCardActive={fourthCardActive}
             onClick={() => setFourthCardActive(!fourthCardActive)}
           >
             {fourthCardActive ? (
               <p>{data.kovvi.desciption}</p>
             ) : (
-              <PortfolioImage src={Kovvi} alt="Kovvi app " />
+              <PortfolioImage src={Kovvi} alt="Kovvi app" />
             )}
           </PortfolioContentContainer>
 
