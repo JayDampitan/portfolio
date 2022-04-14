@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import {
@@ -32,62 +32,93 @@ const linksVariant = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [homeActive, setHomeActive] = useState(false);
+  const [aboutActive, setAboutActive] = useState(false);
+  const [workActive, setWorkActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
 
   return (
     <NavContainer>
-  
-        <Logo
-          as={motion.div}
-        >
-         <h2>JD</h2>
-        </Logo>
-        <Hamburger onClick={() => setIsOpen(!isOpen)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </Hamburger>
-   
+      <Logo as={motion.div}>
+        <h2>JD</h2>
+      </Logo>
+      <Hamburger onClick={() => setIsOpen(!isOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </Hamburger>
 
       <NavLinksContainer
-        isOpen = {isOpen}
+        isOpen={isOpen}
         as={motion.div}
         variants={linksVariant}
         initial="hidden"
         animate="visible"
       >
         <LinkWrapper
-         
+          onClick={() => {
+            setHomeActive(true);
+            setAboutActive(false);
+            setWorkActive(false);
+            setContactActive(false);
+          }}
+          insetActive={homeActive}
           as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
         >
-          <NavLinks to="/"> Home </NavLinks>
-        </LinkWrapper>
-        <LinkWrapper
-          as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
-        >
-          <NavLinks to="/about"> About </NavLinks>
-        </LinkWrapper>
-
-        <LinkWrapper
-          as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
-        >
-          <NavLinks to="/portfolio"> Work </NavLinks>
+          <NavLinks insetActive={homeActive} to="/">
+            {" "}
+            Home{" "}
+          </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper
+          onClick={() => {
+            setHomeActive(false);
+            setAboutActive(true);
+            setWorkActive(false);
+            setContactActive(false);
+          }}
+          insetActive={aboutActive}
           as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
         >
-          <NavLinks to="/contact"> Contact </NavLinks>
+          <NavLinks insetActive={aboutActive} to="/about">
+            {" "}
+            About{" "}
+          </NavLinks>
+        </LinkWrapper>
+
+        <LinkWrapper
+          onClick={() => {
+            setHomeActive(false);
+            setAboutActive(false);
+            setWorkActive(true);
+            setContactActive(false);
+          }}
+          insetActive={workActive}
+          as={motion.div}
+        >
+          <NavLinks insetActive={workActive} to="/portfolio">
+            {" "}
+            Work{" "}
+          </NavLinks>
+        </LinkWrapper>
+
+        <LinkWrapper
+          onClick={() => {
+            setHomeActive(false);
+            setAboutActive(false);
+            setWorkActive(false);
+            setContactActive(true);
+          }}
+          insetActive={contactActive}
+          as={motion.div}
+        >
+          <NavLinks insetActive={contactActive} to="/contact">
+            {" "}
+            Contact{" "}
+          </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>
-     
     </NavContainer>
   );
 };

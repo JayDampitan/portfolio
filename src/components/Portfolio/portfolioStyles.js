@@ -16,6 +16,13 @@ export const Card = styled.div`
   color: ${(props) => props.theme.text};
   padding: 2rem;
   transform: translateX(-35px);
+`;
+
+export const PortfolioTitleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   h3 {
     color: ${(props) => props.theme.text};
@@ -30,6 +37,21 @@ export const Card = styled.div`
     @media (max-width: 810px) {
       font-size: 0.8rem;
     }
+  }
+`;
+
+export const PortfolioGithub = styled.a`
+  width: 1.6rem;
+  fill: ${(props) => props.theme.text};
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  box-shadow: ${(props) => props.theme.boxShadow};
+
+  :hover {
+    box-shadow: ${(props) => props.theme.inset};
   }
 `;
 
@@ -65,6 +87,27 @@ export const PortfolioContentContainer = styled.div`
       font-size: 0.6rem;
       padding: 0.3rem;
     }
+  }
+`;
+
+export const PortfolioButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const PortfolioTech = styled.div`
+  color: ${(props) => props.theme.text};
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  font-family: ${(props) => props.theme.fontFamily};
+  max-height: 2rem;
+  word-break: break-all;
+  display: block;
+
+  span {
+    margin: 0 0.3rem;
   }
 `;
 
@@ -129,8 +172,8 @@ export const FourthCardContainer = styled.div`
 // ----------- Buttons
 
 export const PortFolioVisit = styled.a`
-  width: 10rem;
-  height: 3rem;
+  width: 5rem;
+  height: 2.5rem;
   box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   display: flex;

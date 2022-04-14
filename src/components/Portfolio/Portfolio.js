@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
+  PortfolioTitleContainer,
+  PortfolioGithub,
   PortfolioContentContainer,
+  PortfolioButtonContainer,
+  PortfolioTech,
   PortfolioImage,
   FirstCardContainer,
   SecondCardContainer,
   ThirdCardContainer,
   FourthCardContainer,
   PortFolioVisit,
+  // background elements
   FirstLineContainer,
   FirstPortfolioLine,
   SecondLineContainer,
@@ -23,7 +28,7 @@ import { PageContainer } from "../../subComponents/pageContainer";
 import { Circle, Square } from "../../subComponents/backgroundElements";
 
 import { data } from "../../assets/data";
-import MovieApp from "../../assets/movieApp.png";
+import MovieApp from "../../assets/movieApp1.png";
 import PokePalace from "../../assets/pokePalace.png";
 import ToadTribune from "../../assets/toadTribune.png";
 import Kovvi from "../../assets/kovviShot.png";
@@ -40,6 +45,7 @@ import {
   fifthLineVariant,
   squareColorVariant,
 } from "./portfolioVariants";
+import { Github } from "../AllSvgs";
 
 const Portfolio = () => {
   const [firstCardActive, setFirstCardActive] = useState(false);
@@ -51,7 +57,7 @@ const Portfolio = () => {
     <PageContainer
       as={motion.div}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
     >
       {/* -------------Third Card Container */}
       <FirstCardContainer>
@@ -61,7 +67,15 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>{data.movieApp.title}</h3>
+          <PortfolioTitleContainer>
+            <h3>{data.movieApp.title}</h3>
+            <PortfolioGithub
+              target="_blank"
+              href="https://github.com/dannysanchez559/2021_React_Apprenticeship"
+            >
+              <Github />
+            </PortfolioGithub>
+          </PortfolioTitleContainer>
 
           <PortfolioContentContainer
             firstCardActive={firstCardActive}
@@ -74,12 +88,19 @@ const Portfolio = () => {
             )}
           </PortfolioContentContainer>
 
-          <PortFolioVisit
-            target="_blank"
-            href="https://reactoads-movie-app-7c45e.web.app/"
-          >
-            visit
-          </PortFolioVisit>
+          <PortfolioButtonContainer>
+            <PortFolioVisit
+              target="_blank"
+              href="https://reactoads-movie-app-7c45e.web.app/"
+            >
+              visit
+            </PortFolioVisit>
+
+            <PortfolioTech>
+              <p>-React</p>
+              <p>-Firebase</p>
+            </PortfolioTech>
+          </PortfolioButtonContainer>
         </Card>
       </FirstCardContainer>
       {/* -------------Second Card Container */}
@@ -90,7 +111,16 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>{data.pokePalace.title}</h3>
+          <PortfolioTitleContainer>
+            <h3>{data.pokePalace.title}</h3>
+            <PortfolioGithub
+              target="_blank"
+              href="https://github.com/gonzalespaulb/Pokemon-App"
+            >
+              <Github />
+            </PortfolioGithub>
+          </PortfolioTitleContainer>
+
           <PortfolioContentContainer
             firstCardActive={secondCardActive}
             onClick={() => setSecondCardActive(!secondCardActive)}
@@ -102,12 +132,24 @@ const Portfolio = () => {
             )}
           </PortfolioContentContainer>
 
-          <PortFolioVisit
-            target="_blank"
-            href="https://pokepalace-fa118.web.app/"
-          >
-            visit
-          </PortFolioVisit>
+          <PortfolioButtonContainer>
+            <PortFolioVisit
+              target="_blank"
+              href="https://pokepalace-fa118.web.app/"
+            >
+              visit
+            </PortFolioVisit>
+            <PortfolioTech>
+              <p>
+                <span>-React</span>
+                <span>-SCSS</span>
+              </p>
+              <p>
+                <span>-RTK</span>
+                <span>-Firebase</span>
+              </p>
+            </PortfolioTech>
+          </PortfolioButtonContainer>
         </Card>
       </SecondCardContainer>
       {/* -------------Third Card Container */}
@@ -118,7 +160,16 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>{data.toadTribune.title}</h3>
+          <PortfolioTitleContainer>
+            <h3>{data.toadTribune.title}</h3>
+            <PortfolioGithub
+              target="_blank"
+              href="https://github.com/JayDampitan/news-app"
+            >
+              <Github />
+            </PortfolioGithub>
+          </PortfolioTitleContainer>
+
           <PortfolioContentContainer
             firstCardActive={thirdCardActive}
             onClick={() => setThirdCardActive(!thirdCardActive)}
@@ -130,12 +181,25 @@ const Portfolio = () => {
             )}
           </PortfolioContentContainer>
 
-          <PortFolioVisit
-            target="_blank"
-            href="https://the-toad-tribune-659c7.web.app/"
-          >
-            visit
-          </PortFolioVisit>
+          <PortfolioButtonContainer>
+            <PortFolioVisit
+              target="_blank"
+              href="https://the-toad-tribune-659c7.web.app/"
+            >
+              visit
+            </PortFolioVisit>
+
+            <PortfolioTech>
+              <p>
+                <span>-React</span>
+                <span>-Typescript</span>
+              </p>
+              <p>
+                <span>-Redux</span>
+                <span>-Styled Components</span>
+              </p>
+            </PortfolioTech>
+          </PortfolioButtonContainer>
         </Card>
       </ThirdCardContainer>
       {/* -------------Fourth Card Container */}
@@ -146,7 +210,13 @@ const Portfolio = () => {
           initial="hidden"
           animate="visible"
         >
-          <h3>{data.kovvi.title}</h3>
+          <PortfolioTitleContainer>
+            <h3>{data.kovvi.title}</h3>
+            <PortfolioGithub href="">
+              <Github />
+            </PortfolioGithub>
+          </PortfolioTitleContainer>
+
           <PortfolioContentContainer
             firstCardActive={fourthCardActive}
             onClick={() => setFourthCardActive(!fourthCardActive)}
@@ -158,7 +228,22 @@ const Portfolio = () => {
             )}
           </PortfolioContentContainer>
 
+          <PortfolioButtonContainer>
           <PortFolioVisit href="/">visit</PortFolioVisit>
+
+            <PortfolioTech>
+              <p>
+                <span>-React Native</span>
+                <span>-Redux</span>
+              </p>
+              <p>
+                <span>-Expo</span>
+                <span>-Styled Components</span>
+              </p>
+            </PortfolioTech>
+          </PortfolioButtonContainer>
+
+         
         </Card>
       </FourthCardContainer>
 
