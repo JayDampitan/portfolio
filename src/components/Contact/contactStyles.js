@@ -122,7 +122,9 @@ export const SubmitButton = styled.button`
 `;
 
 export const ContactImageContainer = styled.div`
-  grid-area: 3/7/11/10;
+  align-self: center;
+  justify-self: center;
+  grid-area: 3/7/11/11;
   box-shadow: ${(props) => props.theme.boxShadow},
     ${(props) => props.theme.inset};
   border: 5px solid ${(props) => props.theme.body};
@@ -130,7 +132,7 @@ export const ContactImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 7rem;
+  margin: 3rem 3rem 4rem 3rem;
 
   @media (max-width: 1500px){
     display: none;
@@ -138,8 +140,8 @@ export const ContactImageContainer = styled.div`
 `;
 
 export const ContactImage = styled.img`
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 `;
 
 // -----------Background Elements

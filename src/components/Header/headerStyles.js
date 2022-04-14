@@ -7,7 +7,7 @@ export const HeaderIntro = styled.div`
   font-family: ${(props) => props.theme.fontFamily};
   text-transform: uppercase;
   color: ${(props) => props.theme.text};
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-weight: 900;
   display: flex;

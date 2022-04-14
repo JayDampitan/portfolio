@@ -38,7 +38,7 @@ const Header = () => {
     <PageContainer
       as = {motion.div}
       exit = {{opacity: 0}}
-      transition = {{duration: .6}}
+      transition = {{duration: .5}}
     >
       <HeaderIntro
         as={motion.div}

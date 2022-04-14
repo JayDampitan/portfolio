@@ -27,7 +27,7 @@ import {
   contactImageVariant,
 } from "./contactVariants";
 
-import Phone from "../../assets/phone.png";
+import Kovvi from "../../assets/kovvi.png";
 
 import { PageContainer } from "../../subComponents/pageContainer";
 
@@ -36,7 +36,7 @@ const Contact = () => {
     <PageContainer
       as={motion.div}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
     >
       {/* -----------Contact Form and Animations */}
       <ContactForm
@@ -63,7 +63,7 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        <ContactImage src={Phone} alt="Phone" />
+        <ContactImage src={Kovvi} alt="Phone" />
       </ContactImageContainer>
 
       {/* -----------Background Designs and Animations */}
