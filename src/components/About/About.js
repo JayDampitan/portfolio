@@ -18,6 +18,7 @@ import {
   TitleContainer,
   SvgContainer,
   ParagraphContainer,
+  TechContainer,
   SvgBox,
   FirstLineContainer,
   FirstLine,
@@ -29,6 +30,8 @@ import {
   FourthLine,
 } from "./aboutStyles";
 
+import { myInfo } from "../../assets/data";
+
 import { Square, Circle } from "../../subComponents/backgroundElements";
 
 import {
@@ -36,6 +39,7 @@ import {
   secondLineVariant,
   aboutImageVariant,
   contentVariant,
+  squareColor,
 } from "./aboutVariants";
 
 import { PageContainer } from "../../subComponents/pageContainer";
@@ -53,7 +57,7 @@ const About = () => {
         variants={contentVariant}
         initial="hidden"
         animate="visible"
-      />
+      >
       <TitleContainer
         as={motion.div}
         variants={contentVariant}
@@ -69,19 +73,20 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          totam laudantium rerum quia. Culpa expedita tempora provident saepe
-          itaque laboriosam autem fugit minima amet hic eligendi unde
-          necessitatibus sequi dolores voluptate, neque nesciunt. Rem
-          dignissimos laudantium, impedit dolore quis expedita dicta illo
-          repellendus, fugiat modi debitis, iusto quos nostrum officiis
-          asperiores laborum aspernatur delectus hic. Iusto eligendi
-          necessitatibus atque eius architecto hic dicta quo nam totam, natus
-          nulla similique.
-        </p>
+        <p>{myInfo.story.description}</p>
       </ParagraphContainer>
 
+
+      <TechContainer>
+        <h4>Some of the tech I learned and working on recently:</h4>
+        <p><span>-HTML5</span><span>-CSS</span><span>-Javascript</span></p>
+        <p><span>-React</span><span>-React Native</span><span>-Redux Toolkit</span></p>
+        <p><span>-Styled Components</span><span>-SCSS</span><span>-React Native</span></p>
+      </TechContainer>
+
+      </ContentContainer>
+
+      {/* 
       <SvgContainer
         as={motion.div}
         variants={contentVariant}
@@ -109,7 +114,7 @@ const About = () => {
         <SvgBox>
           <StyledComponents fill="currentColor" />
         </SvgBox>
-      </SvgContainer>
+      </SvgContainer> */}
 
       {/* -----------Profile Image */}
       <ImageContainer
@@ -136,7 +141,7 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-        <Square />
+        <Square/>
         <SecondLine />
         <Circle />
       </SecondLineContainer>
@@ -148,7 +153,12 @@ const About = () => {
       >
         <Circle />
         <ThirdLine />
-        <Square />
+        <Square 
+          as={motion.div}
+          variants={squareColor}
+          initial="hidden"
+          animate="visible"
+         />
       </ThirdLineContainer>
       <FourthAboutLineContainer
         as={motion.div}
