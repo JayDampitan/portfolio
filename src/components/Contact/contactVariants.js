@@ -96,3 +96,17 @@ export const textAreaInputVariant = {
     },
   };
 
+  // -------------Contact form Image Variants
+
+  // image rotation concept
+
+  // export const imageHover = {
+  //   hover: {
+  //     rotateY: [0, 180,280],
+  //     transition: {
+  //       duration: 4,
+  //       ease:  'easeIn'
+  //     }
+  //   }
+  // }
+

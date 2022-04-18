@@ -14,7 +14,6 @@ import {
   ThirdContactContainer,
   ThirdContactLine,
   FourthContactContainer,
-  ContactImage,
 } from "./contactStyles";
 
 import { Square, Circle } from "../../subComponents/backgroundElements";
@@ -25,6 +24,7 @@ import {
   thirdLineVariant,
   contactFormVariant,
   contactImageVariant,
+  imageHover,
 } from "./contactVariants";
 
 import Kovvi from "../../assets/kovvi.png";
@@ -45,6 +45,7 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       />
+      {/* ------------------Contact Info Container */}
       <ContactInfoContainer
         as={motion.div}
         variants={contactFormVariant}
@@ -57,13 +58,14 @@ const Contact = () => {
         <TextArea placeholder="Message" />
         <SubmitButton>Submit</SubmitButton>
       </ContactInfoContainer>
+      {/*-------------Contact Image  */}
       <ContactImageContainer
         as={motion.div}
         variants={contactImageVariant}
         initial="hidden"
         animate="visible"
       >
-        <ContactImage src={Kovvi} alt="Phone" />
+        <motion.img src={Kovvi} alt="Phone" />
       </ContactImageContainer>
 
       {/* -----------Background Designs and Animations */}
