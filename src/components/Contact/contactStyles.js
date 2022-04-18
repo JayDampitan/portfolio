@@ -7,14 +7,13 @@ export const ContactForm = styled.form`
   color: ${(props) => props.theme.text};
   border: ${(props) => props.theme.border};
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     grid-area: 2/3/12/12;
   }
 
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     grid-area: 2/2/12/13;
   }
-
 `;
 
 export const ContactInfoContainer = styled.div`
@@ -27,14 +26,14 @@ export const ContactInfoContainer = styled.div`
   font-family: ${(props) => props.theme.fontFamily};
   padding: 2rem;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     grid-area: 2/4/12/11;
     width: 100%;
     align-items: center;
     justify-content: center;
   }
 
-  @media (max-width: 810px){
+  @media (max-width: 810px) {
     padding: 1rem 0;
   }
 `;
@@ -53,15 +52,15 @@ export const Input = styled.input`
   font-family: ${(props) => props.theme.fontFamily};
   outline: none;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     width: 84%;
     height: 7%;
   }
 
-  @media (max-width: 810px){
+  @media (max-width: 810px) {
     width: 90%;
     height: 7%;
-    font-size: 1rem
+    font-size: 1rem;
   }
 `;
 
@@ -81,12 +80,12 @@ export const TextArea = styled.textarea`
   resize: none;
   margin-bottom: 0.6rem;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     width: 84%;
     height: 50%;
   }
 
-  @media (max-width: 810px){
+  @media (max-width: 810px) {
     width: 90%;
     height: 40%;
     font-size: 1rem;
@@ -114,7 +113,7 @@ export const SubmitButton = styled.button`
     box-shadow: ${(props) => props.theme.inset};
   }
 
-  @media (max-width: 810px){
+  @media (max-width: 810px) {
     width: 7rem;
     height: 3rem;
     margin: 0.7rem;
@@ -124,24 +123,26 @@ export const SubmitButton = styled.button`
 export const ContactImageContainer = styled.div`
   align-self: center;
   justify-self: center;
-  grid-area: 3/7/11/11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 3/7/10/11;
   box-shadow: ${(props) => props.theme.boxShadow},
     ${(props) => props.theme.inset};
   border: 5px solid ${(props) => props.theme.body};
   border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 3rem 4rem 3rem;
+  width: 80%;
+  height: 100%;
+  
 
-  @media (max-width: 1500px){
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1500px) {
     display: none;
   }
-`;
-
-export const ContactImage = styled.img`
-  width: 100%;
-  height: 100%;
 `;
 
 // -----------Background Elements
@@ -152,7 +153,7 @@ export const FirstContactContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     display: none;
   }
 `;
@@ -169,7 +170,7 @@ export const SecondContactContainer = styled.div`
   justify-content: space-between;
   flex-direction: column;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     display: none;
   }
 `;
@@ -188,7 +189,7 @@ export const ThirdContactContainer = styled.div`
   justify-content: space-between;
   flex-direction: column;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     display: none;
   }
 `;
@@ -206,7 +207,7 @@ export const FourthContactContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     display: none;
   }
 `;

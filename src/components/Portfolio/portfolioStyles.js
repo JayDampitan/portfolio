@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 // ------ Portfolio Cards
 
@@ -22,7 +21,7 @@ export const PortfolioTitleContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   h3 {
     color: ${(props) => props.theme.text};
@@ -56,10 +55,10 @@ export const PortfolioGithub = styled.a`
 `;
 
 export const PortfolioContentContainer = styled.div`
-  width: 90%;
-  height: 50%;
+  width: 95%;
+  height: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   border-radius: 1rem;
   cursor: pointer;
@@ -90,13 +89,6 @@ export const PortfolioContentContainer = styled.div`
   }
 `;
 
-export const PortfolioButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-`;
-
 export const PortfolioTech = styled.div`
   color: ${(props) => props.theme.text};
   font-size: 11px;
@@ -107,7 +99,8 @@ export const PortfolioTech = styled.div`
   display: block;
 
   span {
-    margin: 0 0.3rem;
+    margin: 0 0.5rem;
+    font-family: ${(props) => props.theme.fontFamily};
   }
 `;
 
@@ -171,8 +164,15 @@ export const FourthCardContainer = styled.div`
 
 // ----------- Buttons
 
+export const PortfolioButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+`;
+
 export const PortFolioVisit = styled.a`
-  width: 5rem;
+  width: 7rem;
   height: 2.5rem;
   box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
@@ -180,7 +180,7 @@ export const PortFolioVisit = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   color: ${(props) => props.theme.orange};
   user-select: none;
   cursor: pointer;
