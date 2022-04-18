@@ -96,6 +96,19 @@ export const textAreaInputVariant = {
     },
   };
 
+  export const squareColor = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      backgroundColor: 'rgba(187, 68, 48, 1)',
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
   // -------------Contact form Image Variants
 
   // image rotation concept

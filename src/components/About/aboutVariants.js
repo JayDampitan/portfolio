@@ -13,6 +13,19 @@ export const firstLineVariant = {
   },
 };
 
+export const squareColor = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    backgroundColor: 'rgba(187, 68, 48, 1)',
+    transition: {
+      duration: 1
+    }
+  }
+}
+
 export const secondLineVariant = {
   hidden: {
     y: 100,

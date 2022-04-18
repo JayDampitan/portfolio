@@ -24,6 +24,7 @@ import {
   thirdLineVariant,
   contactFormVariant,
   contactImageVariant,
+  squareColor,
   imageHover,
 } from "./contactVariants";
 
@@ -95,7 +96,10 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        <Square />
+        <Square  as={motion.div}
+          variants={squareColor}
+          initial="hidden"
+          animate="visible" />
         <ThirdContactLine />
         <Circle />
       </ThirdContactContainer>
