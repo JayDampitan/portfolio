@@ -8,7 +8,7 @@ export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1rem 13rem;
   color: ${(props) => props.theme.text};
   font-family: ${(props) => props.theme.fontFamily};
@@ -23,15 +23,15 @@ export const ContentContainer = styled.div`
   }
   @media (max-width: 420px) {
     grid-area: 4/3/12/12;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
+    justify-content: space-evenly;
   }
 `;
 
 export const ImageContainer = styled.div`
-  display: flex;
-  width: 85%;
-  height: 85%;
-  grid-area: 2/3/7/5;
+  display: grid;
+  align-self: center;
+  grid-area: 2/3/6/5;
   border-radius: 50%;
   border: 5px solid ${(props) => props.theme.orange};
   box-shadow: ${(props) => props.theme.boxShadow},
@@ -43,10 +43,8 @@ export const ImageContainer = styled.div`
   }
 
   @media (max-width: 420px) {
-    justify-self: center;
-    align-self: center;
-    grid-area: 3/5/5/9;
-    margin-bottom: 1rem;
+    grid-area: 2/5/4/9;
+    margin-top: 1rem;
   }
 `;
 

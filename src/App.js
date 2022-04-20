@@ -17,13 +17,14 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={switchActive ? lightMode : darkMode}>
           <GlobalStyle />
-          <Navbar />
-          <GradientLine />
-          <AnimatedRoutes />
           <Media
             switchActive={switchActive}
             setSwitchActive={setSwitchActive}
           />
+          <GradientLine />
+          <AnimatedRoutes />
+
+          <Navbar />
         </ThemeProvider>
       </BrowserRouter>
     </div>

@@ -4,7 +4,7 @@ export const PageContainer = styled.div`
   
   color: ${(props) => props.theme.text};
   width: 100vw;
-  height: 74vh;
+  height: 76vh;
   user-select: none;
   display: grid;
   grid-template-columns: repeat(13, 1fr );

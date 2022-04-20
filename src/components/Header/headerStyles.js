@@ -3,29 +3,30 @@ import { Link } from "react-router-dom";
 
 export const HeaderIntro = styled.div`
   color: ${(props) => props.theme.text};
-  grid-area: 4/3/5/5;
+  grid-area: 4/3/5/6;
   font-family: ${(props) => props.theme.fontFamily};
   text-transform: uppercase;
   color: ${(props) => props.theme.text};
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.2rem;
   font-weight: 900;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 
   @media (max-width: 1680px) {
     font-size: 1.3rem;
   }
 
   @media (max-width: 1200px) {
-    grid-area: 2/5/3/10;
+    grid-area: 1/5/2/10;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    text-align: center;
   }
 
   @media (max-width: 810px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
     align-items: flex-end;
   }
 
@@ -44,7 +45,7 @@ export const HeaderName = styled.div`
   font-family: ${(props) => props.theme.fontFamily};
   text-transform: uppercase;
   color: ${(props) => props.theme.orange};
-  border-bottom: 3px solid ${(props) => props.theme.text};
+  border-bottom: 2.5px solid ${(props) => props.theme.text};
   word-spacing: 1rem;
   letter-spacing: 0.2rem;
 
@@ -54,17 +55,22 @@ export const HeaderName = styled.div`
 
   @media (max-width: 1200px) {
     justify-content: center;
-    grid-area: 3/5/4/10;
-    font-size: 2.6rem;
+    grid-area: 2/3/3/12;
+    font-size: 3rem;
   }
 
   @media (max-width: 810px) {
-    font-size: 2rem;
-    justify-content: center;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2.3rem;
   }
 
   @media (max-width: 420px) {
-    grid-area: 2/1/3/14;
+    grid-area: 2/3/3/12;
+    font-size: 2rem;
   }
 `;
 
@@ -84,13 +90,13 @@ export const HeaderTitle = styled.div`
   }
 
   @media (max-width: 1200px) {
-    grid-area: 4/4/5/11;
+    grid-area: 3/4/4/11;
     justify-content: center;
   }
 
   @media (max-width: 810px) {
-    font-size: 0.7rem;
-    justify-content: center;
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   @media (max-width: 420px) {
@@ -101,9 +107,12 @@ export const HeaderTitle = styled.div`
 
 export const ConnectButton = styled(Link)`
   justify-content: center;
-  display: flex;
-  grid-area: 7/3/8/4;
+  justify-self: center;
   align-items: center;
+  display: flex;
+  padding: 0.7rem 2rem;
+  margin: 0.5rem;
+  grid-area: 7/3/8/4;
   border-radius: 4rem;
   box-shadow: ${(props) => props.theme.boxShadow};
   text-transform: uppercase;
@@ -122,25 +131,20 @@ export const ConnectButton = styled(Link)`
     transition: ease-in-out 0.3s;
   }
 
-  @media (max-width: 1680px) {
+  @media (max-width: 1200px) {
+    grid-area: 4/7/5/8;
     font-size: 0.8rem;
   }
 
-  @media (max-width: 1200px) {
-    grid-area: 5/7/6/8;
-    font-size: 0.7rem;
-    width: 90%;
-    height: 70%;
-  }
-
   @media (max-width: 810px) {
-    font-size: 0.4rem;
-    border-radius: 20%;
+    font-size: 0.7rem;
+    padding: .5rem 1.5rem;
+    margin-bottom: 1rem;
   }
 
   @media (max-width: 420px) {
-    grid-area: 4/6/5/9;
-    border-radius: 1rem;
+    grid-area: 4/7/5/8;
+    padding: 0.7rem 1rem;
   }
 `;
 
@@ -153,28 +157,18 @@ export const HeaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  @media (max-width: 1300px) {
-    width: 90%;
-    height: 90%;
-  }
+  padding: 1rem 0 0 2rem;
 
   @media (max-width: 1200px) {
-    grid-area: 6/5/13/10;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    grid-area: 5/3/13/12;
   }
 
-  @media (max-width: 810px) {
-    grid-area: 6/3/13/12;
-    margin-left: 1.2rem;
+  @media (max-width: 600px) {
+    grid-area: 5/3/13/12;
   }
 
   @media (max-width: 420px) {
-    grid-area: 5/2/11/13;
-    margin-left: 1.2rem;
+    grid-area: 5/2/13/13;
   }
 `;
 
@@ -183,22 +177,22 @@ export const HeaderImage = styled.img`
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-left: 5rem;
-  padding-top: 0.6rem;
+  align-items: center;
 
-  @media (max-width: 1305px) {
+  /* @media (max-width: 1305px) {
     padding-left: 5rem;
     padding-top: 1rem;
     width: 90%;
     height: 90%;
-  }
+  } */
 
-  @media (max-width: 810px) {
-    padding-left: 3rem;
+  @media (max-width: 420px) {
+    width: 90%;
+    height: 90%;
   }
 `;
 
-// Background Elements
+// ----------------------Background Elements
 
 export const FirstCircleContainer = styled.div`
   grid-area: 5/1/6/3;
@@ -209,14 +203,6 @@ export const FirstCircleContainer = styled.div`
   padding-right: 1rem;
 
   @media (max-width: 1200px) {
-    grid-area: 3/1/4/5;
-  }
-
-  @media (max-width: 810px) {
-    display: none;
-  }
-
-  @media (max-width: 520px) {
     display: none;
   }
 `;
@@ -236,14 +222,6 @@ export const SquareContainer = styled.div`
   flex-direction: column;
 
   @media (max-width: 1200px) {
-    grid-area: 5/10/12/11;
-  }
-
-  @media (max-width: 810px) {
-    display: none;
-  }
-
-  @media (max-width: 520px) {
     display: none;
   }
 `;
@@ -254,10 +232,6 @@ export const SecondLine = styled.div`
   width: 80%;
   background-color: ${(props) => props.theme.text};
   margin: 3rem;
-
-  @media (max-width: 1200px) {
-    margin: 7rem 0;
-  }
 `;
 
 export const ThirdLineContainer = styled.div`
@@ -268,14 +242,6 @@ export const ThirdLineContainer = styled.div`
   padding-left: 2rem;
 
   @media (max-width: 1200px) {
-    grid-area: 12/10/13/13;
-  }
-
-  @media (max-width: 810px) {
-   display: none;
-  }
-
-  @media (max-width: 520px) {
     display: none;
   }
 `;
@@ -293,16 +259,6 @@ export const FourthLineContainer = styled.div`
   justify-content: space-around;
 
   @media (max-width: 1200px) {
-    grid-area: 6/3/9/5;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  @media (max-width: 810px) {
-    display: none;
-  }
-
-  @media (max-width: 520px) {
     display: none;
   }
 `;
@@ -311,12 +267,4 @@ export const FourthLine = styled.div`
   background-color: ${(props) => props.theme.text};
   width: 50%;
   height: 2px;
-
-  @media (max-width: 1200px) {
-    transform: rotate(90deg);
-  }
-
-  @media (max-width: 810px) {
-    width: 150%;
-  }
 `;
