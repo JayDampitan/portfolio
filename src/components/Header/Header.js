@@ -36,9 +36,9 @@ import { PageContainer } from "../../subComponents/pageContainer";
 const Header = () => {
   return (
     <PageContainer
-      as = {motion.div}
-      exit = {{opacity: 0}}
-      transition = {{duration: .5}}
+      as={motion.div}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <HeaderIntro
         as={motion.div}
@@ -64,6 +64,16 @@ const Header = () => {
       >
         software developer from california
       </HeaderTitle>
+
+      <HeaderBox
+        as={motion.div}
+        variants={headerBoxVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <HeaderImage src={HeaderBoxImage} />
+      </HeaderBox>
+
       <ConnectButton
         to="/contact"
         as={motion.div}
@@ -126,15 +136,6 @@ const Header = () => {
         <FourthLine />
         <Square />
       </FourthLineContainer>
-
-      <HeaderBox
-        as={motion.div}
-        variants={headerBoxVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <HeaderImage src={HeaderBoxImage} />
-      </HeaderBox>
     </PageContainer>
   );
 };

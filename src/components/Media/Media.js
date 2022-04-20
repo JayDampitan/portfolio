@@ -6,10 +6,10 @@ import { Facebook, Github, Twitter, YouTube } from "../AllSvgs";
 import {
   Icons,
   IconContainer,
-  SwitchButton,
   MediaContainer,
+  Logo,
+  LogoWrapper,
 } from "./mediaStyles";
-import { Moon, Sun } from "../AllSvgs";
 // ----------------Media Animations
 
 const mediaVariants = {
@@ -27,35 +27,35 @@ const mediaVariants = {
 const Media = ({ switchActive, setSwitchActive }) => {
   return (
     <MediaContainer>
+      <LogoWrapper
+        switchActive={switchActive}
+        onClick={() => {
+          setSwitchActive(!switchActive);
+        }}
+      >
+        <Logo switchActive={switchActive} as={motion.nav}>
+          <h2>JD</h2>
+        </Logo>
+      </LogoWrapper>
       <IconContainer
         as={motion.div}
         variants={mediaVariants}
         initial="hidden"
         animate="visible"
       >
-        <Icons target='_blank' href='https://github.com/JayDampitan'>
+        <Icons target="_blank" href="https://github.com/JayDampitan">
           <Github fill="currentColor" />
         </Icons>
-        <Icons target='_blank' href=''>
+        <Icons target="_blank" href="">
           <YouTube fill="currentColor" />
         </Icons>
-        <Icons target='_blank' href=''>
+        <Icons target="_blank" href="">
           <Twitter fill="currentColor" />
         </Icons>
-        <Icons target='_blank' href=''>
+        <Icons target="_blank" href="">
           <Facebook fill="currentColor" />
         </Icons>
       </IconContainer>
-
-      <SwitchButton
-        switchActive={switchActive}
-        onClick={() => {
-          setSwitchActive(!switchActive);
-        }}
-        as={motion.div}
-      >
-        {switchActive ? <Moon fill="#232427" /> : <Sun fill="#E0B418" />}
-      </SwitchButton>
     </MediaContainer>
   );
 };

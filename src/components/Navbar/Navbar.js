@@ -2,54 +2,23 @@ import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import {
-  NavContainer,
-  Logo,
+  Nav,
   NavLinksContainer,
   LinkWrapper,
   NavLinks,
-  Hamburger,
 } from "./navbarStyles";
 
-const hoverVariants = {
-  hoverMe: {
-    boxShadow:
-      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-  },
-};
-
-const linksVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-      ease: "easeIn",
-    },
-  },
-};
+import { linksVariant } from "./navbarVariants";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [homeActive, setHomeActive] = useState(false);
   const [aboutActive, setAboutActive] = useState(false);
   const [workActive, setWorkActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
   return (
-    <NavContainer>
-      <Logo as={motion.div}>
-        <h2>JD</h2>
-      </Logo>
-      <Hamburger onClick={() => setIsOpen(!isOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </Hamburger>
-
+    <Nav>
       <NavLinksContainer
-        isOpen={isOpen}
         as={motion.div}
         variants={linksVariant}
         initial="hidden"
@@ -119,7 +88,8 @@ const Navbar = () => {
           </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>
-    </NavContainer>
+   
+    </Nav>
   );
 };
 
