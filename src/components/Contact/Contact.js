@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
   ContactForm,
-  ContactInfoContainer,
-  Input,
+  ContactFormContainer,
   TextArea,
   SubmitButton,
   ContactImageContainer,
@@ -33,6 +33,28 @@ import Kovvi from "../../assets/kovvi.png";
 import { PageContainer } from "../../subComponents/pageContainer";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.REACT_APP_PUBLIC_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    form.current.reset();
+  };
+
   return (
     <PageContainer
       as={motion.div}
@@ -40,25 +62,29 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
     >
       {/* -----------Contact Form and Animations */}
-      <ContactForm
+      <ContactFormContainer
         as={motion.div}
         variants={contactFormVariant}
         initial="hidden"
         animate="visible"
       />
+
       {/* ------------------Contact Info Container */}
-      <ContactInfoContainer
-        as={motion.div}
+      <ContactForm
+        ref={form}
+        onSubmit={sendEmail}
+        as={motion.form}
         variants={contactFormVariant}
         initial="hidden"
         animate="visible"
       >
         <h2>Get in touch</h2>
-        <Input placeholder="Name" />
-        <Input placeholder="Email" />
-        <TextArea placeholder="Message" />
-        <SubmitButton>Submit</SubmitButton>
-      </ContactInfoContainer>
+        <input type="text" placeholder="Name" name="name" />
+        <input type="email" placeholder="Email" name="email" />
+        <TextArea type="text" placeholder="Message" name="message" />
+        <SubmitButton type="submit">Send</SubmitButton>
+      </ContactForm>
+
       {/*-------------Contact Image  */}
       <ContactImageContainer
         as={motion.div}
@@ -96,10 +122,12 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        <Square  as={motion.div}
+        <Square
+          as={motion.div}
           variants={squareColor}
           initial="hidden"
-          animate="visible" />
+          animate="visible"
+        />
         <ThirdContactLine />
         <Circle />
       </ThirdContactContainer>
