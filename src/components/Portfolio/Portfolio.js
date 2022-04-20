@@ -146,7 +146,7 @@ const Portfolio = () => {
               target="_blank"
               href="https://pokepalace-fa118.web.app/"
             >
-             <p>visit</p>
+              <p>visit</p>
             </PortFolioVisit>
             <PortfolioGithub
               target="_blank"
@@ -220,7 +220,6 @@ const Portfolio = () => {
         >
           <PortfolioTitleContainer>
             <h3>{data.kovvi.title}</h3>
-           
           </PortfolioTitleContainer>
 
           <PortfolioContentContainer
@@ -246,13 +245,11 @@ const Portfolio = () => {
             )}
           </PortfolioContentContainer>
           <PortfolioButtonContainer>
-          <PortFolioVisit href="/">visit</PortFolioVisit>
-          <PortfolioGithub href="">
+            <PortFolioVisit href="/">visit</PortFolioVisit>
+            <PortfolioGithub href="">
               <Github />
             </PortfolioGithub>
           </PortfolioButtonContainer>
-
-         
         </Card>
       </FourthCardContainer>
 

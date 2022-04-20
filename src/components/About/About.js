@@ -58,32 +58,42 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-      <TitleContainer
-        as={motion.div}
-        variants={contentVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <h2>Something About me</h2>
-      </TitleContainer>
+        <TitleContainer
+          as={motion.div}
+          variants={contentVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2>Something About me</h2>
+        </TitleContainer>
 
-      <ParagraphContainer
-        as={motion.div}
-        variants={contentVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <p>{myInfo.story.description}</p>
-      </ParagraphContainer>
+        <ParagraphContainer
+          as={motion.div}
+          variants={contentVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <p>{myInfo.story.description}</p>
+        </ParagraphContainer>
 
-
-      <TechContainer>
-        <h4>Some of the tech I learned and working on recently:</h4>
-        <p><span>-HTML5</span><span>-CSS</span><span>-Javascript</span></p>
-        <p><span>-React</span><span>-React Native</span><span>-Redux Toolkit</span></p>
-        <p><span>-Styled Components</span><span>-SCSS</span><span>-React Native</span></p>
-      </TechContainer>
-
+        <TechContainer>
+          <h4>Some of the tech I learned and working on recently:</h4>
+          <p>
+            <span>-HTML5</span>
+            <span>-CSS</span>
+            <span>-Javascript</span>
+          </p>
+          <p>
+            <span>-React</span>
+            <span>-React Native</span>
+            <span>-Redux Toolkit</span>
+          </p>
+          <p>
+            <span>-Styled Components</span>
+            <span>-SCSS</span>
+            <span>-React Native</span>
+          </p>
+        </TechContainer>
       </ContentContainer>
 
       {/* 
@@ -141,7 +151,7 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-        <Square/>
+        <Square />
         <SecondLine />
         <Circle />
       </SecondLineContainer>
@@ -153,12 +163,12 @@ const About = () => {
       >
         <Circle />
         <ThirdLine />
-        <Square 
+        <Square
           as={motion.div}
           variants={squareColor}
           initial="hidden"
           animate="visible"
-         />
+        />
       </ThirdLineContainer>
       <FourthAboutLineContainer
         as={motion.div}

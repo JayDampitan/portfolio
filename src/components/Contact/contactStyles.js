@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactForm = styled.form`
+export const ContactFormContainer = styled.div`
   grid-area: 2/4/12/11;
   box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
@@ -16,7 +16,7 @@ export const ContactForm = styled.form`
   }
 `;
 
-export const ContactInfoContainer = styled.div`
+export const ContactForm = styled.form`
   grid-area: 2/4/12/7;
   display: flex;
   flex-direction: column;
@@ -25,6 +25,32 @@ export const ContactInfoContainer = styled.div`
   color: ${(props) => props.theme.orange};
   font-family: ${(props) => props.theme.fontFamily};
   padding: 2rem;
+
+  input {
+    box-shadow: ${(props) => props.theme.inset};
+    background-color: ${(props) => props.theme.body};
+    border-radius: 0.5rem;
+    border: ${(props) => props.theme.border};
+    width: 84%;
+    height: 1.5rem;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    color: ${(props) => props.theme.text};
+    padding: 1rem;
+    font-family: ${(props) => props.theme.fontFamily};
+    outline: none;
+
+    @media (max-width: 1500px) {
+      width: 84%;
+      height: 7%;
+    }
+
+    @media (max-width: 810px) {
+      width: 90%;
+      height: 7%;
+      font-size: 1rem;
+    }
+  }
 
   @media (max-width: 1500px) {
     grid-area: 2/4/12/11;
@@ -35,32 +61,6 @@ export const ContactInfoContainer = styled.div`
 
   @media (max-width: 810px) {
     padding: 1rem 0;
-  }
-`;
-
-export const Input = styled.input`
-  box-shadow: ${(props) => props.theme.inset};
-  background-color: ${(props) => props.theme.body};
-  border-radius: 0.5rem;
-  border: ${(props) => props.theme.border};
-  width: 84%;
-  height: 1.5rem;
-  margin: 1rem 0;
-  font-size: 1.3rem;
-  color: ${(props) => props.theme.text};
-  padding: 1rem;
-  font-family: ${(props) => props.theme.fontFamily};
-  outline: none;
-
-  @media (max-width: 1500px) {
-    width: 84%;
-    height: 7%;
-  }
-
-  @media (max-width: 810px) {
-    width: 90%;
-    height: 7%;
-    font-size: 1rem;
   }
 `;
 
@@ -133,7 +133,6 @@ export const ContactImageContainer = styled.div`
   border-radius: 2rem;
   width: 80%;
   height: 100%;
-  
 
   img {
     width: 100%;
