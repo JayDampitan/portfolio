@@ -8,7 +8,7 @@ export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 13rem;
   color: ${(props) => props.theme.text};
   font-family: ${(props) => props.theme.fontFamily};
@@ -60,12 +60,12 @@ export const TitleContainer = styled.div`
   justify-content: center;
   margin: 1rem;
 
-  @media (max-width: 799px){
-    font-size: .8rem
+  @media (max-width: 799px) {
+    font-size: 0.8rem;
   }
 
-  @media(max-width: 420px){
-    font-size: .6rem;
+  @media (max-width: 420px) {
+    font-size: 0.6rem;
   }
 
   h2 {
@@ -82,8 +82,9 @@ export const ParagraphContainer = styled.div`
   font-family: ${(props) => props.theme.fontFamily};
   font-size: 0.9rem;
 
-  @media (max-width: 420px){
-    font-size: .6rem;
+  @media (max-width: 420px) {
+    font-size: 0.6rem;
+    line-height: 0.9rem;
   }
 `;
 
@@ -93,8 +94,8 @@ export const TechContainer = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  @media (max-width: 420px){
-    font-size: .7rem;
+  @media (max-width: 420px) {
+    font-size: 0.7rem;
   }
 
   h4 {
@@ -106,13 +107,21 @@ export const TechContainer = styled.div`
     font-size: 0.8rem;
     margin: 0.1rem;
 
-    @media (max-width: 420px){
-    font-size: .5rem;
-  }
+    @media (max-width: 420px) {
+      font-size: 0.5rem;
+    }
   }
 
   span {
     margin: 0.8rem;
+
+    @media (max-width: 810px) {
+      margin: 0 0.7rem;
+    }
+
+    @media (max-width: 420px) {
+      margin: 0 0.5rem;
+    }
   }
 `;
 

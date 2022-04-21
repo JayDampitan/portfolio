@@ -47,79 +47,78 @@ export const thirdLineVariant = {
 // -----------Contact Form Variants
 
 export const contactFormVariant = {
-    hidden: {
-      opacity: 0,
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      delay: 0.6,
     },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.4,
-        delay: 0.6,
-      },
-    },
-  };
+  },
+};
 
 export const contactImageVariant = {
-    hidden: {
-      opacity: 0,
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      delay: 1,
     },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        delay: 1,
-      },
-    },
-  };
+  },
+};
 export const secondInputVariant = {
-    hidden: {
-      opacity: 0,
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      delay: 1,
     },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        delay: 1,
-      },
-    },
-  };
+  },
+};
 export const textAreaInputVariant = {
-    hidden: {
-      opacity: 0,
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      delay: 1.2,
     },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        delay: 1.2,
-      },
+  },
+};
+
+export const squareColor = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    backgroundColor: "rgba(187, 68, 48, 1)",
+    transition: {
+      duration: 1,
     },
-  };
+  },
+};
 
-  export const squareColor = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      backgroundColor: 'rgba(187, 68, 48, 1)',
-      transition: {
-        duration: 1
-      }
-    }
-  }
+// -------------Contact form Image Variants
 
-  // -------------Contact form Image Variants
+// image rotation concept
 
-  // image rotation concept
-
-  // export const imageHover = {
-  //   hover: {
-  //     rotateY: [0, 180,280],
-  //     transition: {
-  //       duration: 4,
-  //       ease:  'easeIn'
-  //     }
-  //   }
-  // }
-
+// export const imageHover = {
+//   hover: {
+//     rotateY: [0, 180,280],
+//     transition: {
+//       duration: 4,
+//       ease:  'easeIn'
+//     }
+//   }
+// }

@@ -7,7 +7,7 @@ export const firstLineVariant = {
     x: 0,
     opacity: 1,
     transition: {
-        delay: .3,
+      delay: 0.3,
       duration: 0.5,
     },
   },
@@ -24,7 +24,7 @@ export const firstCircleVariant = {
     y: 20,
     opacity: 1,
     transition: {
-        delay: .3,
+      delay: 0.3,
       duration: 0.5,
     },
   },
@@ -54,7 +54,7 @@ export const squareContainerVariant = {
     y: 0,
     opacity: 1,
     transition: {
-        delay: .3,
+      delay: 0.3,
       duration: 0.5,
     },
   },

@@ -138,7 +138,7 @@ export const ConnectButton = styled(Link)`
 
   @media (max-width: 810px) {
     font-size: 0.7rem;
-    padding: .5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     margin-bottom: 1rem;
   }
 
@@ -157,7 +157,7 @@ export const HeaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0 0 2rem;
+  padding: 1rem 1rem 0 2rem;
 
   @media (max-width: 1200px) {
     grid-area: 5/3/13/12;
@@ -168,6 +168,7 @@ export const HeaderBox = styled.div`
   }
 
   @media (max-width: 420px) {
+    height: 90%;
     grid-area: 5/2/13/13;
   }
 `;
@@ -187,8 +188,8 @@ export const HeaderImage = styled.img`
   } */
 
   @media (max-width: 420px) {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 70%;
   }
 `;
 

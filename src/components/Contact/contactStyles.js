@@ -50,6 +50,12 @@ export const ContactForm = styled.form`
       height: 7%;
       font-size: 1rem;
     }
+
+    @media (max-width: 420px) {
+      width: 90%;
+      height: 4%;
+      font-size: 1rem;
+    }
   }
 
   @media (max-width: 1500px) {

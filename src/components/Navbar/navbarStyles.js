@@ -11,8 +11,8 @@ export const NavLinksContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 `;
 
 export const LinkWrapper = styled.div`
@@ -25,10 +25,10 @@ export const LinkWrapper = styled.div`
     props.insetActive ? props.theme.inset : props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   user-select: none;
-  margin: .7rem;
+  margin: 0.7rem;
 
-  @media (max-width: 420px){
-    margin: .4rem;
+  @media (max-width: 420px) {
+    margin: 0.4rem;
   }
 
   :hover {
@@ -48,9 +48,7 @@ export const NavLinks = styled(Link)`
   color: ${(props) =>
     props.insetActive ? props.theme.orange : props.theme.text};
 
-    @media (max-width: 420px){
-      font-size: .8rem;
-    }
+  @media (max-width: 420px) {
+    font-size: 0.8rem;
+  }
 `;
-
-

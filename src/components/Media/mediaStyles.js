@@ -5,17 +5,16 @@ export const MediaContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 5rem;
-  border: 2px solid red;
 
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     padding: 0 3rem;
   }
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     padding: 0 2rem;
   }
 
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     padding: 0 1rem;
   }
 `;
@@ -32,8 +31,8 @@ export const LogoWrapper = styled.div`
   border-radius: 0.5rem;
   cursor: pointer;
 
-  @media  (max-width: 600px){
-    margin: .5rem;
+  @media (max-width: 600px) {
+    margin: 0.5rem;
   }
 `;
 
@@ -45,9 +44,10 @@ export const Logo = styled.div`
   user-select: none;
 
   h2 {
-    color: ${(props) => props.switchActive ? props.theme.body : props.theme.body};
+    color: ${(props) =>
+      props.switchActive ? props.theme.body : props.theme.body};
     text-shadow: ${(props) => props.theme.logoShadow};
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       font-size: 2.4rem;
     }
   }
@@ -80,7 +80,7 @@ export const Icons = styled.a`
   @media (max-width: 810px) {
     width: 1.7rem;
     height: 1.7rem;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   @media (max-width: 420px) {

@@ -23,7 +23,6 @@ function App() {
           />
           <GradientLine />
           <AnimatedRoutes />
-
           <Navbar />
         </ThemeProvider>
       </BrowserRouter>
