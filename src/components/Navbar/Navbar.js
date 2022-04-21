@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-import {
-  Nav,
-  NavLinksContainer,
-  LinkWrapper,
-  NavLinks,
-} from "./navbarStyles";
+import { Nav, NavLinksContainer, LinkWrapper, NavLinks } from "./navbarStyles";
 
 import { linksVariant } from "./navbarVariants";
 
@@ -88,7 +83,6 @@ const Navbar = () => {
           </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>
-   
     </Nav>
   );
 };

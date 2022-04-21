@@ -15,6 +15,14 @@ export const Card = styled.div`
   color: ${(props) => props.theme.text};
   padding: 2rem;
   transform: translateX(-35px);
+  position: relative;
+
+  @media (max-width: 420px) {
+    flex-direction: row;
+    padding: 1.8rem 1.5rem;
+    justify-content: space-evenly;
+    margin-left: 0.5rem;
+  }
 `;
 
 export const PortfolioTitleContainer = styled.div`
@@ -33,9 +41,16 @@ export const PortfolioTitleContainer = styled.div`
       font-size: 0.9rem;
     }
 
-    @media (max-width: 810px) {
+    @media (max-width: 420px) {
       font-size: 0.8rem;
     }
+  }
+
+  @media (max-width: 420px) {
+    position: absolute;
+    width: auto;
+    top: 2rem;
+    left: 66%;
   }
 `;
 
@@ -58,49 +73,56 @@ export const PortfolioContentContainer = styled.div`
   width: 95%;
   height: 60%;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  align-items: center;
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: ${(props) =>
     props.firstCardActive ? props.theme.inset : props.theme.boxShadow};
-  padding: 1rem;
+  padding: 0.5rem 0.5rem;
 
-  &p {
+  @media (max-width: 420px) {
+    padding: 0.4rem 0.3rem;
+    height: 120%;
+    width: 100%;
+    margin-right: 1rem;
+  }
+
+  p {
     font-family: ${(props) => props.theme.fontFamily};
     font-size: 0.9rem;
-    padding: 0 2rem;
     text-indent: 2rem;
-
-    @media (max-width: 1400px) {
-      font-size: 0.8rem;
-    }
+    display: block;
 
     @media (max-width: 810px) {
       font-size: 0.7rem;
-      padding: 0.4rem 0.9rem;
+      padding: 0.4rem 0.5rem;
       margin: 0.2rem 0;
     }
 
     @media (max-width: 420px) {
-      font-size: 0.6rem;
-      padding: 0.3rem;
+      font-size: 0.5rem;
+      margin: 0;
+      padding: 0;
     }
   }
 `;
 
 export const PortfolioTech = styled.div`
   color: ${(props) => props.theme.text};
-  font-size: 11px;
   letter-spacing: 0.1rem;
   font-family: ${(props) => props.theme.fontFamily};
-  max-height: 2rem;
-  word-break: break-all;
-  display: block;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+  width: 100%;
 
   span {
-    margin: 0 0.5rem;
-    font-family: ${(props) => props.theme.fontFamily};
+    font-size: 0.6rem;
+    margin: 0 0.2rem;
+
+    @media (max-width: 810px) {
+      display: none;
+    }
   }
 `;
 
@@ -108,13 +130,17 @@ export const PortfolioImage = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 1rem;
+
+  @media (max-width: 420px) {
+    border-radius: 0.5rem;
+  }
 `;
 
 export const FirstCardContainer = styled.div`
   grid-area: 3/2/10/4;
 
   @media (max-width: 1400px) {
-    grid-area: 3/2/6/7;
+    grid-area: 1/2/6/7;
     padding: 1rem;
   }
 
@@ -127,7 +153,7 @@ export const SecondCardContainer = styled.div`
   grid-area: 3/5/10/7;
 
   @media (max-width: 1400px) {
-    grid-area: 7/2/10/7;
+    grid-area: 7/2/12/7;
     padding: 1rem;
   }
 
@@ -140,7 +166,7 @@ export const ThirdCardContainer = styled.div`
   grid-area: 3/8/10/10;
 
   @media (max-width: 1400px) {
-    grid-area: 3/8/6/13;
+    grid-area: 1/8/6/13;
     padding: 1rem;
   }
 
@@ -153,7 +179,7 @@ export const FourthCardContainer = styled.div`
   grid-area: 3/11/10/13;
 
   @media (max-width: 1400px) {
-    grid-area: 7/8/10/13;
+    grid-area: 7/8/12/13;
     padding: 1rem;
   }
 
@@ -169,6 +195,10 @@ export const PortfolioButtonContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
+
+  @media (max-width: 420px) {
+    margin-top: 2.5rem;
+  }
 `;
 
 export const PortFolioVisit = styled.a`
@@ -203,7 +233,8 @@ export const PortFolioVisit = styled.a`
   }
 
   @media (max-width: 420px) {
-    width: 4rem;
+    width: 5rem;
+    margin: 1rem;
   }
 `;
 
@@ -216,12 +247,7 @@ export const FirstLineContainer = styled.div`
   justify-content: flex-start;
 
   @media (max-width: 1400px) {
-    align-items: flex-start;
-  }
-
-  @media (max-width: 810px) {
     display: none;
-    width: 80%;
   }
 `;
 
@@ -237,7 +263,7 @@ export const SecondLineContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  @media (max-width: 810px) {
+  @media (max-width: 1400px) {
     display: none;
   }
 `;
@@ -249,7 +275,7 @@ export const ThirdLineContainer = styled.div`
   justify-content: space-around;
   flex-direction: column;
 
-  @media (max-width: 810px) {
+  @media (max-width: 1400px) {
     display: none;
   }
 `;
@@ -268,7 +294,7 @@ export const FourthLineContainer = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  @media (max-width: 810px) {
+  @media (max-width: 1400px) {
     display: none;
   }
 `;
@@ -279,7 +305,7 @@ export const FifthLineContainer = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  @media (max-width: 810px) {
+  @media (max-width: 1400px) {
     display: none;
   }
 `;

@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  
   color: ${(props) => props.theme.text};
   width: 100vw;
   height: 76vh;
   user-select: none;
   display: grid;
-  grid-template-columns: repeat(13, 1fr );
+  grid-template-columns: repeat(13, 1fr);
   grid-template-rows: repeat(12, 1fr);
 
-  @media (max-width: 810px){
+  @media (max-width: 810px) {
     width: 100vw;
   }
 
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     width: 100vw;
+    height: 82vh;
   }
 `;
