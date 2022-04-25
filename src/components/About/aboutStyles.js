@@ -29,8 +29,8 @@ export const ContentContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  display: grid;
-  align-self: center;
+  display: flex;
+  justify-self: center;
   grid-area: 2/3/6/5;
   border-radius: 50%;
   border: 5px solid ${(props) => props.theme.orange};
@@ -43,8 +43,8 @@ export const ImageContainer = styled.div`
   }
 
   @media (max-width: 420px) {
-    grid-area: 2/5/4/9;
-    margin-top: 1rem;
+    grid-area: 2/4/5/10;
+    margin-bottom: 1.5rem;
   }
 `;
 

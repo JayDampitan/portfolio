@@ -75,6 +75,7 @@ export const PortfolioContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: ${(props) =>
@@ -96,14 +97,18 @@ export const PortfolioContentContainer = styled.div`
 
     @media (max-width: 810px) {
       font-size: 0.7rem;
-      padding: 0.4rem 0.5rem;
-      margin: 0.2rem 0;
+      margin-top: 1.2rem;
+      padding: 0 .5rem;
     }
 
     @media (max-width: 420px) {
       font-size: 0.5rem;
       margin: 0;
       padding: 0;
+    }
+
+    @media (max-width: 380px){
+      font-size: .4rem;
     }
   }
 `;
