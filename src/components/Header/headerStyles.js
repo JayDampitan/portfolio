@@ -70,7 +70,7 @@ export const HeaderName = styled.div`
 
   @media (max-width: 420px) {
     grid-area: 2/3/3/12;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 `;
 
@@ -100,7 +100,7 @@ export const HeaderTitle = styled.div`
   }
 
   @media (max-width: 420px) {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     grid-area: 3/1/4/14;
   }
 `;
@@ -144,7 +144,8 @@ export const ConnectButton = styled(Link)`
 
   @media (max-width: 420px) {
     grid-area: 4/7/5/8;
-    padding: 0.7rem 1rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -168,7 +169,8 @@ export const HeaderBox = styled.div`
   }
 
   @media (max-width: 420px) {
-    height: 90%;
+    height: 85%;
+    align-self: center;
     grid-area: 5/2/13/13;
   }
 `;
