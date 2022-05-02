@@ -82,7 +82,7 @@ const Contact = () => {
         <input type="text" placeholder="Name" name="name" />
         <input type="email" placeholder="Email" name="email" />
         <TextArea type="text" placeholder="Message" name="message" />
-        <SubmitButton type="submit">Send</SubmitButton>
+        <SubmitButton type="submit">Submit</SubmitButton>
       </ContactForm>
 
       {/*-------------Contact Image  */}

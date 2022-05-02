@@ -25,10 +25,10 @@ export const LinkWrapper = styled.div`
     props.insetActive ? props.theme.inset : props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   user-select: none;
-  margin: 0.7rem;
+  margin: 1rem;
 
   @media (max-width: 420px) {
-    margin: 0.4rem;
+    margin: 0.5rem;
   }
 
   :hover {
@@ -39,16 +39,13 @@ export const LinkWrapper = styled.div`
 export const NavLinks = styled(Link)`
   display: flex;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
   font-family: "Poppins", sans-serif;
-  padding: 0.5rem 1rem;
+  padding: .7rem;
   cursor: pointer;
-  text-decoration: none;
-  color: ${(props) =>
+  fill: ${(props) =>
     props.insetActive ? props.theme.orange : props.theme.text};
 
   @media (max-width: 420px) {
-    font-size: 0.8rem;
+    padding: .6rem;
   }
 `;

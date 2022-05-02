@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { HomeIcon, AboutIcon, WorkIcon, ContactIcon } from "../AllSvgs";
 
 import { Nav, NavLinksContainer, LinkWrapper, NavLinks } from "./navbarStyles";
 
@@ -30,8 +31,7 @@ const Navbar = () => {
           as={motion.div}
         >
           <NavLinks insetActive={homeActive} to="/">
-            {" "}
-            Home{" "}
+            <HomeIcon />
           </NavLinks>
         </LinkWrapper>
 
@@ -46,8 +46,7 @@ const Navbar = () => {
           as={motion.div}
         >
           <NavLinks insetActive={aboutActive} to="/about">
-            {" "}
-            About{" "}
+            <AboutIcon />
           </NavLinks>
         </LinkWrapper>
 
@@ -62,8 +61,7 @@ const Navbar = () => {
           as={motion.div}
         >
           <NavLinks insetActive={workActive} to="/portfolio">
-            {" "}
-            Work{" "}
+            <WorkIcon />
           </NavLinks>
         </LinkWrapper>
 
@@ -78,8 +76,7 @@ const Navbar = () => {
           as={motion.div}
         >
           <NavLinks insetActive={contactActive} to="/contact">
-            {" "}
-            Contact{" "}
+            <ContactIcon />
           </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>

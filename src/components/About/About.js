@@ -1,25 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  CSS,
-  Framer,
-  StyledComponents,
-  HTML,
-  JavaScript,
-  ReactIcon,
-  ReduxIcon,
-} from "../AllSvgs";
-
 import JD from "../../assets/portfolio.jpg";
 import {
   ContentContainer,
   ImageContainer,
-  Image,
   TitleContainer,
-  SvgContainer,
   ParagraphContainer,
   TechContainer,
-  SvgBox,
+  TechWrapper,
   FirstLineContainer,
   FirstLine,
   SecondLineContainer,
@@ -30,7 +18,7 @@ import {
   FourthLine,
 } from "./aboutStyles";
 
-import { myInfo } from "../../assets/data";
+import { myInfo, myTech } from "../../assets/data";
 
 import { Square, Circle } from "../../subComponents/backgroundElements";
 
@@ -77,54 +65,11 @@ const About = () => {
         </ParagraphContainer>
 
         <TechContainer>
-          <h4>Some of the tech I learned and working on recently:</h4>
-          <p>
-            <span>-HTML5</span>
-            <span>-CSS</span>
-            <span>-Javascript</span>
-          </p>
-          <p>
-            <span>-React</span>
-            <span>-React Native</span>
-            <span>-Redux Toolkit</span>
-          </p>
-          <p>
-            <span>-Styled Components</span>
-            <span>-SCSS</span>
-            <span>-React Native</span>
-          </p>
+          {myTech.map((tech) => {
+            return <TechWrapper>{tech}</TechWrapper>;
+          })}
         </TechContainer>
       </ContentContainer>
-
-      {/* 
-      <SvgContainer
-        as={motion.div}
-        variants={contentVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <SvgBox>
-          <HTML fill="currentColor" />
-        </SvgBox>
-        <SvgBox>
-          <CSS fill="currentColor" />
-        </SvgBox>
-        <SvgBox>
-          <JavaScript stroke="currentColor" fill="currentColor" />
-        </SvgBox>
-        <SvgBox>
-          <ReactIcon fill="currentColor" />
-        </SvgBox>
-        <SvgBox>
-          <ReduxIcon fill="currentColor" />
-        </SvgBox>
-        <SvgBox>
-          <Framer fill="currentColor" />
-        </SvgBox>
-        <SvgBox>
-          <StyledComponents fill="currentColor" />
-        </SvgBox>
-      </SvgContainer> */}
 
       {/* -----------Profile Image */}
       <ImageContainer
@@ -133,7 +78,7 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-        <Image src={JD} />
+        <img src={JD} />
       </ImageContainer>
 
       {/* -----------Background Lines and Shapes */}
