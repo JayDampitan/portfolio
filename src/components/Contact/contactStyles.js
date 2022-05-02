@@ -20,11 +20,26 @@ export const ContactForm = styled.form`
   grid-area: 2/4/12/7;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
   color: ${(props) => props.theme.orange};
   font-family: ${(props) => props.theme.fontFamily};
   padding: 2rem;
+
+  @media (max-width: 1500px) {
+    grid-area: 2/4/12/11;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 810px) {
+    padding: 1rem 0;
+  }
+
+  h2{ 
+    text-shadow: ${ props => props.theme.boxShadow};
+  }
 
   input {
     box-shadow: ${(props) => props.theme.inset};
@@ -58,16 +73,7 @@ export const ContactForm = styled.form`
     }
   }
 
-  @media (max-width: 1500px) {
-    grid-area: 2/4/12/11;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
 
-  @media (max-width: 810px) {
-    padding: 1rem 0;
-  }
 `;
 
 export const TextArea = styled.textarea`
@@ -102,7 +108,7 @@ export const SubmitButton = styled.button`
   width: 8rem;
   height: 3.5rem;
   box-shadow: ${(props) => props.theme.boxShadow};
-  background-color: ${(props) => props.theme.orange};
+  background: ${(props) => props.theme.orange};
   border-radius: 2rem;
   border: ${(props) => props.theme.border};
   font-family: ${(props) => props.theme.fontFamily};
@@ -123,6 +129,12 @@ export const SubmitButton = styled.button`
     width: 7rem;
     height: 3rem;
     margin: 0.7rem;
+  }
+
+  @media (max-width: 420px){
+    width: 5rem;
+    height: 2.5rem;
+    font-size: .7rem;
   }
 `;
 

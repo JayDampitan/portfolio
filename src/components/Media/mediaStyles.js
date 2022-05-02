@@ -44,8 +44,7 @@ export const Logo = styled.div`
   user-select: none;
 
   h2 {
-    color: ${(props) =>
-      props.switchActive ? props.theme.body : props.theme.body};
+    color: ${(props) => props.theme.orange };
     text-shadow: ${(props) => props.theme.logoShadow};
     @media (max-width: 600px) {
       font-size: 2.4rem;
@@ -68,7 +67,7 @@ export const Icons = styled.a`
   width: 2rem;
   height: 2rem;
   margin: 0 1rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 50%;
   box-shadow: ${(props) => props.theme.boxShadow};
   border: ${(props) => props.theme.border};
@@ -86,5 +85,6 @@ export const Icons = styled.a`
   @media (max-width: 420px) {
     width: 1.4rem;
     height: 1.4rem;
+    padding: .5rem;
   }
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Facebook, Github, Twitter, YouTube } from "../AllSvgs";
+import { Linkedin, Github, Twitter, YouTube, Link } from "../AllSvgs";
 
 import {
   Icons,
@@ -46,14 +46,14 @@ const Media = ({ switchActive, setSwitchActive }) => {
         <Icons target="_blank" href="https://github.com/JayDampitan">
           <Github fill="currentColor" />
         </Icons>
-        <Icons target="_blank" href="">
+        <Icons target="_blank" href="https://www.youtube.com/channel/UCu2DsrRQhBXdRq_k6ASNCfQ">
           <YouTube fill="currentColor" />
         </Icons>
-        <Icons target="_blank" href="">
+        <Icons target="_blank" href="https://twitter.com/home">
           <Twitter fill="currentColor" />
         </Icons>
-        <Icons target="_blank" href="">
-          <Facebook fill="currentColor" />
+        <Icons target="_blank" href="https://www.linkedin.com/in/jay-dampitan-568482183/">
+          <Linkedin fill="currentColor" />
         </Icons>
       </IconContainer>
     </MediaContainer>

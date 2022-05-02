@@ -71,6 +71,11 @@ export const HeaderName = styled.div`
   @media (max-width: 420px) {
     grid-area: 2/3/3/12;
     font-size: 2.2rem;
+    letter-spacing: .1rem;
+  }
+
+  @media (max-width: 375px){
+    font-size: 2rem;
   }
 `;
 
@@ -122,12 +127,12 @@ export const ConnectButton = styled(Link)`
   letter-spacing: 0.1rem;
   text-decoration: none;
   font-family: ${(props) => props.theme.fontFamily};
-  border: ${(props) => props.theme.border};
   cursor: pointer;
 
   :hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.orange};
+    box-shadow: ${props => props.theme.inset};
     transition: ease-in-out 0.3s;
   }
 
@@ -146,6 +151,7 @@ export const ConnectButton = styled(Link)`
     grid-area: 4/7/5/8;
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
+    font-size: .5rem;
   }
 `;
 
@@ -169,9 +175,10 @@ export const HeaderBox = styled.div`
   }
 
   @media (max-width: 420px) {
-    height: 85%;
+    height: 90%;
     align-self: center;
     grid-area: 5/2/13/13;
+    padding: 0 .5rem;
   }
 `;
 
@@ -191,7 +198,7 @@ export const HeaderImage = styled.img`
 
   @media (max-width: 420px) {
     width: 100%;
-    height: 70%;
+    height: 80%;
   }
 `;
 
