@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // ------ Portfolio Cards
 
@@ -29,13 +30,14 @@ export const PortfolioTitleContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   h3 {
     color: ${(props) => props.theme.text};
     text-transform: uppercase;
     font-family: ${(props) => props.theme.fontFamily};
     border-bottom: 2px solid ${(props) => props.theme.orange};
+    text-shadow: ${ props => props.theme.boxShadow};
 
     @media (max-width: 1400px) {
       font-size: 0.9rem;
@@ -50,7 +52,9 @@ export const PortfolioTitleContainer = styled.div`
     position: absolute;
     width: auto;
     top: 2rem;
-    left: 66%;
+    left: 57%;
+    width: 8rem;
+    justify-content: space-between;
   }
 `;
 
@@ -67,6 +71,10 @@ export const PortfolioGithub = styled.a`
   :hover {
     box-shadow: ${(props) => props.theme.inset};
   }
+
+  @media (max-width: 420px){
+    width: .8rem;
+  } 
 `;
 
 export const PortfolioContentContainer = styled.div`
@@ -76,6 +84,7 @@ export const PortfolioContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: ${(props) =>
@@ -84,20 +93,18 @@ export const PortfolioContentContainer = styled.div`
 
   @media (max-width: 420px) {
     padding: 0.4rem 0.3rem;
-    height: 120%;
-    width: 100%;
+    height: 5rem;
+    width: 17rem;
     margin-right: 1rem;
   }
 
   p {
     font-family: ${(props) => props.theme.fontFamily};
     font-size: 0.9rem;
-    text-indent: 2rem;
     display: block;
 
     @media (max-width: 810px) {
       font-size: 0.7rem;
-      margin-top: 1.2rem;
       padding: 0 .5rem;
     }
 
@@ -207,20 +214,22 @@ export const PortfolioButtonContainer = styled.div`
 `;
 
 export const PortFolioVisit = styled.a`
-  width: 7rem;
+  width: 6rem;
   height: 2.5rem;
   box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: 2rem;
+  border-radius: .5rem;
   color: ${(props) => props.theme.orange};
   user-select: none;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  font-weight: 500;
 
   :hover {
     box-shadow: ${(props) => props.theme.inset};
@@ -235,11 +244,54 @@ export const PortFolioVisit = styled.a`
   @media (max-width: 810px) {
     width: 7rem;
     font-size: 0.8rem;
+    border-radius: .5rem;
   }
 
   @media (max-width: 420px) {
-    width: 5rem;
-    margin: 1rem;
+    width: 3rem;
+    margin: .5rem;
+    font-size: .57rem;
+    height: 2rem;
+  }
+`;
+
+export const MoreButton = styled(Link)`
+  width: 6rem;
+  height: 2.5rem;
+  box-shadow: ${(props) => props.theme.boxShadow};
+  background-color: ${(props) => props.theme.body};
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: .5rem;
+  color: ${(props) => props.theme.orange};
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  :hover {
+    box-shadow: ${(props) => props.theme.inset};
+  }
+
+  @media (max-width: 1400px) {
+    width: 8rem;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 810px) {
+    width: 7rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 420px) {
+    width: 3rem;
+    margin: .5rem;
+    font-size: .5rem;
+    height: 2rem;
+    border-radius: .5rem;
   }
 `;
 

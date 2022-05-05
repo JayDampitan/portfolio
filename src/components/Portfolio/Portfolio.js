@@ -13,6 +13,7 @@ import {
   ThirdCardContainer,
   FourthCardContainer,
   PortFolioVisit,
+  MoreButton,
   // background elements
   FirstLineContainer,
   FirstPortfolioLine,
@@ -69,6 +70,12 @@ const Portfolio = () => {
         >
           <PortfolioTitleContainer>
             <h3>{data.movieApp.title}</h3>
+            <PortfolioGithub
+              target="_blank"
+              href="https://github.com/dannysanchez559/2021_React_Apprenticeship"
+            >
+              <Github />
+            </PortfolioGithub>
           </PortfolioTitleContainer>
 
           <PortfolioContentContainer
@@ -78,14 +85,6 @@ const Portfolio = () => {
             {firstCardActive ? (
               <>
                 <p>{data.movieApp.desciption}</p>
-                <PortfolioTech>
-                  <p>
-                    <span>-React</span>
-                  </p>
-                  <p>
-                    <span>-Firebase</span>
-                  </p>
-                </PortfolioTech>
               </>
             ) : (
               <PortfolioImage src={MovieApp} alt="" />
@@ -98,12 +97,7 @@ const Portfolio = () => {
             >
               visit
             </PortFolioVisit>
-            <PortfolioGithub
-              target="_blank"
-              href="https://github.com/dannysanchez559/2021_React_Apprenticeship"
-            >
-              <Github />
-            </PortfolioGithub>
+            <MoreButton to="/movieApp">more</MoreButton>
           </PortfolioButtonContainer>
         </Card>
       </FirstCardContainer>
@@ -117,6 +111,12 @@ const Portfolio = () => {
         >
           <PortfolioTitleContainer>
             <h3>{data.pokePalace.title}</h3>
+            <PortfolioGithub
+              target="_blank"
+              href="https://github.com/gonzalespaulb/Pokemon-App"
+            >
+              <Github />
+            </PortfolioGithub>
           </PortfolioTitleContainer>
 
           <PortfolioContentContainer
@@ -126,16 +126,6 @@ const Portfolio = () => {
             {secondCardActive ? (
               <>
                 <p>{data.pokePalace.desciption}</p>
-                <PortfolioTech>
-                  <p>
-                    <span>-React</span>
-                    <span>-SCSS</span>
-                  </p>
-                  <p>
-                    <span>-Redux Toolkit (RTK)</span>
-                    <span>-Firebase</span>
-                  </p>
-                </PortfolioTech>
               </>
             ) : (
               <PortfolioImage src={PokePalace} alt="" />
@@ -148,12 +138,7 @@ const Portfolio = () => {
             >
               <p>visit</p>
             </PortFolioVisit>
-            <PortfolioGithub
-              target="_blank"
-              href="https://github.com/gonzalespaulb/Pokemon-App"
-            >
-              <Github />
-            </PortfolioGithub>
+            <MoreButton to="/pokeApp">more</MoreButton>
           </PortfolioButtonContainer>
         </Card>
       </SecondCardContainer>
@@ -167,6 +152,12 @@ const Portfolio = () => {
         >
           <PortfolioTitleContainer>
             <h3>{data.toadTribune.title}</h3>
+            <PortfolioGithub
+              target="_blank"
+              href="https://github.com/JayDampitan/news-app"
+            >
+              <Github />
+            </PortfolioGithub>
           </PortfolioTitleContainer>
 
           <PortfolioContentContainer
@@ -176,19 +167,6 @@ const Portfolio = () => {
             {thirdCardActive ? (
               <>
                 <p>{data.toadTribune.desciption}</p>
-                <PortfolioTech>
-                  <p>
-                    <span>-React</span>
-                    <span>-Style Components</span>
-                  </p>
-                  <p>
-                    <span>-Redux Toolkit (RTK)</span>
-                    <span>-Firebase</span>
-                  </p>
-                  <p>
-                    <span>-Typescript</span>
-                  </p>
-                </PortfolioTech>
               </>
             ) : (
               <PortfolioImage src={ToadTribune} />
@@ -201,12 +179,7 @@ const Portfolio = () => {
             >
               <p>visit</p>
             </PortFolioVisit>
-            <PortfolioGithub
-              target="_blank"
-              href="https://github.com/JayDampitan/news-app"
-            >
-              <Github />
-            </PortfolioGithub>
+            <MoreButton to="/tribuneApp">more</MoreButton>
           </PortfolioButtonContainer>
         </Card>
       </ThirdCardContainer>
@@ -220,6 +193,9 @@ const Portfolio = () => {
         >
           <PortfolioTitleContainer>
             <h3>{data.kovvi.title}</h3>
+            <PortfolioGithub href="">
+              <Github />
+            </PortfolioGithub>
           </PortfolioTitleContainer>
 
           <PortfolioContentContainer
@@ -229,16 +205,6 @@ const Portfolio = () => {
             {fourthCardActive ? (
               <>
                 <p>{data.kovvi.desciption}</p>
-                <PortfolioTech>
-                  <p>
-                    <span>-React Native</span>
-                    <span>-Redux Toolkit (RTK)</span>
-                  </p>
-                  <p>
-                    <span>-Expo</span>
-                    <span>-Styled Components</span>
-                  </p>
-                </PortfolioTech>
               </>
             ) : (
               <PortfolioImage src={Kovvi} alt="Kovvi app" />
@@ -246,9 +212,8 @@ const Portfolio = () => {
           </PortfolioContentContainer>
           <PortfolioButtonContainer>
             <PortFolioVisit href="/">visit</PortFolioVisit>
-            <PortfolioGithub href="">
-              <Github />
-            </PortfolioGithub>
+
+            <MoreButton to="/kovviApp">more</MoreButton>
           </PortfolioButtonContainer>
         </Card>
       </FourthCardContainer>

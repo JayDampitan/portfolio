@@ -42,6 +42,7 @@ export const Logo = styled.div`
   font-family: ${(props) => props.theme.fontFamily}, sans-serif;
   background-color: ${(props) => props.theme.body};
   user-select: none;
+  background: none;
 
   h2 {
     color: ${(props) => props.theme.orange };
