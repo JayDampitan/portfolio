@@ -22,7 +22,7 @@ export const darkMode = {
     "-3px -3px 10px rgba(240,240,240, 0.1), 3px 3px 8px rgba(10, 10, 10, .4) ",
   border: "1px solid #2E2D2D",
   inset:
-    "inset -3px -3px 8px rgba(200,200,200, 0.2), inset 4px 4px 8px rgba(10, 10, 10, .5) ",
+    "inset -3px -3px 5px rgba(200,200,200, 0.2), inset 2px 2px 5px rgba(10, 10, 10, .5) ",
   orange: "rgba(187, 68, 48, 1)",
   logoShadow:
     "-2px -2px 8px rgba(255,255,255, 0.1), 2px 2px 8px rgba(10, 10, 10, .7) ",

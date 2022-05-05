@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const HeaderIntro = styled.div`
   color: ${(props) => props.theme.text};
-  grid-area: 4/3/5/6;
+  grid-area: 4/3/5/7;
   font-family: ${(props) => props.theme.fontFamily};
   text-transform: uppercase;
   color: ${(props) => props.theme.text};
