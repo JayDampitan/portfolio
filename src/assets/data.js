@@ -87,3 +87,63 @@ export const myTech = [
   "styled components",
   "framer",
 ];
+
+export const MovieAppImages = [
+  {
+    image: require("../assets/images/movieApp.png"),
+  },
+  {
+    image: require("../assets/images/movieApp1.png"),
+  },
+  {
+    image: require("../assets/images/movieApp2.png"),
+  },
+  {
+    image: require("../assets/images/movieApp3.png"),
+  },
+];
+export const PokePalaceImages = [
+  {
+    image: require("../assets/images/pokePalace.png"),
+  },
+  {
+    image: require("../assets/images/pokePalace1.png"),
+  },
+  {
+    image: require("../assets/images/pokePalace2.png"),
+  },
+  {
+    image: require("../assets/images/pokePalace6.png"),
+  },
+  {
+    image: require("../assets/images/pokePalace7.png"),
+  },
+];
+export const ToadTribuneImages = [
+  {
+    image: require("../assets/images/toadTribune.png"),
+  },
+  {
+    image: require("../assets/images/toadTribune1.png"),
+  },
+  {
+    image: require("../assets/images/toadTribune2.png"),
+  },
+  {
+    image: require("../assets/images/toadTribune3.png"),
+  },
+];
+export const KovviImages = [
+  {
+    image: require("../assets/images/kovvi.png"),
+  },
+  {
+    image: require("../assets/images/kovvi1.png"),
+  },
+  {
+    image: require("../assets/images/kovvi2.png"),
+  },
+  {
+    image: require("../assets/images/kovvi3.png"),
+  },
+];

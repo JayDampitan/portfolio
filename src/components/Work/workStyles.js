@@ -70,17 +70,19 @@ export const Carousel = styled.div`
   padding: 0.7rem;
   height: 85%;
   width: 75%;
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: 1400px) {
     width: 65%;
     height: 80%;
   }
+`;
 
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
-  }
+export const CarouselImage = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
 `;
 
 export const CarouselButton = styled.button`
@@ -145,9 +147,9 @@ export const WorkDesContainer = styled.div`
     padding: 0 1rem;
   }
 
-  p{ 
-    font-family: ${props => props.theme.fontFamily};
-    font-size: .9rem;
+  p {
+    font-family: ${(props) => props.theme.fontFamily};
+    font-size: 0.9rem;
   }
 `;
 
@@ -240,14 +242,13 @@ export const ThemeWrapper = styled.div`
   justify-content: center;
   list-style: none;
   flex-direction: column;
-
 `;
 
 export const ColorExample = styled.span`
-    width: 1.4rem;
-    height: 1.4rem;
-    box-shadow: ${(props) => props.theme.inset};
-    border-radius: 50%;
-    margin: 5px;
-    background-color: ${(props) => props.colorTheme};
-` 
+  width: 1.4rem;
+  height: 1.4rem;
+  box-shadow: ${(props) => props.theme.inset};
+  border-radius: 50%;
+  margin: 5px;
+  background-color: ${(props) => props.colorTheme};
+`;

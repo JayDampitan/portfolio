@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeaderBoxImage from "../../assets/headerBoxImage.png";
+import HeaderBoxImage from "../../assets/images/headerBoxImage.png";
 
 import {
   HeaderIntro,

@@ -28,7 +28,7 @@ import {
   imageHover,
 } from "./contactVariants";
 
-import Kovvi from "../../assets/kovvi.png";
+import Kovvi from "../../assets/images/phone1.png";
 
 import { PageContainer } from "../../subComponents/pageContainer";
 

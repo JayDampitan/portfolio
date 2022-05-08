@@ -8,7 +8,6 @@ export const Card = styled.div`
   height: 100%;
   border: ${(props) => props.theme.border};
   box-shadow: ${(props) => props.theme.boxShadow};
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

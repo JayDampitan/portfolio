@@ -29,10 +29,10 @@ import { PageContainer } from "../../subComponents/pageContainer";
 import { Circle, Square } from "../../subComponents/backgroundElements";
 
 import { data } from "../../assets/data";
-import MovieApp from "../../assets/movieApp1.png";
-import PokePalace from "../../assets/pokePalace.png";
-import ToadTribune from "../../assets/toadTribune.png";
-import Kovvi from "../../assets/kovviShot.png";
+import MovieApp from "../../assets/images/movieApp.png";
+import PokePalace from "../../assets/images/pokePalace.png";
+import ToadTribune from "../../assets/images/toadTribune.png";
+import Kovvi from "../../assets/images/kovviShot.png";
 
 import {
   firstCardVariant,

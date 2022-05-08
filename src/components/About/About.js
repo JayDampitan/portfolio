@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import JD from "../../assets/portfolio.jpg";
+import JD from "../../assets/images/portfolio.jpg";
 import {
   ContentContainer,
   ImageContainer,

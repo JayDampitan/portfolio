@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { PageContainer } from "../../subComponents/pageContainer";
 import {
   WorkPageContainer,
@@ -11,16 +11,15 @@ import {
   WorkIconContainer,
   ListContainer,
   Carousel,
+  CarouselImage,
   CarouselWrapper,
   CarouselButton,
   WorkDescription,
   ListWrapper,
   ThemeWrapper,
-  ThemeContainer,
   ColorExample,
 } from "./workStyles";
-import { data } from "../../assets/data";
-import testImage from "../../assets/movieApp.png";
+import { data, MovieAppImages } from "../../assets/data";
 import {
   Github,
   Previous,
@@ -33,6 +32,22 @@ import { motion } from "framer-motion";
 import { pageVariant } from "./workVariants";
 
 const MovieApp = () => {
+  const [current, setCurrent] = useState(0);
+  let slides = MovieAppImages;
+  const length = slides.length;
+
+  const nextHandler = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevHandler = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
     <PageContainer
       as={motion.div}
@@ -54,13 +69,21 @@ const MovieApp = () => {
           </CarouselTitleContainer>
           <CarouselWrapper>
             <CarouselButton>
-              <Previous />
+              <Previous onClick={prevHandler} />
             </CarouselButton>
             <Carousel>
-              <img src={testImage} alt="" />
+              {MovieAppImages.map((slide, index) => {
+                return (
+                  <>
+                    {index === current && (
+                      <CarouselImage src={slide.image} alt="" key={index} />
+                    )}
+                  </>
+                );
+              })}
             </Carousel>
             <CarouselButton>
-              <Next />
+              <Next onClick={nextHandler} />
             </CarouselButton>
           </CarouselWrapper>
         </CarouselContainer>

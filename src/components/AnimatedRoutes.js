@@ -8,6 +8,7 @@ import MovieApp from "./Work/MovieApp";
 import PokeApp from "./Work/PokeApp";
 import TribuneApp from "./Work/TribuneApp";
 import KovviApp from "./Work/KovviApp";
+import { MovieAppImages } from "../assets/data";
 
 import { AnimatePresence } from "framer-motion";
 
