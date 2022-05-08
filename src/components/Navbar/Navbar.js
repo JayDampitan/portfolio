@@ -7,7 +7,7 @@ import { Nav, NavLinksContainer, LinkWrapper, NavLinks } from "./navbarStyles";
 import { linksVariant } from "./navbarVariants";
 
 const Navbar = () => {
-  const [homeActive, setHomeActive] = useState(false);
+  const [homeActive, setHomeActive] = useState(true);
   const [aboutActive, setAboutActive] = useState(false);
   const [workActive, setWorkActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
