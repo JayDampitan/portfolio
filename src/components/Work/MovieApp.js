@@ -10,6 +10,7 @@ import {
   WorkColumns,
   WorkIconContainer,
   ListContainer,
+  ColorList,
   Carousel,
   CarouselImage,
   CarouselWrapper,
@@ -101,10 +102,8 @@ const MovieApp = () => {
 
               <ListWrapper>
                 <ListContainer>
-                  {data.movieApp.tech.map((list) => (
-                    <p>
-                      <li>{list}</li>
-                    </p>
+                  {data.movieApp.tech.map((list, index) => (
+                    <li key={index}>{list}</li>
                   ))}
                 </ListContainer>
               </ListWrapper>
@@ -114,12 +113,13 @@ const MovieApp = () => {
               <WorkIconContainer>
                 <TypoGraphyIcon />
               </WorkIconContainer>
-
-              <ListContainer>
-                {data.movieApp.typography.map((list) => (
-                  <li>{list}</li>
-                ))}
-              </ListContainer>
+              <ListWrapper>
+                <ListContainer>
+                  {data.movieApp.typography.map((list, index) => (
+                    <li key={index}>{list}</li>
+                  ))}
+                </ListContainer>
+              </ListWrapper>
             </WorkColumns>
             {/* ---------------------Colors Section */}
             <WorkColumns>
@@ -129,15 +129,15 @@ const MovieApp = () => {
 
               <ListWrapper>
                 <ThemeWrapper>
-                  {data.movieApp.colors.map((color) => {
-                    return <ColorExample colorTheme={color}></ColorExample>;
+                  {data.movieApp.colors.map((color, index) => {
+                    return <ColorExample key={index} colorTheme={color}></ColorExample>;
                   })}
                 </ThemeWrapper>
-                <ListContainer>
-                  {data.movieApp.colors.map((list) => (
-                    <li>{list}</li>
-                  ))}
-                </ListContainer>
+                <ColorList>
+                  {data.movieApp.colors.map((list, index) => {
+                    return <li key={index}>{list}</li>;
+                  })}
+                </ColorList>
               </ListWrapper>
             </WorkColumns>
           </ColumnsContainer>

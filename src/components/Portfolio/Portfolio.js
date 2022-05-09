@@ -6,7 +6,6 @@ import {
   PortfolioGithub,
   PortfolioContentContainer,
   PortfolioButtonContainer,
-  PortfolioTech,
   PortfolioImage,
   FirstCardContainer,
   SecondCardContainer,
@@ -244,7 +243,12 @@ const Portfolio = () => {
         initial="hidden"
         animate="visible"
       >
-        <Circle />
+        <Circle
+          as={motion.div}
+          variants={squareColorVariant}
+          initial="hidden"
+          animate="visible"
+        />
         <SecondPortfolioLine />
         <Square />
       </ThirdLineContainer>
@@ -256,12 +260,7 @@ const Portfolio = () => {
         animate="visible"
       >
         <FirstPortfolioLine />
-        <Square
-          as={motion.div}
-          variants={squareColorVariant}
-          initial="hidden"
-          animate="visible"
-        />
+        <Square />
       </FourthLineContainer>
 
       <FifthLineContainer
