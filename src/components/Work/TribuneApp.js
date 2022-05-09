@@ -18,6 +18,7 @@ import {
   ListWrapper,
   ThemeWrapper,
   ColorExample,
+  ColorList,
 } from "./workStyles";
 import { data, ToadTribuneImages } from "../../assets/data";
 import {
@@ -101,8 +102,8 @@ const TribuneApp = () => {
 
               <ListWrapper>
                 <ListContainer>
-                  {data.toadTribune.tech.map((list) => (
-                    <p>
+                  {data.toadTribune.tech.map((list, index) => (
+                    <p key={index}>
                       <li>{list}</li>
                     </p>
                   ))}
@@ -116,8 +117,8 @@ const TribuneApp = () => {
               </WorkIconContainer>
 
               <ListContainer>
-                {data.toadTribune.typography.map((list) => (
-                  <li>{list}</li>
+                {data.toadTribune.typography.map((list, index) => (
+                  <li key={index}>{list}</li>
                 ))}
               </ListContainer>
             </WorkColumns>
@@ -129,15 +130,15 @@ const TribuneApp = () => {
 
               <ListWrapper>
                 <ThemeWrapper>
-                  {data.toadTribune.colors.map((color) => {
-                    return <ColorExample colorTheme={color}></ColorExample>;
+                  {data.toadTribune.colors.map((color, index) => {
+                    return <ColorExample key={index} colorTheme={color}></ColorExample>;
                   })}
                 </ThemeWrapper>
-                <ListContainer>
-                  {data.toadTribune.colors.map((list) => (
-                    <li>{list}</li>
+                <ColorList>
+                  {data.toadTribune.colors.map((list, index) => (
+                    <li key={index}>{list}</li>
                   ))}
-                </ListContainer>
+                </ColorList>
               </ListWrapper>
             </WorkColumns>
           </ColumnsContainer>

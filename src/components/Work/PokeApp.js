@@ -10,6 +10,7 @@ import {
   WorkColumns,
   WorkIconContainer,
   ListContainer,
+  ColorList,
   Carousel,
   CarouselImage,
   CarouselWrapper,
@@ -101,10 +102,8 @@ const PokeApp = () => {
 
               <ListWrapper>
                 <ListContainer>
-                  {data.pokePalace.tech.map((list) => (
-                    <p>
-                      <li>{list}</li>
-                    </p>
+                  {data.pokePalace.tech.map((list, index) => (
+                    <li key={index}>{list}</li>
                   ))}
                 </ListContainer>
               </ListWrapper>
@@ -114,12 +113,13 @@ const PokeApp = () => {
               <WorkIconContainer>
                 <TypoGraphyIcon />
               </WorkIconContainer>
-
-              <ListContainer>
-                {data.pokePalace.typography.map((list) => (
-                  <li>{list}</li>
-                ))}
-              </ListContainer>
+              <ListWrapper>
+                <ListContainer>
+                  {data.pokePalace.typography.map((list, index) => (
+                    <li key={index}>{list}</li>
+                  ))}
+                </ListContainer>
+              </ListWrapper>
             </WorkColumns>
             {/* ---------------------Colors Section */}
             <WorkColumns>
@@ -129,15 +129,15 @@ const PokeApp = () => {
 
               <ListWrapper>
                 <ThemeWrapper>
-                  {data.pokePalace.colors.map((color) => {
-                    return <ColorExample colorTheme={color}></ColorExample>;
+                  {data.pokePalace.colors.map((color, index) => {
+                    return <ColorExample key={index} colorTheme={color}></ColorExample>;
                   })}
                 </ThemeWrapper>
-                <ListContainer>
-                  {data.pokePalace.colors.map((list) => (
-                    <li>{list}</li>
-                  ))}
-                </ListContainer>
+                <ColorList>
+                  {data.pokePalace.colors.map((list, index) => {
+                    return <li key={index}>{list}</li>;
+                  })}
+                </ColorList>
               </ListWrapper>
             </WorkColumns>
           </ColumnsContainer>

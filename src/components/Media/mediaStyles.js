@@ -38,7 +38,7 @@ export const LogoWrapper = styled.div`
 
 export const Logo = styled.div`
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: ${(props) => props.theme.fontFamily}, sans-serif;
   background-color: ${(props) => props.theme.body};
   user-select: none;

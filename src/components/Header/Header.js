@@ -94,10 +94,11 @@ const Header = () => {
           animate="visible"
         />
         <Circle
-          as={motion.div}
-          variants={firstCircleVariant}
-          initial="hidden"
-          animate="visible"
+           as={motion.div}
+           variants={secondCircleVariant}
+           initial="hidden"
+           animate="visible"
+         
         />
       </FirstCircleContainer>
 
@@ -121,7 +122,7 @@ const Header = () => {
         />
         <Circle
           as={motion.div}
-          variants={secondCircleVariant}
+          variants={firstCircleVariant}
           initial="hidden"
           animate="visible"
         />

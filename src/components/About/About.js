@@ -96,7 +96,12 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-        <Square />
+        <Square
+          as={motion.div}
+          variants={squareColor}
+          initial="hidden"
+          animate="visible"
+        />
         <SecondLine />
         <Circle />
       </SecondLineContainer>
@@ -108,12 +113,7 @@ const About = () => {
       >
         <Circle />
         <ThirdLine />
-        <Square
-          as={motion.div}
-          variants={squareColor}
-          initial="hidden"
-          animate="visible"
-        />
+        <Square />
       </ThirdLineContainer>
       <FourthAboutLineContainer
         as={motion.div}

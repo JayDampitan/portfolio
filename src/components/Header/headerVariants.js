@@ -77,13 +77,18 @@ export const thirdContainerVariant = {
 
 export const secondCircleVariant = {
   hidden: {
+    x: -100,
+    y: 20,
     opacity: 0,
   },
   visible: {
-    opacity: 1,
+    x: 0,
+    y: 20,
     backgroundColor: "rgba(187, 68, 48, 1)",
+    opacity: 1,
     transition: {
-      delay: 1.2,
+      delay: 0.3,
+      duration: 0.5,
     },
   },
 };
