@@ -31,6 +31,21 @@ export const PortfolioTitleContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
+  @media (max-width: 420px) {
+    position: absolute;
+    width: auto;
+    top: 2rem;
+    left: 57%;
+    width: 8rem;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 360px){
+    top: 1.8rem;
+    left: 56%;
+    width: 6.7rem;
+  }
+
   h3 {
     color: ${(props) => props.theme.text};
     text-transform: uppercase;
@@ -45,16 +60,13 @@ export const PortfolioTitleContainer = styled.div`
     @media (max-width: 420px) {
       font-size: 0.8rem;
     }
+
+    @media (max-width: 360px){
+      font-size: .7rem;
+    }
   }
 
-  @media (max-width: 420px) {
-    position: absolute;
-    width: auto;
-    top: 2rem;
-    left: 57%;
-    width: 8rem;
-    justify-content: space-between;
-  }
+
 `;
 
 export const PortfolioGithub = styled.a`
@@ -90,10 +102,15 @@ export const PortfolioContentContainer = styled.div`
     props.firstCardActive ? props.theme.inset : props.theme.boxShadow};
   padding: 0.5rem 0.5rem;
 
+  @media (max-width: 810px){
+    margin: .8rem;
+  }
+
   @media (max-width: 420px) {
+    border-radius: .5rem;
     padding: 0.4rem 0.3rem;
-    height: 5rem;
-    width: 17rem;
+    height: 5.3rem;
+    width: 18rem;
     margin-right: 1rem;
   }
 
@@ -143,7 +160,7 @@ export const PortfolioImage = styled.img`
   border-radius: 1rem;
 
   @media (max-width: 420px) {
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
   }
 `;
 

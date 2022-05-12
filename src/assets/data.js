@@ -2,9 +2,9 @@ export const data = {
   movieApp: {
     title: "Movie App",
     desciption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "Reactoad Movie App is a Netflix mockup where you can search for your favorite movie and find out more information about them such as ratings, actors and more. ",
     longDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "Coming out of the Bitwise Industry classes, Reactoad Movie App is a Netflix mockup and my first project coming  in the Bitwise apprenticeship program. In collaboration with my teammates  Danny Sanchez and Elias Guttierez, our first challenge as apprentices  is to fetch data from a movie API and create an application utilizing the data that have been fetched. This presented a great challenge on my part since this is my first exposure to APIs and how to fetch data. But with great guidance from our lead Kendrick Mausolf, and amazing team work, we have achieved our first challenge and created this application that you can enjoy today. ",
     tech: ["HTML5", "CSS3", "JavaScript ES6", "React"],
     colors: [
       "#895FB5",
@@ -19,9 +19,9 @@ export const data = {
   pokePalace: {
     title: "Poke Palace",
     desciption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "PokePalace is a web application where you can buy, win and collect all Pokemon. Get a chance to experience an online slot machine only for Pokemon.",
     longDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "On the second application of our apprenticeship program, we were challenged to fetch data from the poke API and create an engaging web application using those data, while introducing new technologies such Redux and Redux Toolkit to manage our states. Along side my teammates Kenneth Ferrell II and Paul Gonzalez, we created a web app where users can buy Pokemons with the initial Poke dollars we give them and play on our integrated poke slot machine where you can win a pokemon on every spin for a chance to collect them all. Also included in the app is a feature where you can collect different badges by collecting certain Pokemon related to those badges. ",
     tech: ["HTML5", "CSS3", "JavaScript ES6", "React", "Redux", "SASS"],
     colors: [
       "#333333",
@@ -38,9 +38,9 @@ export const data = {
   toadTribune: {
     title: "Toad Tribune",
     desciption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "Toad Tribune is an online newspaper where you can gather all the recent information locally and internationally including your local weather. ",
     longDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "Toad Tribune is an online newspaper that we created for the third application in our apprenticeship. Here our lead gave us the freedom to choose whatever API of our liking and how many. The challenge that we faced in this project is our first exposure to Typescript and Styled Components. Although indeed a challenge at first, with the help from my teammates Kenneth Ferrell II and Elias Gutierrez we successfully learned some of the core fundamentals of these technologies and created a liking for them. ",
     tech: [
       "HTML5",
       "CSS3",
@@ -64,28 +64,50 @@ export const data = {
   kovvi: {
     title: "KOVVI",
     desciption:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "Kovvi is a mobile application that tracks data related to Covid19 of a specific location and presented in a graph form. ",
     longDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.",
+      "Kovvi is the fourth and final project that we would create as a team in my Bitwise apprenticeship program. It is a mobile application that gives information related to covid 19 such as deaths, healed and infected individuals  in a specific area. The challenge that was presented to us is the first exposure to React Native and RTK query, a feature of Redux Toolkit to fetch data from APIs. Although the transition from React to React Native was quite easy, the relation of styled components and React Native presented itself as a challenge and prevented us from creating a neuromorphic design to our application. But thanks to my teammates Connie Lai and Elias Gutierrez, we still came up with a simple yet modern approach to our project.",
+      tech: [
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6",
+        "React Native",
+        "Expo",
+        "Styled Components",
+      ],
+      colors: [
+        "#3e3e3e",
+        "#356893",
+        "#4092e5",
+        "#314f63",
+        "#fafafa",
+        "#203f59",
+        "#77C280",
+      ],
+      typography: ["NotoSans",],
   },
+  
 };
 
 export const myInfo = {
   story: {
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiatLorem ipsum dolor, sit amet consectetur adipisicing elit. Delect velit autem tenetur quisquam eaque fugiatipisicing elit. Delect velit autem tenetur quisquam eaque fugiat est nobis officiisprovident molestias accusamus obcaecati, sit illo quos quam voluptatem vero voluptatibus porro.Lorem ipsum dolor, ",
+      "Hello my name is Jay Dampitan, I am 37 years old and  currently a React/React Native apprentice at Bitwise Industries based in Fresno, California. My passion for learning and natural curiosity led to Bitwise where my coding journey started. Prior to programming, I worked in the casino industry for over 16 years and learned many disciplines that helped me in my career. As a clerk I learned communication skills with clients and associates. I learned leadership and decision making skills as a floor supervisor for over a decade. Efficiency as an accounting audit clerk and consistency as an anti money laundering compliance officer. My enthusiasm for learning has led me to many hobbies, interests, areas of study and career paths. It led me to programming, my chosen career. My journey on this one is still somewhat new, but I cannot be more excited to learn more tech such as listed below."
   },
 };
 
 export const myTech = [
-  "html",
-  "css",
+  "html5",
+  "css3",
   "javascript",
+  "Bootstrap",
   "scss",
   "react",
   "redux",
   "styled components",
-  "framer",
+  "framer motion",
+  "typescript",
+  
 ];
 
 export const MovieAppImages = [

@@ -30,7 +30,7 @@ import {
   ColorIcon,
 } from "../AllSvgs";
 import { motion } from "framer-motion";
-import { pageVariant } from "./workVariants";
+import { pageVariant, imageVariant } from "./workVariants";
 
 const TribuneApp = () => {
   const [current, setCurrent] = useState(0);
@@ -77,7 +77,10 @@ const TribuneApp = () => {
                 return (
                   <>
                     {index === current && (
-                      <CarouselImage src={slide.image} alt="" key={index} />
+                      <CarouselImage  variants={imageVariant}
+                      initial="hidden"
+                      animate="visible"
+                      src={slide.image} alt="images of the application" key={index} />
                     )}
                   </>
                 );

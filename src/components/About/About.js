@@ -41,7 +41,6 @@ const About = () => {
     >
       {/* -----------About Page Content */}
       <ContentContainer
-        as={motion.div}
         variants={contentVariant}
         initial="hidden"
         animate="visible"
@@ -78,7 +77,7 @@ const About = () => {
         initial="hidden"
         animate="visible"
       >
-        <img src={JD} />
+        <img src={JD} alt="Man playing a guitar" />
       </ImageContainer>
 
       {/* -----------Background Lines and Shapes */}

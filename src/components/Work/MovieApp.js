@@ -30,7 +30,7 @@ import {
   ColorIcon,
 } from "../AllSvgs";
 import { motion } from "framer-motion";
-import { pageVariant } from "./workVariants";
+import { pageVariant, imageVariant } from "./workVariants";
 
 const MovieApp = () => {
   const [current, setCurrent] = useState(0);
@@ -58,6 +58,7 @@ const MovieApp = () => {
     >
       <WorkPageContainer>
         {/* -----------------Carousel Container */}
+
         <CarouselContainer>
           <CarouselTitleContainer>
             <h1>{data.movieApp.title}</h1>
@@ -68,26 +69,37 @@ const MovieApp = () => {
               <Github />
             </PortfolioGithub>
           </CarouselTitleContainer>
+
           <CarouselWrapper>
             <CarouselButton>
               <Previous onClick={prevHandler} />
             </CarouselButton>
-            <Carousel>
-              {MovieAppImages.map((slide, index) => {
-                return (
-                  <>
-                    {index === current && (
-                      <CarouselImage src={slide.image} alt="" key={index} />
-                    )}
-                  </>
-                );
-              })}
-            </Carousel>
+            
+              <Carousel>
+                {MovieAppImages.map((slide, index) => {
+                  return (
+                    <>
+                      {index === current && (
+                        <CarouselImage
+                          variants={imageVariant}
+                          initial="hidden"
+                          animate="visible"
+                          src={slide.image}
+                          alt="images of the application"
+                          key={index}
+                        />
+                      )}
+                    </>
+                  );
+                })}
+              </Carousel>
+          
             <CarouselButton>
               <Next onClick={nextHandler} />
             </CarouselButton>
           </CarouselWrapper>
         </CarouselContainer>
+
         {/* -----------------Work Description */}
         <WorkDesContainer>
           <WorkDescription>
@@ -130,7 +142,12 @@ const MovieApp = () => {
               <ListWrapper>
                 <ThemeWrapper>
                   {data.movieApp.colors.map((color, index) => {
-                    return <ColorExample key={index} colorTheme={color}></ColorExample>;
+                    return (
+                      <ColorExample
+                        key={index}
+                        colorTheme={color}
+                      ></ColorExample>
+                    );
                   })}
                 </ThemeWrapper>
                 <ColorList>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeaderBoxImage from "../../assets/images/headerBoxImage.png";
+import HeaderBoxImage from "../../assets/images/headerBoxImage2.png";
+import { useNavigate } from "react-router-dom";
 
 import {
   HeaderIntro,
@@ -32,8 +33,10 @@ import {
 import { Square, Circle } from "../../subComponents/backgroundElements";
 
 import { PageContainer } from "../../subComponents/pageContainer";
+import { Navigate } from "react-router-dom";
 
 const Header = () => {
+ const navigate = useNavigate();
   return (
     <PageContainer
       as={motion.div}
@@ -71,12 +74,12 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <HeaderImage src={HeaderBoxImage} />
+        <HeaderImage src={HeaderBoxImage} alt="a cartoon man on his computer" />
       </HeaderBox>
 
       <ConnectButton
-        to="/contact"
-        as={motion.div}
+        as = {motion.div}
+        onClick = {() => navigate("/contact")}
         variants={headerIntroVariant}
         initial="hidden"
         animate="visible"

@@ -30,7 +30,7 @@ import {
   ColorIcon,
 } from "../AllSvgs";
 import { motion } from "framer-motion";
-import { pageVariant } from "./workVariants";
+import { pageVariant, imageVariant } from "./workVariants";
 
 const KovviApp = () => {
   const [current, setCurrent] = useState(0);
@@ -60,7 +60,7 @@ const KovviApp = () => {
         {/* -----------------Carousel Container */}
         <CarouselContainer>
           <CarouselTitleContainer>
-            <h1>{data.toadTribune.title}</h1>
+            <h1>{data.kovvi.title}</h1>
             <PortfolioGithub
               target="_blank"
               href="https://github.com/dannysanchez559/2021_React_Apprenticeship"
@@ -77,7 +77,14 @@ const KovviApp = () => {
                 return (
                   <>
                     {index === current && (
-                      <CarouselImage src={slide.image} alt="" key={index} />
+                      <CarouselImage
+                        variants={imageVariant}
+                        initial="hidden"
+                        animate="visible"
+                        src={slide.image}
+                        alt="images of the application"
+                        key={index}
+                      />
                     )}
                   </>
                 );
@@ -91,7 +98,7 @@ const KovviApp = () => {
         {/* -----------------Work Description */}
         <WorkDesContainer>
           <WorkDescription>
-            <p>{data.toadTribune.longDescription}</p>
+            <p>{data.kovvi.longDescription}</p>
           </WorkDescription>
 
           <ColumnsContainer>
@@ -102,7 +109,7 @@ const KovviApp = () => {
 
               <ListWrapper>
                 <ListContainer>
-                  {data.toadTribune.tech.map((list, index) => (
+                  {data.kovvi.tech.map((list, index) => (
                     <p key={index}>
                       <li>{list}</li>
                     </p>
@@ -117,7 +124,7 @@ const KovviApp = () => {
               </WorkIconContainer>
 
               <ListContainer>
-                {data.toadTribune.typography.map((list, index) => (
+                {data.kovvi.typography.map((list, index) => (
                   <li key={index}>{list}</li>
                 ))}
               </ListContainer>
@@ -130,12 +137,17 @@ const KovviApp = () => {
 
               <ListWrapper>
                 <ThemeWrapper>
-                  {data.toadTribune.colors.map((color, index) => {
-                    return <ColorExample key={index} colorTheme={color}></ColorExample>;
+                  {data.kovvi.colors.map((color, index) => {
+                    return (
+                      <ColorExample
+                        key={index}
+                        colorTheme={color}
+                      ></ColorExample>
+                    );
                   })}
                 </ThemeWrapper>
                 <ColorList>
-                  {data.toadTribune.colors.map((list, index) => (
+                  {data.kovvi.colors.map((list, index) => (
                     <li key={index}>{list}</li>
                   ))}
                 </ColorList>
