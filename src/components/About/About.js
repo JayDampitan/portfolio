@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { myInfo, myTech } from "../../assets/data";
+import { Square, Circle } from "../../subComponents/backgroundElements";
+import { PageContainer } from "../../subComponents/pageContainer";
 import JD from "../../assets/images/portfolio.jpg";
 import {
   ContentContainer,
@@ -17,11 +20,6 @@ import {
   FourthAboutLineContainer,
   FourthLine,
 } from "./aboutStyles";
-
-import { myInfo, myTech } from "../../assets/data";
-
-import { Square, Circle } from "../../subComponents/backgroundElements";
-
 import {
   firstLineVariant,
   secondLineVariant,
@@ -30,7 +28,6 @@ import {
   squareColor,
 } from "./aboutVariants";
 
-import { PageContainer } from "../../subComponents/pageContainer";
 
 const About = () => {
   return (

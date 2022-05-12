@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { HomeIcon, AboutIcon, WorkIcon, ContactIcon } from "../AllSvgs";
-
 import { Nav, NavLinksContainer, LinkWrapper, NavLinks } from "./navbarStyles";
-
 import { linksVariant } from "./navbarVariants";
 
 const Navbar = () => {

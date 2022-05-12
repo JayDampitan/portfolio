@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { BorderLine } from "./gradientStyles";
 
 const gradientVariant = {
