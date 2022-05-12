@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyles";
-
 import GradientLine from "./components/Gradient/GradientLine";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 import Media from "./components/Media/Media";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 import { lightMode, darkMode } from "./components/Theme";
 
 function App() {

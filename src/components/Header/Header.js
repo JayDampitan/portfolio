@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeaderBoxImage from "../../assets/images/headerBoxImage2.png";
+import HeaderBoxImage from "../../assets/images/headerBoxImage.png";
 import { useNavigate } from "react-router-dom";
-
+import { Square, Circle } from "../../subComponents/backgroundElements";
+import { PageContainer } from "../../subComponents/pageContainer";
 import {
   HeaderIntro,
   HeaderName,
@@ -19,7 +20,6 @@ import {
   FourthLineContainer,
   FourthLine,
 } from "./headerStyles";
-
 import {
   firstLineVariant,
   firstCircleVariant,
@@ -30,10 +30,6 @@ import {
   headerBoxVariant,
 } from "./headerVariants";
 
-import { Square, Circle } from "../../subComponents/backgroundElements";
-
-import { PageContainer } from "../../subComponents/pageContainer";
-import { Navigate } from "react-router-dom";
 
 const Header = () => {
  const navigate = useNavigate();
