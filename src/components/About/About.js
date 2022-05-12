@@ -1,58 +1,125 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-import JD from "../../assets/portfolio.jpg";
+import { myInfo, myTech } from "../../assets/data";
+import { Square, Circle } from "../../subComponents/backgroundElements";
+import { PageContainer } from "../../subComponents/pageContainer";
+import JD from "../../assets/images/portfolio.jpg";
 import {
-  AboutContainer,
-  AboutTitle,
   ContentContainer,
   ImageContainer,
-  TopCircle,
-  Image,
-  AboutMe,
+  TitleContainer,
+  ParagraphContainer,
+  TechContainer,
+  TechWrapper,
+  FirstLineContainer,
+  FirstLine,
+  SecondLineContainer,
+  SecondLine,
+  ThirdLineContainer,
+  ThirdLine,
+  FourthAboutLineContainer,
+  FourthLine,
 } from "./aboutStyles";
+import {
+  firstLineVariant,
+  secondLineVariant,
+  aboutImageVariant,
+  contentVariant,
+  squareColor,
+} from "./aboutVariants";
 
-// -------------About Page Variants
-
-const aboutVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
 
 const About = () => {
   return (
-    <AboutContainer
+    <PageContainer
       as={motion.div}
-      variants={aboutVariants}
-      initial="hidden"
-      animate="visible"
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <AboutTitle>Something About Me</AboutTitle>
+      {/* -----------About Page Content */}
+      <ContentContainer
+        variants={contentVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <TitleContainer
+          as={motion.div}
+          variants={contentVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2>Something About me</h2>
+        </TitleContainer>
 
-      <ContentContainer>
-        <ImageContainer>
-          <Image src={JD} />
-        </ImageContainer>
+        <ParagraphContainer
+          as={motion.div}
+          variants={contentVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <p>{myInfo.story.description}</p>
+        </ParagraphContainer>
 
-        <AboutMe>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dicta
-            rem, officia similique ex quis officiis voluptatum! Culpa adipisci
-            et numquam, vero beatae, architecto iure consequuntur natus nihil
-            odit reprehenderit aperiam, blanditiis doloribus laborum doloremque
-            provident est ducimus veniam ipsa qui ut nam! Quis, quae? Neque
-            explicabo tempora odio quia.
-          </p>
-        </AboutMe>
+        <TechContainer>
+          {myTech.map((tech) => {
+            return <TechWrapper>{tech}</TechWrapper>;
+          })}
+        </TechContainer>
       </ContentContainer>
-    </AboutContainer>
+
+      {/* -----------Profile Image */}
+      <ImageContainer
+        as={motion.div}
+        variants={aboutImageVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <img src={JD} alt="Man playing a guitar" />
+      </ImageContainer>
+
+      {/* -----------Background Lines and Shapes */}
+      <FirstLineContainer
+        as={motion.div}
+        variants={firstLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <FirstLine />
+      </FirstLineContainer>
+      <SecondLineContainer
+        as={motion.div}
+        variants={secondLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <Square
+          as={motion.div}
+          variants={squareColor}
+          initial="hidden"
+          animate="visible"
+        />
+        <SecondLine />
+        <Circle />
+      </SecondLineContainer>
+      <ThirdLineContainer
+        as={motion.div}
+        variants={secondLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <Circle />
+        <ThirdLine />
+        <Square />
+      </ThirdLineContainer>
+      <FourthAboutLineContainer
+        as={motion.div}
+        variants={firstLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <FourthLine />
+      </FourthAboutLineContainer>
+    </PageContainer>
   );
 };
 

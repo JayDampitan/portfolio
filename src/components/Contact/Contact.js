@@ -1,60 +1,145 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-
-import mail from "../../assets/mail.svg";
+import emailjs from "@emailjs/browser";
 import {
-  ContactContainer,
-  ContactTitle,
-  ContactContents,
-  MailLogo,
   ContactForm,
-  Label,
-  Input,
+  ContactFormContainer,
   TextArea,
-  Button,
+  SubmitButton,
+  ContactImageContainer,
+  FirstContactContainer,
+  FirstContactLine,
+  SecondContactContainer,
+  SecondContactLine,
+  ThirdContactContainer,
+  ThirdContactLine,
+  FourthContactContainer,
 } from "./contactStyles";
 
-// -------------About Page Variants
+import { Square, Circle } from "../../subComponents/backgroundElements";
 
-const contactVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 3,
-      mass: 0.4,
-      type: "spring",
-      damping: 8,
-    },
-  },
-};
+import {
+  firstLineVariant,
+  secondLineVariant,
+  thirdLineVariant,
+  contactFormVariant,
+  contactImageVariant,
+  squareColor,
+} from "./contactVariants";
+
+import Kovvi from "../../assets/images/phone3.png";
+
+import { PageContainer } from "../../subComponents/pageContainer";
 
 const Contact = () => {
-  return (
-    <ContactContainer
-      as={motion.div}
-      variants={contactVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <ContactTitle>Contact</ContactTitle>
-      <ContactContents>
-        <MailLogo src={mail}></MailLogo>
+  const form = useRef();
 
-        <ContactForm>
-          <Label>Name</Label>
-          <Input />
-          <Label>Email</Label>
-          <Input />
-          <Label>Message</Label>
-          <TextArea />
-          <Button>Connect</Button>
-        </ContactForm>
-      </ContactContents>
-    </ContactContainer>
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.REACT_APP_PUBLIC_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    form.current.reset();
+  };
+
+  return (
+    <PageContainer
+      as={motion.div}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* -----------Contact Form and Animations */}
+      <ContactFormContainer
+        as={motion.div}
+        variants={contactFormVariant}
+        initial="hidden"
+        animate="visible"
+      />
+
+      {/* ------------------Contact Info Container */}
+      <ContactForm
+        ref={form}
+        onSubmit={sendEmail}
+        as={motion.form}
+        variants={contactFormVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <h2>Get in touch</h2>
+        <input type="text" placeholder="Name" name="name" />
+        <input type="email" placeholder="Email" name="email" />
+        <TextArea type="text" placeholder="Message" name="message" />
+        <SubmitButton type="submit">Submit</SubmitButton>
+      </ContactForm>
+
+      {/*-------------Contact Image  */}
+      <ContactImageContainer
+        as={motion.div}
+        variants={contactImageVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.img src={Kovvi} alt="Phone" />
+      </ContactImageContainer>
+
+      {/* -----------Background Designs and Animations */}
+      <FirstContactContainer
+        as={motion.div}
+        variants={firstLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <FirstContactLine />
+      </FirstContactContainer>
+
+      <SecondContactContainer
+        as={motion.div}
+        variants={secondLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <Circle />
+        <SecondContactLine />
+        <Square />
+      </SecondContactContainer>
+
+      <ThirdContactContainer
+        as={motion.div}
+        variants={thirdLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <Square
+          as={motion.div}
+          variants={squareColor}
+          initial="hidden"
+          animate="visible"
+        />
+        <ThirdContactLine />
+        <Circle />
+      </ThirdContactContainer>
+
+      <FourthContactContainer
+        as={motion.div}
+        variants={firstLineVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <FirstContactLine />
+      </FourthContactContainer>
+    </PageContainer>
   );
 };
 

@@ -1,98 +1,142 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import HeaderBoxImage from "../../assets/images/headerBoxImage.png";
+import { useNavigate } from "react-router-dom";
+import { Square, Circle } from "../../subComponents/backgroundElements";
+import { PageContainer } from "../../subComponents/pageContainer";
 import {
-  HeaderContainer,
-  FirstHeader,
-  SecondHeader,
-  ThirdHeader,
+  HeaderIntro,
+  HeaderName,
+  HeaderTitle,
+  ConnectButton,
+  HeaderBox,
+  FirstCircleContainer,
+  FirstLine,
+  SecondLine,
+  SquareContainer,
+  ThirdLineContainer,
+  ThirdLine,
+  HeaderImage,
+  FourthLineContainer,
+  FourthLine,
 } from "./headerStyles";
+import {
+  firstLineVariant,
+  firstCircleVariant,
+  headerIntroVariant,
+  squareContainerVariant,
+  thirdContainerVariant,
+  secondCircleVariant,
+  headerBoxVariant,
+} from "./headerVariants";
 
-// ----------------------------Header Motion Variants
-const firstVariant = {
-  hover: {
-    boxShadow:
-      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-  },
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
-
-const secondVariant = {
-  hover: {
-    boxShadow:
-      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-  },
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
-
-const thirdVariant = {
-  hover: {
-    boxShadow:
-      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-  },
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
 
 const Header = () => {
+ const navigate = useNavigate();
   return (
-    <>
-      <HeaderContainer>
-        <FirstHeader
+    <PageContainer
+      as={motion.div}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <HeaderIntro
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        Hello, my name is
+      </HeaderIntro>
+      <HeaderName
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        Jay Dampitan
+      </HeaderName>
+      <HeaderTitle
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        software developer from california
+      </HeaderTitle>
+
+      <HeaderBox
+        as={motion.div}
+        variants={headerBoxVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <HeaderImage src={HeaderBoxImage} alt="a cartoon man on his computer" />
+      </HeaderBox>
+
+      <ConnectButton
+        as = {motion.div}
+        onClick = {() => navigate("/contact")}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        connect
+      </ConnectButton>
+
+      {/* -----------Background Elements */}
+
+      <FirstCircleContainer>
+        <FirstLine
           as={motion.div}
-          variants={firstVariant}
+          variants={firstLineVariant}
           initial="hidden"
           animate="visible"
-          whileHover="hover"
-          drag
-        >
-          Hello!
-        </FirstHeader>
-        <SecondHeader
+        />
+        <Circle
+           as={motion.div}
+           variants={secondCircleVariant}
+           initial="hidden"
+           animate="visible"
+         
+        />
+      </FirstCircleContainer>
+
+      <SquareContainer
+        as={motion.div}
+        variants={squareContainerVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <Square />
+        <SecondLine />
+        <Square />
+      </SquareContainer>
+
+      <ThirdLineContainer>
+        <ThirdLine
           as={motion.div}
-          variants={secondVariant}
+          variants={thirdContainerVariant}
           initial="hidden"
           animate="visible"
-          whileHover="hover"
-          drag
-        >
-          I'm Jay,
-        </SecondHeader>
-        <ThirdHeader
+        />
+        <Circle
           as={motion.div}
-          variants={thirdVariant}
+          variants={firstCircleVariant}
           initial="hidden"
           animate="visible"
-          whileHover="hover"
-          drag
-        >
-          software developer from California
-        </ThirdHeader>
-      </HeaderContainer>
-    </>
+        />
+      </ThirdLineContainer>
+
+      <FourthLineContainer
+        as={motion.div}
+        variants={headerIntroVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <FourthLine />
+        <Square />
+      </FourthLineContainer>
+    </PageContainer>
   );
 };
 

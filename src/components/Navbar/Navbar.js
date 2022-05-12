@@ -1,69 +1,17 @@
-import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { HomeIcon, AboutIcon, WorkIcon, ContactIcon } from "../AllSvgs";
+import { Nav, NavLinksContainer, LinkWrapper, NavLinks } from "./navbarStyles";
+import { linksVariant } from "./navbarVariants";
 
-import {
-  NavContainer,
-  LogoContainer,
-  Logo,
-  NavLinksContainer,
-  LinkWrapper,
-  NavLinks,
-  Hamburger,
-  SwitchButton,
-} from "./navbarStyles";
-
-import { Moon, Sun } from "../AllSvgs";
-
-const logoVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      type: "spring",
-      mass: 0.5,
-    },
-  },
-};
-
-const hoverVariants = {
-  hoverMe: {
-    boxShadow:
-      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-  },
-};
-
-const linksVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-      ease: "easeIn",
-    },
-  },
-};
-
-const Navbar = ({ switchActive, setSwitchActive }) => {
-  const control = useAnimation();
+const Navbar = () => {
+  const [homeActive, setHomeActive] = useState(true);
+  const [aboutActive, setAboutActive] = useState(false);
+  const [workActive, setWorkActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
 
   return (
-    <NavContainer>
-  
-        <Logo
-          as={motion.div}
-          variants={logoVariants}
-          initial="hidden"
-          animate="visible"
-        >
-         <h2>JD</h2>
-        </Logo>
-   
-
+    <Nav>
       <NavLinksContainer
         as={motion.div}
         variants={linksVariant}
@@ -72,52 +20,65 @@ const Navbar = ({ switchActive, setSwitchActive }) => {
       >
         <LinkWrapper
           onClick={() => {
-            control.start({
-              boxShadow:
-                "inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4)",
-            });
+            setHomeActive(true);
+            setAboutActive(false);
+            setWorkActive(false);
+            setContactActive(false);
           }}
+          insetActive={homeActive}
           as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
         >
-          <NavLinks to="/"> Home </NavLinks>
-        </LinkWrapper>
-        <LinkWrapper
-          as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
-        >
-          <NavLinks to="/about"> About </NavLinks>
+          <NavLinks insetActive={homeActive} to="/">
+            <HomeIcon />
+          </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper
+          onClick={() => {
+            setHomeActive(false);
+            setAboutActive(true);
+            setWorkActive(false);
+            setContactActive(false);
+          }}
+          insetActive={aboutActive}
           as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
         >
-          <NavLinks to="/portfolio"> Portfolio </NavLinks>
+          <NavLinks insetActive={aboutActive} to="/about">
+            <AboutIcon />
+          </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper
+          onClick={() => {
+            setHomeActive(false);
+            setAboutActive(false);
+            setWorkActive(true);
+            setContactActive(false);
+          }}
+          insetActive={workActive}
           as={motion.div}
-          variants={hoverVariants}
-          whileHover="hoverMe"
         >
-          <NavLinks to="/contact"> Contact </NavLinks>
+          <NavLinks insetActive={workActive} to="/portfolio">
+            <WorkIcon />
+          </NavLinks>
+        </LinkWrapper>
+
+        <LinkWrapper
+          onClick={() => {
+            setHomeActive(false);
+            setAboutActive(false);
+            setWorkActive(false);
+            setContactActive(true);
+          }}
+          insetActive={contactActive}
+          as={motion.div}
+        >
+          <NavLinks insetActive={contactActive} to="/contact">
+            <ContactIcon />
+          </NavLinks>
         </LinkWrapper>
       </NavLinksContainer>
-      <SwitchButton
-        onClick={() => {
-          setSwitchActive(!switchActive);
-        }}
-        as={motion.div}
-        variants={hoverVariants}
-        whileHover="hoverMe"
-      >
-        {switchActive ? <Moon fill='#E9E016' /> : <Sun fill='#E9E016'/>}
-      </SwitchButton>
-    </NavContainer>
+    </Nav>
   );
 };
 

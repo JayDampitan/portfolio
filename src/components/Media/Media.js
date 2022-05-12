@@ -1,10 +1,14 @@
 import React from "react";
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Facebook, Github, Twitter, YouTube } from "../AllSvgs";
+import { Linkedin, Github, Twitter, YouTube, Link } from "../AllSvgs";
 
-import { Icons, IconContainer, Line } from "./mediaStyles";
-
+import {
+  Icons,
+  IconContainer,
+  MediaContainer,
+  Logo,
+  LogoWrapper,
+} from "./mediaStyles";
 // ----------------Media Animations
 
 const mediaVariants = {
@@ -19,50 +23,39 @@ const mediaVariants = {
   },
 };
 
-const linksVariants = {
-  hover: {
-    boxShadow:
-      " inset -5px -5px 10px rgba(150,150,150, 0.3), inset 5px 5px 10px rgba(10, 10, 10, .4) ",
-  },
-};
-
-const Media = () => {
+const Media = ({ switchActive, setSwitchActive }) => {
   return (
-    <Icons
-      as={motion.div}
-      variants={mediaVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <MediaContainer>
+      <LogoWrapper
+        switchActive={switchActive}
+        onClick={() => {
+          setSwitchActive(!switchActive);
+        }}
+      >
+        <Logo switchActive={switchActive} as={motion.nav}>
+          <h2>JD</h2>
+        </Logo>
+      </LogoWrapper>
       <IconContainer
         as={motion.div}
-        variants={linksVariants}
-        whileHover="hover"
+        variants={mediaVariants}
+        initial="hidden"
+        animate="visible"
       >
-        <Github fill="currentColor" />
+        <Icons target="_blank" href="https://github.com/JayDampitan">
+          <Github fill="currentColor" />
+        </Icons>
+        <Icons target="_blank" href="https://www.youtube.com/channel/UCu2DsrRQhBXdRq_k6ASNCfQ">
+          <YouTube fill="currentColor" />
+        </Icons>
+        <Icons target="_blank" href="https://twitter.com/home">
+          <Twitter fill="currentColor" />
+        </Icons>
+        <Icons target="_blank" href="https://www.linkedin.com/in/jay-dampitan-568482183/">
+          <Linkedin fill="currentColor" />
+        </Icons>
       </IconContainer>
-      <IconContainer
-        as={motion.div}
-        variants={linksVariants}
-        whileHover="hover"
-      >
-        <YouTube fill="currentColor" />
-      </IconContainer>
-      <IconContainer
-        as={motion.div}
-        variants={linksVariants}
-        whileHover="hover"
-      >
-        <Twitter fill="currentColor" />
-      </IconContainer>
-      <IconContainer
-        as={motion.div}
-        variants={linksVariants}
-        whileHover="hover"
-      >
-        <Facebook fill="currentColor" />
-      </IconContainer>
-    </Icons>
+    </MediaContainer>
   );
 };
 
