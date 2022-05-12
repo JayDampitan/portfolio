@@ -50,6 +50,9 @@ export const Logo = styled.div`
     @media (max-width: 600px) {
       font-size: 2.4rem;
     }
+    @media (max-width: 420px) {
+      font-size: 2rem;
+    }
   }
 `;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled(motion.div)`
   grid-area: 3/4/12/11;
   border: ${(props) => props.theme.border};
   box-shadow: ${(props) => props.theme.inset};
@@ -15,18 +16,22 @@ export const ContentContainer = styled.div`
   @media (max-width: 1400px) {
     grid-area: 3/3/12/12;
   }
-  @media (max-width: 810px) {
-    grid-area: 3/3/13/12;
+  @media (max-width: 840px) {
+    grid-area: 3/2/13/13;
+    height: 95%;
     justify-content: center;
   }
   @media (max-width: 420px) {
-    grid-area: 3/2/12/13;
-    
+    grid-area: 3/2/13/13;
+    height: 95%;
+    box-shadow: none;
+    border: none;
+    padding-top: 1rem;
   }
 `;
 
 export const ImageContainer = styled.div`
-  width: 85%;
+  width: 78%;
   height: 90%;
   grid-area: 2/3/6/5;
   border-radius: 50%;
@@ -62,6 +67,12 @@ export const ImageContainer = styled.div`
   @media (max-width: 420px) {
     grid-area: 1/5/4/10;
     margin-right: 2rem;
+  }
+
+  @media (max-width: 360px){
+    width: 60%;
+    height: 60%;
+    margin-bottom: 1rem;
   }
 
   img {
@@ -110,8 +121,9 @@ export const ParagraphContainer = styled.div`
 
 
   @media (max-width: 840px) {
+    margin: 1rem;
     font-size: 0.9rem;
-    width: 85%;
+    width: 90%;
     
   }
 
@@ -119,7 +131,14 @@ export const ParagraphContainer = styled.div`
     font-size: 0.68rem;
     line-height: 0.9rem;
     padding: 0 1rem;
-    margin: .8rem 0;
+    margin: .5rem 0 .8rem 0;
+    width: 95%;
+    text-indent: 0;
+  }
+
+  @media (max-width: 360px){
+    padding: 0 1rem;
+    width: 100%;
   }
 `;
 
@@ -136,12 +155,16 @@ export const TechContainer = styled.div`
   }
 
   @media (max-width: 810px) {
-    width: 90%;
+    width: 100%;
   }
 
   @media (max-width: 420px) {
     font-size: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0;
+  }
+
+  @media (max-width: 360px){
+    margin-top: 0;
   }
 `;
 

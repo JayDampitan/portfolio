@@ -6,6 +6,7 @@ export const ContactFormContainer = styled.div`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   border: ${(props) => props.theme.border};
+  
 
   @media (max-width: 1500px) {
     grid-area: 2/3/12/12;
@@ -27,10 +28,12 @@ export const ContactForm = styled.form`
   padding: 2rem;
 
   @media (max-width: 1500px) {
-    grid-area: 2/4/12/11;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    grid-area: 2/3/12/12;
+    padding: 0;
+    width: 90%;
+    height: 90%;
+    align-self: center;
+    justify-self: center;
   }
 
   @media (max-width: 810px) {
@@ -106,7 +109,7 @@ export const TextArea = styled.textarea`
 
 export const SubmitButton = styled.button`
   width: 8rem;
-  height: 3.5rem;
+  height: 3.2rem;
   box-shadow: ${(props) => props.theme.boxShadow};
   background: ${(props) => props.theme.orange};
   border-radius: 2rem;
@@ -147,13 +150,13 @@ export const ContactImageContainer = styled.div`
   grid-area: 3/7/10/11;
   box-shadow: ${(props) => props.theme.boxShadow},
     ${(props) => props.theme.inset};
-  border: 5px solid ${(props) => props.theme.body};
+  border: 3px solid ${(props) => props.theme.body};
   border-radius: 2rem;
-  width: 80%;
+  width: 90%;
   height: 100%;
 
   img {
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
 

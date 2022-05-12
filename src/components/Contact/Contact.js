@@ -25,10 +25,9 @@ import {
   contactFormVariant,
   contactImageVariant,
   squareColor,
-  imageHover,
 } from "./contactVariants";
 
-import Kovvi from "../../assets/images/phone1.png";
+import Kovvi from "../../assets/images/phone3.png";
 
 import { PageContainer } from "../../subComponents/pageContainer";
 

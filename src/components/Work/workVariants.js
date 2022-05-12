@@ -12,4 +12,21 @@ export const pageVariant = {
       opacity: 0
     }
   };
+
+  export const imageVariant = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: .8
+      }
+    },
+    exit: {
+     opacity: 0
+    }
+  }
+
+  
   

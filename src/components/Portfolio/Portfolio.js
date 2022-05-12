@@ -86,7 +86,7 @@ const Portfolio = () => {
                 <p>{data.movieApp.desciption}</p>
               </>
             ) : (
-              <PortfolioImage src={MovieApp} alt="" />
+              <PortfolioImage src={MovieApp} alt="images of the project" />
             )}
           </PortfolioContentContainer>
           <PortfolioButtonContainer>
@@ -127,7 +127,7 @@ const Portfolio = () => {
                 <p>{data.pokePalace.desciption}</p>
               </>
             ) : (
-              <PortfolioImage src={PokePalace} alt="" />
+              <PortfolioImage src={PokePalace} alt="image of the application" />
             )}
           </PortfolioContentContainer>
           <PortfolioButtonContainer>

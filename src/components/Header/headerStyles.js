@@ -13,6 +13,7 @@ export const HeaderIntro = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 6px;
 
   @media (max-width: 1680px) {
     font-size: 1.3rem;
@@ -48,6 +49,7 @@ export const HeaderName = styled.div`
   border-bottom: 2.5px solid ${(props) => props.theme.text};
   word-spacing: 1rem;
   letter-spacing: 0.2rem;
+  width: 95%;
 
   @media (max-width: 1680px) {
     font-size: 3rem;
@@ -74,8 +76,11 @@ export const HeaderName = styled.div`
     letter-spacing: .1rem;
   }
 
-  @media (max-width: 375px){
+  @media (max-width: 390px){
     font-size: 2rem;
+  }
+  @media (max-width: 375px){
+    font-size: 1.8rem;
   }
 `;
 
@@ -110,7 +115,7 @@ export const HeaderTitle = styled.div`
   }
 `;
 
-export const ConnectButton = styled(Link)`
+export const ConnectButton = styled.div`
   justify-content: center;
   justify-self: center;
   align-items: center;
@@ -164,7 +169,7 @@ export const HeaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1rem 0 2rem;
+  padding: 2rem;
 
   @media (max-width: 1200px) {
     grid-area: 5/3/13/12;
@@ -188,13 +193,6 @@ export const HeaderImage = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* @media (max-width: 1305px) {
-    padding-left: 5rem;
-    padding-top: 1rem;
-    width: 90%;
-    height: 90%;
-  } */
 
   @media (max-width: 420px) {
     width: 100%;
