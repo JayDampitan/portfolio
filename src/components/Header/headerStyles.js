@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const HeaderIntro = styled.div`
   color: ${(props) => props.theme.text};
@@ -70,7 +69,7 @@ export const HeaderName = styled.div`
     font-size: 2.3rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     grid-area: 2/3/3/12;
     font-size: 2.2rem;
     letter-spacing: .1rem;
@@ -109,7 +108,7 @@ export const HeaderTitle = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     font-size: 0.7rem;
     grid-area: 3/1/4/14;
   }
@@ -152,7 +151,7 @@ export const ConnectButton = styled.div`
     margin-bottom: 1rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     grid-area: 4/7/5/8;
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
@@ -170,20 +169,24 @@ export const HeaderBox = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  width: 98%;
 
   @media (max-width: 1200px) {
+    margin-top: 20px;
     grid-area: 5/3/13/12;
+    width: 90%;
   }
 
   @media (max-width: 600px) {
     grid-area: 5/3/13/12;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     height: 90%;
     align-self: center;
     grid-area: 5/2/13/13;
     padding: 0 .5rem;
+    
   }
 `;
 
@@ -194,7 +197,7 @@ export const HeaderImage = styled.img`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     width: 100%;
     height: 80%;
   }
