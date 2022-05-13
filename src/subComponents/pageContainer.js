@@ -15,6 +15,6 @@ export const PageContainer = styled.div`
 
   @media (max-width: 420px) {
     width: 100vw;
-    height: 75vh;
+    height: 74vh;
   }
 `;

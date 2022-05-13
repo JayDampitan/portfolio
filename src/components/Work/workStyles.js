@@ -13,7 +13,7 @@ export const WorkPageContainer = styled.div`
     grid-area: 2/2/13/13;
   }
 
-  @media (max-width: 360px){
+  @media (max-width: 360px) {
     grid-area: 1/2/12/13;
     box-shadow: none;
   }
@@ -27,7 +27,6 @@ export const CarouselContainer = styled.div`
   height: 90%;
   width: 40%;
   box-shadow: ${(props) => props.theme.boxShadow};
- 
 
   @media (max-width: 1100px) {
     width: 100%;
@@ -48,7 +47,6 @@ export const CarouselTitleContainer = styled.div`
   padding: 0.5rem 3rem;
   border-radius: 0.5rem;
 
-
   h1 {
     color: ${(props) => props.theme.orange};
     font-size: 2.3rem;
@@ -64,7 +62,7 @@ export const CarouselTitleContainer = styled.div`
       font-size: 1.2rem;
     }
 
-    @media (max-width: 390px){
+    @media (max-width: 390px) {
       font-size: 1.1rem;
     }
   }
@@ -100,7 +98,6 @@ export const Carousel = styled.div`
   overflow: hidden;
   transition: 1s ease-in;
 
-
   @media (max-width: 1400px) {
     width: 70%;
     height: 90%;
@@ -116,7 +113,6 @@ export const CarouselImage = styled(motion.img)`
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
- 
 `;
 
 export const CarouselButton = styled.button`
@@ -182,12 +178,11 @@ export const WorkDesContainer = styled.div`
     width: 100%;
     height: 40%;
   }
-  p{
-    @media (max-width: 360px){
-    width: 100%;
+  p {
+    @media (max-width: 360px) {
+      width: 100%;
+    }
   }
-  }
-  
 `;
 
 export const WorkDescription = styled.div`
@@ -206,19 +201,16 @@ export const WorkDescription = styled.div`
   }
 
   @media (max-width: 810px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 420px) {
-    font-size: .7rem;
+    font-size: 0.7rem;
     width: 80%;
   }
 
-  @media (max-width: 360px){
-
+  @media (max-width: 360px) {
   }
-
-
 `;
 
 export const ColumnsContainer = styled.div`
@@ -241,7 +233,7 @@ export const ColumnsContainer = styled.div`
     padding: 0 0.5rem;
   }
   @media (max-width: 420px) {
-   display: none;
+    display: none;
   }
 `;
 
@@ -318,7 +310,7 @@ export const ListContainer = styled.div`
     margin: 0.3rem 0;
 
     @media (max-width: 1100px) {
-      margin: 0.2rem ;
+      margin: 0.2rem;
     }
   }
 `;
@@ -331,7 +323,7 @@ export const ColorList = styled.div`
   line-height: 2rem;
   text-align: center;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1440px) {
     display: none;
   }
 `;
@@ -343,7 +335,10 @@ export const ThemeWrapper = styled.div`
   list-style: none;
   flex-direction: column;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1440px) {
+  }
+
+  @media (max-width: 1200px) {
     flex-direction: row;
   }
 `;
@@ -356,7 +351,10 @@ export const ColorExample = styled.span`
   margin: 5px;
   background-color: ${(props) => props.colorTheme};
 
+  @media (max-width: 1440px) {
+    margin: 0;
+  }
+
   @media (max-width: 1100px) {
-    margin: 2px;
   }
 `;

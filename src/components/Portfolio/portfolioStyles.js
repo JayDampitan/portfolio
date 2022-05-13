@@ -11,17 +11,27 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   color: ${(props) => props.theme.text};
-  padding: 2rem;
   transform: translateX(-35px);
   position: relative;
+  padding: 2rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 1440px) {
+    width: 100%;
+    height: 93%;
+  }
+
+  @media (max-width: 450px) {
     flex-direction: row;
     padding: 1.8rem 1.5rem;
     justify-content: space-evenly;
     margin-left: 0.5rem;
+  }
+
+  @media (max-width: 360px) {
+    width: 100%;
+    height: 90%;
   }
 `;
 
@@ -40,7 +50,7 @@ export const PortfolioTitleContainer = styled.div`
     justify-content: space-between;
   }
 
-  @media (max-width: 360px){
+  @media (max-width: 360px) {
     top: 1.8rem;
     left: 56%;
     width: 6.7rem;
@@ -51,22 +61,20 @@ export const PortfolioTitleContainer = styled.div`
     text-transform: uppercase;
     font-family: ${(props) => props.theme.fontFamily};
     border-bottom: 2px solid ${(props) => props.theme.orange};
-    text-shadow: ${ props => props.theme.boxShadow};
+    text-shadow: ${(props) => props.theme.boxShadow};
 
     @media (max-width: 1400px) {
       font-size: 0.9rem;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 450px) {
       font-size: 0.8rem;
     }
 
-    @media (max-width: 360px){
-      font-size: .7rem;
+    @media (max-width: 360px) {
+      font-size: 0.7rem;
     }
   }
-
-
 `;
 
 export const PortfolioGithub = styled.a`
@@ -83,9 +91,9 @@ export const PortfolioGithub = styled.a`
     box-shadow: ${(props) => props.theme.inset};
   }
 
-  @media (max-width: 420px){
-    width: .8rem;
-  } 
+  @media (max-width: 450px) {
+    width: 0.8rem;
+  }
 `;
 
 export const PortfolioContentContainer = styled.div`
@@ -100,18 +108,22 @@ export const PortfolioContentContainer = styled.div`
   cursor: pointer;
   box-shadow: ${(props) =>
     props.firstCardActive ? props.theme.inset : props.theme.boxShadow};
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
 
-  @media (max-width: 810px){
-    margin: .8rem;
+  @media (max-width: 810px) {
+    margin: 20px 0;
   }
 
-  @media (max-width: 420px) {
-    border-radius: .5rem;
+  @media (max-width: 450px) {
+    border-radius: 0.5rem;
     padding: 0.4rem 0.3rem;
     height: 5.3rem;
     width: 18rem;
     margin-right: 1rem;
+  }
+
+  @media (max-width: 810px) {
+    margin: 10px 0;
   }
 
   p {
@@ -121,17 +133,17 @@ export const PortfolioContentContainer = styled.div`
 
     @media (max-width: 810px) {
       font-size: 0.7rem;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 450px) {
       font-size: 0.5rem;
       margin: 0;
       padding: 0;
     }
 
-    @media (max-width: 380px){
-      font-size: .4rem;
+    @media (max-width: 380px) {
+      font-size: 0.4rem;
     }
   }
 `;
@@ -159,7 +171,7 @@ export const PortfolioImage = styled.img`
   height: 100%;
   border-radius: 1rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     border-radius: 0.3rem;
   }
 `;
@@ -172,8 +184,14 @@ export const FirstCardContainer = styled.div`
     padding: 1rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 1200px) {
+    height: 100%;
+  }
+
+  @media (max-width: 450px) {
     grid-area: 1/2/3/13;
+    height: 80%;
+    margin-top: 10px;
   }
 `;
 
@@ -185,8 +203,14 @@ export const SecondCardContainer = styled.div`
     padding: 1rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 1200px) {
+    height: 100%;
+  }
+
+  @media (max-width: 450px) {
     grid-area: 4/2/6/13;
+    height: 80%;
+    margin-top: 10px;
   }
 `;
 
@@ -198,8 +222,14 @@ export const ThirdCardContainer = styled.div`
     padding: 1rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 1200px) {
+    height: 100%;
+  }
+
+  @media (max-width: 450px) {
     grid-area: 7/2/9/13;
+    height: 80%;
+    margin-top: 10px;
   }
 `;
 
@@ -211,8 +241,14 @@ export const FourthCardContainer = styled.div`
     padding: 1rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 1200px) {
+    height: 100%;
+  }
+
+  @media (max-width: 450px) {
     grid-area: 10/2/12/13;
+    height: 80%;
+    margin-top: 10px;
   }
 `;
 
@@ -224,8 +260,9 @@ export const PortfolioButtonContainer = styled.div`
   justify-content: space-around;
   width: 100%;
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     margin-top: 2.5rem;
+    margin-left: 10px;
   }
 `;
 
@@ -239,7 +276,7 @@ export const PortFolioVisit = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: ${(props) => props.theme.orange};
   user-select: none;
   cursor: pointer;
@@ -260,14 +297,14 @@ export const PortFolioVisit = styled.a`
   @media (max-width: 810px) {
     width: 7rem;
     font-size: 0.8rem;
-    border-radius: .5rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     width: 3rem;
-    margin: .5rem;
-    font-size: .57rem;
-    height: 2rem;
+    margin-left: 10px;
+    font-size: 10px;
+    height: 25px;
+    border-radius: 0;
   }
 `;
 
@@ -281,7 +318,7 @@ export const MoreButton = styled(Link)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: ${(props) => props.theme.orange};
   user-select: none;
   cursor: pointer;
@@ -302,12 +339,12 @@ export const MoreButton = styled(Link)`
     font-size: 0.8rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     width: 3rem;
-    margin: .5rem;
-    font-size: .5rem;
-    height: 2rem;
-    border-radius: .5rem;
+    margin: 0.5rem;
+    font-size: 10px;
+    height: 25px;
+    border-radius: 0;
   }
 `;
 
@@ -335,6 +372,7 @@ export const SecondLineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  align-self: center;
 
   @media (max-width: 1400px) {
     display: none;
@@ -347,6 +385,10 @@ export const ThirdLineContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+
+  @media (max-width: 1440px) {
+    margin-bottom: 8px;
+  }
 
   @media (max-width: 1400px) {
     display: none;

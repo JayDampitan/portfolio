@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import {
@@ -60,16 +60,14 @@ const Contact = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* -----------Contact Form and Animations */}
+   
       <ContactFormContainer
         as={motion.div}
         variants={contactFormVariant}
         initial="hidden"
         animate="visible"
-      />
-
-      {/* ------------------Contact Info Container */}
-      <ContactForm
+      >
+         <ContactForm
         ref={form}
         onSubmit={sendEmail}
         as={motion.form}
@@ -83,8 +81,6 @@ const Contact = () => {
         <TextArea type="text" placeholder="Message" name="message" />
         <SubmitButton type="submit">Submit</SubmitButton>
       </ContactForm>
-
-      {/*-------------Contact Image  */}
       <ContactImageContainer
         as={motion.div}
         variants={contactImageVariant}
@@ -93,6 +89,15 @@ const Contact = () => {
       >
         <motion.img src={Kovvi} alt="Phone" />
       </ContactImageContainer>
+
+
+      </ContactFormContainer>
+
+    
+     
+
+      {/*-------------Contact Image  */}
+      
 
       {/* -----------Background Designs and Animations */}
       <FirstContactContainer

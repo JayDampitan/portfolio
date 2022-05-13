@@ -45,13 +45,19 @@ const Media = ({ switchActive, setSwitchActive }) => {
         <Icons target="_blank" href="https://github.com/JayDampitan">
           <Github fill="currentColor" />
         </Icons>
-        <Icons target="_blank" href="https://www.youtube.com/channel/UCu2DsrRQhBXdRq_k6ASNCfQ">
+        <Icons
+          target="_blank"
+          href="https://www.youtube.com/channel/UCu2DsrRQhBXdRq_k6ASNCfQ"
+        >
           <YouTube fill="currentColor" />
         </Icons>
         <Icons target="_blank" href="https://twitter.com/home">
           <Twitter fill="currentColor" />
         </Icons>
-        <Icons target="_blank" href="https://www.linkedin.com/in/jay-dampitan-568482183/">
+        <Icons
+          target="_blank"
+          href="https://www.linkedin.com/in/jay-dampitan-568482183/"
+        >
           <Linkedin fill="currentColor" />
         </Icons>
       </IconContainer>

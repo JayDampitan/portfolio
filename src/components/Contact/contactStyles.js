@@ -1,47 +1,40 @@
 import styled from "styled-components";
 
 export const ContactFormContainer = styled.div`
+  display: grid;
   grid-area: 2/4/12/11;
   box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   border: ${(props) => props.theme.border};
-  
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  justify-self: center;
+  width: 95%;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1440px) {
     grid-area: 2/3/12/12;
-  }
-
-  @media (max-width: 420px) {
-    grid-area: 2/2/12/13;
+    width: 100%;
   }
 `;
 
 export const ContactForm = styled.form`
-  grid-area: 2/4/12/7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   color: ${(props) => props.theme.orange};
   font-family: ${(props) => props.theme.fontFamily};
-  padding: 2rem;
+  width: 40%;
+  height: 100%;
 
-  @media (max-width: 1500px) {
-    grid-area: 2/3/12/12;
-    padding: 0;
-    width: 90%;
-    height: 90%;
-    align-self: center;
-    justify-self: center;
+  @media (max-width: 1200px) {
+    width: 100%;
   }
 
-  @media (max-width: 810px) {
-    padding: 1rem 0;
-  }
-
-  h2{ 
-    text-shadow: ${ props => props.theme.boxShadow};
+  h2 {
+    text-shadow: ${(props) => props.theme.boxShadow};
   }
 
   input {
@@ -58,9 +51,9 @@ export const ContactForm = styled.form`
     font-family: ${(props) => props.theme.fontFamily};
     outline: none;
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1440px) {
       width: 84%;
-      height: 7%;
+      height: 5%;
     }
 
     @media (max-width: 810px) {
@@ -69,14 +62,12 @@ export const ContactForm = styled.form`
       font-size: 1rem;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 450px) {
       width: 90%;
       height: 4%;
       font-size: 1rem;
     }
   }
-
-
 `;
 
 export const TextArea = styled.textarea`
@@ -113,7 +104,7 @@ export const SubmitButton = styled.button`
   box-shadow: ${(props) => props.theme.boxShadow};
   background: ${(props) => props.theme.orange};
   border-radius: 2rem;
-  border: ${(props) => props.theme.border};
+  border: none;
   font-family: ${(props) => props.theme.fontFamily};
   letter-spacing: 0.2rem;
   color: ${(props) => props.theme.text};
@@ -128,16 +119,22 @@ export const SubmitButton = styled.button`
     box-shadow: ${(props) => props.theme.inset};
   }
 
+  @media (max-width: 1440px) {
+    width: 6rem;
+    height: 3rem;
+  }
+
   @media (max-width: 810px) {
     width: 7rem;
     height: 3rem;
     margin: 0.7rem;
   }
 
-  @media (max-width: 420px){
+  @media (max-width: 450px) {
     width: 5rem;
     height: 2.5rem;
-    font-size: .7rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 `;
 
@@ -147,20 +144,20 @@ export const ContactImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-area: 3/7/10/11;
   box-shadow: ${(props) => props.theme.boxShadow},
     ${(props) => props.theme.inset};
   border: 3px solid ${(props) => props.theme.body};
   border-radius: 2rem;
-  width: 90%;
-  height: 100%;
+  width: 50%;
+  height: 80%;
+  margin: 0 20px 50px 0;
 
   img {
     width: 80%;
-    height: 100%;
+    height: 95%;
   }
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;

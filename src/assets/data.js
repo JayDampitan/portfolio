@@ -2,7 +2,7 @@ export const data = {
   movieApp: {
     title: "Movie App",
     desciption:
-      "Reactoad Movie App is a Netflix mockup where you can search for your favorite movie and find out more information about them such as ratings, actors and more. ",
+      "Reactoad Movie App is a IMDB clone where you can search for your favorite movie and find out more information about them such as ratings, actors and more.",
     longDescription:
       "Coming out of the Bitwise Industry classes, Reactoad Movie App is aIMDB clone and my first project coming  in the Bitwise apprenticeship program. In collaboration with my teammates  Danny Sanchez and Elias Guttierez, our first challenge as apprentices  was to fetch data from a movie API and create an application utilizing the data that have been fetched. This presented a great challenge on my part since this is my first exposure to API’s and how to fetch data from them. But with great guidance from our lead Kendrick Mausolf, and amazing team work, we have achieved our first challenge and created this application that you see today. ",
     tech: ["HTML5", "CSS3", "JavaScript ES6", "React"],
@@ -21,7 +21,7 @@ export const data = {
     desciption:
       "PokePalace is a web application where you can buy, win and collect all Pokemon. Get a chance to experience an online slot machine only for Pokemons.",
     longDescription:
-      "On the second application on our apprenticeship program, we were challenged to fetch data from the Poke API and create a web application that will utilize data from the API and is  engaging to the users. Also introducing new technologies such Redux and Redux Toolkit. With the help of my teammates Kenneth Ferrell II and Paul Gonzalez. We created a fan game where users can buy Pokemons with the initial Poke dollars we give them and play on our integrated poke slot machine where you can win a Pokemon on every spin for a chance to collect them all. Also included in the app is a feature where you can collect different badges by collecting certain Pokemons. ",
+      "On the second application on our apprenticeship program, we were challenged to fetch data from the Poke API and create a web application that will utilize data from the API and is  engaging to the users. Also introducing new technologies such Redux and Redux Toolkit. With the help of my teammates Kenneth Ferrell II and Paul Gonzalez. We created a fan game where users can buy Pokemons with the initial Poke dollars we give them and play on our integrated poke slot machine where you can win a Pokemon on every spin for a chance to collect them all. Also included in the app is a feature where you can collect different badges by collecting certain Pokemons.",
     tech: ["HTML5", "CSS3", "JavaScript ES6", "React", "Redux", "SASS"],
     colors: [
       "#333333",
@@ -38,9 +38,9 @@ export const data = {
   toadTribune: {
     title: "Toad Tribune",
     desciption:
-      "Toad Tribune is an online newspaper where you can gather all the recent information locally and internationally including your local weather. ",
+      "Toad Tribune is an online newspaper where you can gather all the recent information locally and internationally including your local weather.",
     longDescription:
-      "Toad Tribune is an online newspaper that we created for the third application in our apprenticeship. Here our lead gave us the freedom to choose whatever API of our liking and how many. The challenge that we faced in this project is our first exposure to Typescript and Styled Components. Although indeed a challenge at first, with the help from my teammates Kenneth Ferrell II and Elias Gutierrez We successfully learned some of the core fundamentals of these technologies and gained a liking for them. ",
+      "Toad Tribune is an online newspaper that we created for the third application in our apprenticeship. Here our lead gave us the freedom to choose whatever API of our liking and how many. The challenge that we faced in this project is our first exposure to Typescript and Styled Components. Although indeed a challenge at first, with the help from my teammates Kenneth Ferrell II and Elias Gutierrez We successfully learned some of the core fundamentals of these technologies and gained a liking for them.",
     tech: [
       "HTML5",
       "CSS3",

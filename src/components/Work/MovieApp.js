@@ -74,26 +74,26 @@ const MovieApp = () => {
             <CarouselButton>
               <Previous onClick={prevHandler} />
             </CarouselButton>
-            
-              <Carousel>
-                {MovieAppImages.map((slide, index) => {
-                  return (
-                    <>
-                      {index === current && (
-                        <CarouselImage
-                          variants={imageVariant}
-                          initial="hidden"
-                          animate="visible"
-                          src={slide.image}
-                          alt="images of the application"
-                          key={index}
-                        />
-                      )}
-                    </>
-                  );
-                })}
-              </Carousel>
-          
+
+            <Carousel>
+              {MovieAppImages.map((slide, index) => {
+                return (
+                  <>
+                    {index === current && (
+                      <CarouselImage
+                        variants={imageVariant}
+                        initial="hidden"
+                        animate="visible"
+                        src={slide.image}
+                        alt="images of the application"
+                        key={index}
+                      />
+                    )}
+                  </>
+                );
+              })}
+            </Carousel>
+
             <CarouselButton>
               <Next onClick={nextHandler} />
             </CarouselButton>
