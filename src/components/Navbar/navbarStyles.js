@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   width: 100%;
-  position: absolute;
-  bottom: 2%;
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
 `;
@@ -14,6 +14,17 @@ export const NavLinksContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   border-radius: 0.5rem;
+  margin-bottom: 10px;
+
+  .home,
+  .about,
+  .portfolio,
+  .contact {
+    box-shadow: ${(props) => props.theme.inset};
+    border: none;
+    fill: ${props => props.theme.orange};
+    border-radius: 0.5rem;
+  }
 `;
 
 export const LinkWrapper = styled.div`
@@ -22,15 +33,15 @@ export const LinkWrapper = styled.div`
   align-items: center;
   border-radius: 0.7rem;
   border: ${(props) => props.theme.border};
-  box-shadow: ${(props) =>
-    props.insetActive ? props.theme.inset : props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow};
   background-color: ${(props) => props.theme.body};
   user-select: none;
   margin: 0 1rem;
 
-  @media (max-width: 420px) {
-    margin: 0.5rem;
+  @media (max-width: 1440px) {
+    margin: 0 0.5rem;
   }
+
 
   :hover {
     box-shadow: ${(props) => props.theme.inset};
@@ -43,10 +54,16 @@ export const NavLinks = styled(Link)`
   font-family: "Poppins", sans-serif;
   padding: 0.8rem;
   cursor: pointer;
-  fill: ${(props) =>
-    props.insetActive ? props.theme.orange : props.theme.text};
+  fill: ${(props) => props.theme.text};
 
-  @media (max-width: 420px) {
+  .icon-home,.icon-about,.icon-portfolio,.contact{
+    fill: ${props => props.theme.orange};
+  }
+
+  @media (max-width: 1440px) {
     padding: 0.6rem;
+  }
+  @media (max-width: 450px) {
+    padding: 0.5rem;
   }
 `;

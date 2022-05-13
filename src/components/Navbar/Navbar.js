@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HomeIcon, AboutIcon, WorkIcon, ContactIcon } from "../AllSvgs";
 import { Nav, NavLinksContainer, LinkWrapper, NavLinks } from "./navbarStyles";
 import { linksVariant } from "./navbarVariants";
 
 const Navbar = () => {
-  const [homeActive, setHomeActive] = useState(true);
-  const [aboutActive, setAboutActive] = useState(false);
-  const [workActive, setWorkActive] = useState(false);
-  const [contactActive, setContactActive] = useState(false);
+  const setLocalStorage = (currentPage) => {
+    window.sessionStorage.setItem("currentPage", currentPage);
+    setSelectedPage(currentPage);
+  };
+
+  useEffect(() => {
+    const page = window.sessionStorage.getItem("currentPage");
+    setSelectedPage(page || "home");
+  }, []);
+
+  const [selectedPage, setSelectedPage] = useState("home");
 
   return (
     <Nav>
@@ -19,61 +26,61 @@ const Navbar = () => {
         animate="visible"
       >
         <LinkWrapper
+          className={`${selectedPage === "home" && selectedPage}`}
           onClick={() => {
-            setHomeActive(true);
-            setAboutActive(false);
-            setWorkActive(false);
-            setContactActive(false);
+            setLocalStorage("home");
           }}
-          insetActive={homeActive}
           as={motion.div}
         >
-          <NavLinks insetActive={homeActive} to="/">
+          <NavLinks
+            className={`${selectedPage === "home" && selectedPage}`}
+            to="/"
+          >
             <HomeIcon />
           </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper
+          className={` ${selectedPage === "about" && selectedPage}`}
           onClick={() => {
-            setHomeActive(false);
-            setAboutActive(true);
-            setWorkActive(false);
-            setContactActive(false);
+            setLocalStorage("about");
           }}
-          insetActive={aboutActive}
           as={motion.div}
         >
-          <NavLinks insetActive={aboutActive} to="/about">
+          <NavLinks
+            className={`${selectedPage === "about" && selectedPage}`}
+            to="/about"
+          >
             <AboutIcon />
           </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper
+          className={`${selectedPage === "portfolio" && selectedPage}`}
           onClick={() => {
-            setHomeActive(false);
-            setAboutActive(false);
-            setWorkActive(true);
-            setContactActive(false);
+            setLocalStorage("portfolio");
           }}
-          insetActive={workActive}
           as={motion.div}
         >
-          <NavLinks insetActive={workActive} to="/portfolio">
+          <NavLinks
+            className={`${selectedPage === "portfolio" && selectedPage}`}
+            to="/portfolio"
+          >
             <WorkIcon />
           </NavLinks>
         </LinkWrapper>
 
         <LinkWrapper
+          className={`${selectedPage === "contact" && selectedPage}`}
           onClick={() => {
-            setHomeActive(false);
-            setAboutActive(false);
-            setWorkActive(false);
-            setContactActive(true);
+            setLocalStorage("contact");
           }}
-          insetActive={contactActive}
           as={motion.div}
         >
-          <NavLinks insetActive={contactActive} to="/contact">
+          <NavLinks
+            className={`${selectedPage === "contact" && selectedPage}`}
+            to="/contact"
+          >
             <ContactIcon />
           </NavLinks>
         </LinkWrapper>

@@ -13,17 +13,20 @@ export const ContentContainer = styled(motion.div)`
   color: ${(props) => props.theme.text};
   font-family: ${(props) => props.theme.fontFamily};
 
-  @media (max-width: 1400px) {
-    grid-area: 3/3/12/12;
+  @media (max-width: 1440px) {
+    grid-area: 3/3/13/12;
+    height: 90%;
   }
-  @media (max-width: 840px) {
+
+  @media (max-width: 1200px) {
     grid-area: 3/2/13/13;
-    height: 95%;
+    height: 100%;
+    border: none;
     justify-content: center;
   }
-  @media (max-width: 420px) {
+
+  @media (max-width: 450px) {
     grid-area: 3/2/13/13;
-    height: 95%;
     box-shadow: none;
     border: none;
     padding-top: 1rem;
@@ -40,19 +43,25 @@ export const ImageContainer = styled.div`
     ${(props) => props.theme.inset};
   padding: 0.4rem;
 
-  @media (max-width: 1400px) {
-    grid-area: 1/6/4/9;
-    align-self: flex-end;
+  @media (max-width: 1440px) {
+    width: 50%;
+    height: 70%;
+    grid-area: 1/3/5/6;
+    align-self: center;
+    justify-self: flex-start;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     grid-area: 1/6/4/9;
-    width: 80%;
+  }
+
+  @media (max-width: 1200px) {
+    grid-area: 1/6/4/9;
+    width: 75%;
     height: 80%;
   }
 
   @media (max-width: 840px) {
-    justify-self: center;
     width: 82%;
     height: 78%;
   }
@@ -61,18 +70,18 @@ export const ImageContainer = styled.div`
     grid-area: 1/6/4/9;
     width: 75%;
     height: 75%;
-
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
+    width: 67%;
+    height: 63%;
     grid-area: 1/5/4/10;
-    margin-right: 2rem;
+    border: 2px solid ${(props) => props.theme.orange};
   }
 
-  @media (max-width: 360px){
+  @media (max-width: 360px) {
     width: 60%;
     height: 60%;
-    margin-bottom: 1rem;
   }
 
   img {
@@ -88,17 +97,25 @@ export const TitleContainer = styled.div`
   justify-content: center;
   text-align: center;
 
- @media (max-width: 1400px){
-   margin-top: 3rem;
- }
+  @media (max-width: 1440px) {
+    margin-top: 0.5rem;
+  }
 
-  @media (max-width: 420px) {
+  @media (max-width: 1400px) {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 450px) {
     font-size: 0.6rem;
   }
 
   h2 {
     border-bottom: 3px solid ${(props) => props.theme.orange};
     text-transform: uppercase;
+
+    @media (max-width: 1200px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 
@@ -110,35 +127,30 @@ export const ParagraphContainer = styled.div`
   font-family: ${(props) => props.theme.fontFamily};
   font-size: 0.9rem;
   text-align: center;
-  padding: 0 7rem;
-  margin: 2rem;
+  padding: 0 50px;
+  margin: 30px;
 
-  @media (max-width: 1400px) {
-    padding: 0 2rem;
-    margin: 2.3rem;
-    margin-bottom: 3rem;
+  @media (max-width: 1440px) {
+    padding: 0 40px;
   }
-
 
   @media (max-width: 840px) {
-    margin: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     width: 90%;
-    
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     font-size: 0.68rem;
     line-height: 0.9rem;
     padding: 0 1rem;
-    margin: .5rem 0 .8rem 0;
+    margin: 30px;
     width: 95%;
     text-indent: 0;
   }
 
-  @media (max-width: 360px){
-    padding: 0 1rem;
+  @media (max-width: 360px) {
     width: 100%;
+    margin: 10px;
   }
 `;
 
@@ -146,24 +158,23 @@ export const TechContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   flex-wrap: wrap;
 
   @media (max-width: 1400px) {
-    width: 80%;
+    width: 100%;
     margin-bottom: 1rem;
   }
 
-  @media (max-width: 810px) {
-    width: 100%;
+  @media (max-width: 1200px) {
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     font-size: 0.5rem;
     margin-top: 0;
   }
 
-  @media (max-width: 360px){
+  @media (max-width: 360px) {
     margin-top: 0;
   }
 `;
@@ -174,20 +185,24 @@ export const TechWrapper = styled.div`
   justify-content: center;
   box-shadow: ${(props) => props.theme.inset};
   color: ${(props) => props.theme.orange};
-  padding: 0.5rem 2rem;
+  padding: 8px 20px;
   border-radius: 2rem;
   font-size: 0.8rem;
   margin: 0.5rem;
   text-transform: uppercase;
 
+  @media (max-width: 1200px) {
+    font-size: 0.6srem;
+  }
+
   @media (max-width: 810px) {
     font-size: 0.7rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     font-size: 0.6rem;
-    padding: .2rem 1rem;
-    margin: .3rem;
+    padding: 0.2rem 1rem;
+    margin: 0.3rem;
   }
 `;
 

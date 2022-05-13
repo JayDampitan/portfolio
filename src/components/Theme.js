@@ -3,7 +3,7 @@ export const lightMode = {
   text: "#232427",
   boxShadow:
     "3px 3px 5px rgba(10, 10, 10, .2) , -3px -3px 8px rgba(240, 240, 240, .4)",
-  border: "2px solid #C7CBCB",
+  border: "1px solid #C7CBCB",
   inset:
     "inset 3px 3px 8px rgba(10, 10, 10, .3) , inset -3px -3px 8px rgba(240,240,240, 0.6)",
   fontFamily: "Poppins",

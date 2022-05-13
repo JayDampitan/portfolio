@@ -77,10 +77,14 @@ const TribuneApp = () => {
                 return (
                   <>
                     {index === current && (
-                      <CarouselImage  variants={imageVariant}
-                      initial="hidden"
-                      animate="visible"
-                      src={slide.image} alt="images of the application" key={index} />
+                      <CarouselImage
+                        variants={imageVariant}
+                        initial="hidden"
+                        animate="visible"
+                        src={slide.image}
+                        alt="images of the application"
+                        key={index}
+                      />
                     )}
                   </>
                 );
@@ -134,7 +138,12 @@ const TribuneApp = () => {
               <ListWrapper>
                 <ThemeWrapper>
                   {data.toadTribune.colors.map((color, index) => {
-                    return <ColorExample key={index} colorTheme={color}></ColorExample>;
+                    return (
+                      <ColorExample
+                        key={index}
+                        colorTheme={color}
+                      ></ColorExample>
+                    );
                   })}
                 </ThemeWrapper>
                 <ColorList>

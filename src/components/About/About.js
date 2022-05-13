@@ -61,8 +61,8 @@ const About = () => {
         </ParagraphContainer>
 
         <TechContainer>
-          {myTech.map((tech) => {
-            return <TechWrapper>{tech}</TechWrapper>;
+          {myTech.map((tech, index) => {
+            return <TechWrapper key={index}>{tech}</TechWrapper>;
           })}
         </TechContainer>
       </ContentContainer>

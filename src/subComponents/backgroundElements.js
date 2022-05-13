@@ -13,7 +13,7 @@ export const Circle = styled.div`
     height: 3.5rem;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1440px) {
     width: 3rem;
     height: 3rem;
   }
@@ -36,7 +36,7 @@ export const Square = styled.div`
     height: 3.5rem;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1440px) {
     width: 3rem;
     height: 3rem;
   }

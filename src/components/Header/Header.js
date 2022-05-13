@@ -30,9 +30,8 @@ import {
   headerBoxVariant,
 } from "./headerVariants";
 
-
 const Header = () => {
- const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <PageContainer
       as={motion.div}
@@ -74,8 +73,8 @@ const Header = () => {
       </HeaderBox>
 
       <ConnectButton
-        as = {motion.div}
-        onClick = {() => navigate("/contact")}
+        as={motion.div}
+        onClick={() => navigate("/contact")}
         variants={headerIntroVariant}
         initial="hidden"
         animate="visible"
@@ -93,11 +92,10 @@ const Header = () => {
           animate="visible"
         />
         <Circle
-           as={motion.div}
-           variants={secondCircleVariant}
-           initial="hidden"
-           animate="visible"
-         
+          as={motion.div}
+          variants={secondCircleVariant}
+          initial="hidden"
+          animate="visible"
         />
       </FirstCircleContainer>
 
